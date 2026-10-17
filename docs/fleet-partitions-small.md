@@ -1,9 +1,11 @@
 # Fleet reductions at N=2 and N=4
 
-The current component implementation is slower than the full-fleet solver for
-these small cases. Keep `full` for N=2 and N=4. The earlier N=20 gains do not
-justify switching every fleet size to components. No solver code, defaults,
-experiment campaigns, or manuscript data were changed for this comparison.
+The original component prototype was slower than the full-fleet solver for
+these small cases. The subsequent [component reuse benchmark](component-reuse.md)
+measures a general optimization of that implementation. The results below are
+historical measurements; they do not prescribe fleet-size dispatch. No solver
+code, defaults, experiment campaigns, or manuscript data were changed for this
+original comparison.
 
 ## Inputs and protocol
 
@@ -78,11 +80,10 @@ local system assembly, trajectory reconstruction, and bookkeeping outweigh that
 saving. Graph construction contributes only about 1% of the added time in the
 typical interacting case.
 
-The measured choice is `full` for these small fleets and `components` for the
-previously measured N=20 cases. The crossover for intermediate fleet sizes has
-not been established. A future implementation could avoid unnecessary component
-setup when there is no useful reduction, but that optimization is not included
-in these measurements.
+These measurements identify avoidable setup and reconstruction overhead in the
+prototype. They do not establish a crossover for intermediate fleet sizes.
+The subsequent implementation removes duplicate work and reuses unchanged
+components without introducing any fleet-size thresholds.
 
 ## Validation and reproduction
 

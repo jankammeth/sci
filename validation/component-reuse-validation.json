@@ -1,0 +1,1792 @@
+{
+  "passed": true,
+  "benchmark_sha256": "aedc039185e76caf47bc2c5fdc5f26e933a4d83cb42efaa7163d7d7329fd5a67",
+  "measured_runs": 546,
+  "profiling_runs": 15,
+  "physical_checks": [
+    {
+      "case_id": "n2_seed0",
+      "mode": "full",
+      "passed": true
+    },
+    {
+      "case_id": "n2_seed0",
+      "mode": "active",
+      "passed": true
+    },
+    {
+      "case_id": "n2_seed0",
+      "mode": "components",
+      "passed": true
+    },
+    {
+      "case_id": "n2_seed2",
+      "mode": "full",
+      "passed": true
+    },
+    {
+      "case_id": "n2_seed2",
+      "mode": "active",
+      "passed": true
+    },
+    {
+      "case_id": "n2_seed2",
+      "mode": "components",
+      "passed": true
+    },
+    {
+      "case_id": "n2_seed10",
+      "mode": "full",
+      "passed": true
+    },
+    {
+      "case_id": "n2_seed10",
+      "mode": "active",
+      "passed": true
+    },
+    {
+      "case_id": "n2_seed10",
+      "mode": "components",
+      "passed": true
+    },
+    {
+      "case_id": "n4_seed0",
+      "mode": "full",
+      "passed": true
+    },
+    {
+      "case_id": "n4_seed0",
+      "mode": "active",
+      "passed": true
+    },
+    {
+      "case_id": "n4_seed0",
+      "mode": "components",
+      "passed": true
+    },
+    {
+      "case_id": "n4_seed1",
+      "mode": "full",
+      "passed": true
+    },
+    {
+      "case_id": "n4_seed1",
+      "mode": "active",
+      "passed": true
+    },
+    {
+      "case_id": "n4_seed1",
+      "mode": "components",
+      "passed": true
+    },
+    {
+      "case_id": "n4_seed8",
+      "mode": "full",
+      "passed": true
+    },
+    {
+      "case_id": "n4_seed8",
+      "mode": "active",
+      "passed": true
+    },
+    {
+      "case_id": "n4_seed8",
+      "mode": "components",
+      "passed": true
+    },
+    {
+      "case_id": "n4_seed40",
+      "mode": "full",
+      "passed": true
+    },
+    {
+      "case_id": "n4_seed40",
+      "mode": "active",
+      "passed": true
+    },
+    {
+      "case_id": "n4_seed40",
+      "mode": "components",
+      "passed": true
+    },
+    {
+      "case_id": "n20_seed2",
+      "mode": "full",
+      "passed": true
+    },
+    {
+      "case_id": "n20_seed2",
+      "mode": "active",
+      "passed": true
+    },
+    {
+      "case_id": "n20_seed2",
+      "mode": "components",
+      "passed": true
+    },
+    {
+      "case_id": "n20_seed9",
+      "mode": "full",
+      "passed": true
+    },
+    {
+      "case_id": "n20_seed9",
+      "mode": "active",
+      "passed": true
+    },
+    {
+      "case_id": "n20_seed9",
+      "mode": "components",
+      "passed": true
+    },
+    {
+      "case_id": "n20_seed15",
+      "mode": "full",
+      "passed": true
+    },
+    {
+      "case_id": "n20_seed15",
+      "mode": "active",
+      "passed": true
+    },
+    {
+      "case_id": "n20_seed15",
+      "mode": "components",
+      "passed": true
+    },
+    {
+      "case_id": "n20_seed35",
+      "mode": "full",
+      "passed": true
+    },
+    {
+      "case_id": "n20_seed35",
+      "mode": "active",
+      "passed": true
+    },
+    {
+      "case_id": "n20_seed35",
+      "mode": "components",
+      "passed": true
+    },
+    {
+      "case_id": "n20_seed47",
+      "mode": "full",
+      "passed": true
+    },
+    {
+      "case_id": "n20_seed47",
+      "mode": "active",
+      "passed": true
+    },
+    {
+      "case_id": "n20_seed47",
+      "mode": "components",
+      "passed": true
+    }
+  ],
+  "profile_trajectory_exact_matches": [
+    "n20_seed2",
+    "n20_seed9",
+    "n20_seed15",
+    "n20_seed35",
+    "n20_seed47"
+  ],
+  "full_mode_parity": {
+    "cases": 29,
+    "arrays": 174,
+    "records_equal": true,
+    "max_absolute_array_difference": 0.0,
+    "before": {
+      "records": [
+        {
+          "status": "success",
+          "convergence_reason": "converged",
+          "converged": true,
+          "num_contacts": 0,
+          "min_distance": 3.0,
+          "checks": {
+            "residual": 0.0,
+            "contact_position_error": 0.0,
+            "acceleration_jump": 0.0,
+            "jerk_balance": 0.0,
+            "normalization": 0.0,
+            "tangency": 0.0,
+            "endpoint_error": 0.0,
+            "minimum_mass": 0.0,
+            "minimum_knot_gap": 6.0,
+            "valid": true
+          },
+          "active_set_updates": 0,
+          "removed_contacts": [],
+          "collision_backend": "native",
+          "name": "free-2d",
+          "cost": 0.22222222222222227,
+          "recovery_count": 0
+        },
+        {
+          "status": "success",
+          "convergence_reason": "converged",
+          "converged": true,
+          "num_contacts": 1,
+          "min_distance": 1.0,
+          "checks": {
+            "residual": 0.0,
+            "contact_position_error": 0.0,
+            "acceleration_jump": 0.0,
+            "jerk_balance": 0.0,
+            "normalization": 0.0,
+            "tangency": 0.0,
+            "endpoint_error": 0.0,
+            "minimum_mass": 0.4444444444444444,
+            "minimum_knot_gap": 3.0,
+            "valid": true
+          },
+          "active_set_updates": 1,
+          "removed_contacts": [],
+          "collision_backend": "native",
+          "name": "head_on-2d",
+          "cost": 2.2222222222222214,
+          "recovery_count": 0
+        },
+        {
+          "status": "success",
+          "convergence_reason": "converged",
+          "converged": true,
+          "num_contacts": 1,
+          "min_distance": 0.9999999999999994,
+          "checks": {
+            "residual": 7.427353079548451e-14,
+            "contact_position_error": 0.0,
+            "acceleration_jump": 2.9605947323337087e-16,
+            "jerk_balance": 7.427353079548451e-14,
+            "normalization": 0.0,
+            "tangency": 1.5777218104420236e-30,
+            "endpoint_error": 4.440892098500626e-16,
+            "minimum_mass": 0.2666666666666666,
+            "minimum_knot_gap": 2.9999999999999574,
+            "valid": true
+          },
+          "active_set_updates": 1,
+          "removed_contacts": [],
+          "collision_backend": "native",
+          "name": "offset-2d",
+          "cost": 1.9377777777777792,
+          "recovery_count": 0
+        },
+        {
+          "status": "success",
+          "convergence_reason": "converged",
+          "converged": true,
+          "num_contacts": 3,
+          "min_distance": 0.9999999999999999,
+          "checks": {
+            "residual": 1.673106098110111e-13,
+            "contact_position_error": 0.0,
+            "acceleration_jump": 4.0745185003743245e-14,
+            "jerk_balance": 1.673106098110111e-13,
+            "normalization": 6.661338147750939e-16,
+            "tangency": 5.134781488891349e-16,
+            "endpoint_error": 4.440892098500626e-16,
+            "minimum_mass": 0.02555930012903578,
+            "minimum_knot_gap": 0.6449106441840464,
+            "valid": true
+          },
+          "active_set_updates": 3,
+          "removed_contacts": [],
+          "collision_backend": "native",
+          "name": "fleet-2d",
+          "cost": 9.619125862933505,
+          "recovery_count": 0
+        },
+        {
+          "status": "success",
+          "convergence_reason": "converged",
+          "converged": true,
+          "num_contacts": 2,
+          "min_distance": 1.0000000000000249,
+          "checks": {
+            "residual": 1.822034190190891e-11,
+            "contact_position_error": 0.0,
+            "acceleration_jump": 7.2362667073722076e-12,
+            "jerk_balance": 1.822034190190891e-11,
+            "normalization": 2.788880237858393e-13,
+            "tangency": 1.3877787807814457e-13,
+            "endpoint_error": 1.7763568394002505e-15,
+            "minimum_mass": 0.23601690884089824,
+            "minimum_knot_gap": 1.028888093577299,
+            "valid": true
+          },
+          "active_set_updates": 2,
+          "removed_contacts": [],
+          "collision_backend": "native",
+          "name": "fleet5-2d",
+          "cost": 8.104868157798423,
+          "recovery_count": 0
+        },
+        {
+          "status": "success",
+          "convergence_reason": "converged",
+          "converged": true,
+          "num_contacts": 0,
+          "min_distance": 3.0,
+          "checks": {
+            "residual": 0.0,
+            "contact_position_error": 0.0,
+            "acceleration_jump": 0.0,
+            "jerk_balance": 0.0,
+            "normalization": 0.0,
+            "tangency": 0.0,
+            "endpoint_error": 0.0,
+            "minimum_mass": 0.0,
+            "minimum_knot_gap": 6.0,
+            "valid": true
+          },
+          "active_set_updates": 0,
+          "removed_contacts": [],
+          "collision_backend": "native",
+          "name": "free-3d",
+          "cost": 0.33333333333333337,
+          "recovery_count": 0
+        },
+        {
+          "status": "success",
+          "convergence_reason": "converged",
+          "converged": true,
+          "num_contacts": 1,
+          "min_distance": 1.0,
+          "checks": {
+            "residual": 0.0,
+            "contact_position_error": 0.0,
+            "acceleration_jump": 0.0,
+            "jerk_balance": 0.0,
+            "normalization": 0.0,
+            "tangency": 0.0,
+            "endpoint_error": 0.0,
+            "minimum_mass": 0.4444444444444444,
+            "minimum_knot_gap": 3.0,
+            "valid": true
+          },
+          "active_set_updates": 1,
+          "removed_contacts": [],
+          "collision_backend": "native",
+          "name": "head_on-3d",
+          "cost": 2.2222222222222214,
+          "recovery_count": 0
+        },
+        {
+          "status": "success",
+          "convergence_reason": "converged",
+          "converged": true,
+          "num_contacts": 1,
+          "min_distance": 0.9999999999999994,
+          "checks": {
+            "residual": 7.427353079548451e-14,
+            "contact_position_error": 0.0,
+            "acceleration_jump": 2.9605947323337087e-16,
+            "jerk_balance": 7.427353079548451e-14,
+            "normalization": 0.0,
+            "tangency": 1.5777218104420236e-30,
+            "endpoint_error": 4.440892098500626e-16,
+            "minimum_mass": 0.2666666666666666,
+            "minimum_knot_gap": 2.9999999999999574,
+            "valid": true
+          },
+          "active_set_updates": 1,
+          "removed_contacts": [],
+          "collision_backend": "native",
+          "name": "offset-3d",
+          "cost": 1.9377777777777792,
+          "recovery_count": 0
+        },
+        {
+          "status": "success",
+          "convergence_reason": "converged",
+          "converged": true,
+          "num_contacts": 3,
+          "min_distance": 1.0000000001498603,
+          "checks": {
+            "residual": 4.579913115421164e-09,
+            "contact_position_error": 0.0,
+            "acceleration_jump": 2.3642829360959183e-10,
+            "jerk_balance": 2.147250155459801e-09,
+            "normalization": 4.579913115421164e-09,
+            "tangency": 8.348495506016462e-10,
+            "endpoint_error": 4.440892098500626e-16,
+            "minimum_mass": 0.24776437152334832,
+            "minimum_knot_gap": 0.5744939193023213,
+            "valid": true
+          },
+          "active_set_updates": 3,
+          "removed_contacts": [],
+          "collision_backend": "native",
+          "name": "fleet-3d",
+          "cost": 9.450383211994716,
+          "recovery_count": 0
+        },
+        {
+          "status": "success",
+          "convergence_reason": "converged",
+          "converged": true,
+          "num_contacts": 2,
+          "min_distance": 1.0000000012771872,
+          "checks": {
+            "residual": 3.76804187851576e-09,
+            "contact_position_error": 0.0,
+            "acceleration_jump": 3.382373547911044e-10,
+            "jerk_balance": 9.309003481255962e-10,
+            "normalization": 3.76804187851576e-09,
+            "tangency": 5.725592231234367e-10,
+            "endpoint_error": 8.881784197001252e-16,
+            "minimum_mass": 0.23537339857561734,
+            "minimum_knot_gap": 1.028999265526617,
+            "valid": true
+          },
+          "active_set_updates": 2,
+          "removed_contacts": [],
+          "collision_backend": "native",
+          "name": "fleet5-3d",
+          "cost": 8.108237684902479,
+          "recovery_count": 0
+        },
+        {
+          "status": "success",
+          "convergence_reason": "converged",
+          "converged": true,
+          "num_contacts": 0,
+          "min_distance": 3.0,
+          "checks": {
+            "residual": 0.0,
+            "contact_position_error": 0.0,
+            "acceleration_jump": 0.0,
+            "jerk_balance": 0.0,
+            "normalization": 0.0,
+            "tangency": 0.0,
+            "endpoint_error": 0.0,
+            "minimum_mass": 0.0,
+            "minimum_knot_gap": 6.0,
+            "valid": true
+          },
+          "active_set_updates": 0,
+          "removed_contacts": [],
+          "collision_backend": "native",
+          "name": "free-5d",
+          "cost": 0.5555555555555558,
+          "recovery_count": 0
+        },
+        {
+          "status": "success",
+          "convergence_reason": "converged",
+          "converged": true,
+          "num_contacts": 1,
+          "min_distance": 1.0,
+          "checks": {
+            "residual": 0.0,
+            "contact_position_error": 0.0,
+            "acceleration_jump": 0.0,
+            "jerk_balance": 0.0,
+            "normalization": 0.0,
+            "tangency": 0.0,
+            "endpoint_error": 0.0,
+            "minimum_mass": 0.4444444444444444,
+            "minimum_knot_gap": 3.0,
+            "valid": true
+          },
+          "active_set_updates": 1,
+          "removed_contacts": [],
+          "collision_backend": "native",
+          "name": "head_on-5d",
+          "cost": 2.2222222222222214,
+          "recovery_count": 0
+        },
+        {
+          "status": "success",
+          "convergence_reason": "converged",
+          "converged": true,
+          "num_contacts": 1,
+          "min_distance": 0.9999999999999994,
+          "checks": {
+            "residual": 7.427353079548451e-14,
+            "contact_position_error": 0.0,
+            "acceleration_jump": 2.9605947323337087e-16,
+            "jerk_balance": 7.427353079548451e-14,
+            "normalization": 0.0,
+            "tangency": 1.5777218104420236e-30,
+            "endpoint_error": 4.440892098500626e-16,
+            "minimum_mass": 0.2666666666666666,
+            "minimum_knot_gap": 2.9999999999999574,
+            "valid": true
+          },
+          "active_set_updates": 1,
+          "removed_contacts": [],
+          "collision_backend": "native",
+          "name": "offset-5d",
+          "cost": 1.9377777777777792,
+          "recovery_count": 0
+        },
+        {
+          "status": "success",
+          "convergence_reason": "converged",
+          "converged": true,
+          "num_contacts": 3,
+          "min_distance": 1.000000000000001,
+          "checks": {
+            "residual": 1.5509815654013437e-12,
+            "contact_position_error": 0.0,
+            "acceleration_jump": 3.3545388689049105e-13,
+            "jerk_balance": 1.5509815654013437e-12,
+            "normalization": 1.2878587085651816e-14,
+            "tangency": 5.662137425588298e-15,
+            "endpoint_error": 4.440892098500626e-16,
+            "minimum_mass": 0.1754088544258849,
+            "minimum_knot_gap": 0.5554359001160769,
+            "valid": true
+          },
+          "active_set_updates": 3,
+          "removed_contacts": [],
+          "collision_backend": "native",
+          "name": "fleet-5d",
+          "cost": 9.313521859682847,
+          "recovery_count": 0
+        },
+        {
+          "status": "success",
+          "convergence_reason": "converged",
+          "converged": true,
+          "num_contacts": 2,
+          "min_distance": 1.0000000000004245,
+          "checks": {
+            "residual": 1.645350522494482e-12,
+            "contact_position_error": 0.0,
+            "acceleration_jump": 2.3350765765428605e-13,
+            "jerk_balance": 4.0138031787151363e-13,
+            "normalization": 1.645350522494482e-12,
+            "tangency": 1.325606291402437e-13,
+            "endpoint_error": 8.881784197001252e-16,
+            "minimum_mass": 0.21370981355035928,
+            "minimum_knot_gap": 1.0296087272721604,
+            "valid": true
+          },
+          "active_set_updates": 2,
+          "removed_contacts": [],
+          "collision_backend": "native",
+          "name": "fleet5-5d",
+          "cost": 8.132752374954453,
+          "recovery_count": 0
+        },
+        {
+          "status": "success",
+          "convergence_reason": "converged",
+          "converged": true,
+          "num_contacts": 0,
+          "min_distance": 3.0,
+          "checks": {
+            "residual": 0.0,
+            "contact_position_error": 0.0,
+            "acceleration_jump": 0.0,
+            "jerk_balance": 0.0,
+            "normalization": 0.0,
+            "tangency": 0.0,
+            "endpoint_error": 0.0,
+            "minimum_mass": 0.0,
+            "minimum_knot_gap": 6.0,
+            "valid": true
+          },
+          "active_set_updates": 0,
+          "removed_contacts": [],
+          "collision_backend": "native",
+          "name": "free-10d",
+          "cost": 1.1111111111111112,
+          "recovery_count": 0
+        },
+        {
+          "status": "success",
+          "convergence_reason": "converged",
+          "converged": true,
+          "num_contacts": 1,
+          "min_distance": 1.0,
+          "checks": {
+            "residual": 0.0,
+            "contact_position_error": 0.0,
+            "acceleration_jump": 0.0,
+            "jerk_balance": 0.0,
+            "normalization": 0.0,
+            "tangency": 0.0,
+            "endpoint_error": 0.0,
+            "minimum_mass": 0.4444444444444444,
+            "minimum_knot_gap": 3.0,
+            "valid": true
+          },
+          "active_set_updates": 1,
+          "removed_contacts": [],
+          "collision_backend": "native",
+          "name": "head_on-10d",
+          "cost": 2.2222222222222214,
+          "recovery_count": 0
+        },
+        {
+          "status": "success",
+          "convergence_reason": "converged",
+          "converged": true,
+          "num_contacts": 1,
+          "min_distance": 0.9999999999999994,
+          "checks": {
+            "residual": 7.427353079548451e-14,
+            "contact_position_error": 0.0,
+            "acceleration_jump": 2.9605947323337087e-16,
+            "jerk_balance": 7.427353079548451e-14,
+            "normalization": 0.0,
+            "tangency": 1.5777218104420236e-30,
+            "endpoint_error": 4.440892098500626e-16,
+            "minimum_mass": 0.2666666666666666,
+            "minimum_knot_gap": 2.9999999999999574,
+            "valid": true
+          },
+          "active_set_updates": 1,
+          "removed_contacts": [],
+          "collision_backend": "native",
+          "name": "offset-10d",
+          "cost": 1.9377777777777792,
+          "recovery_count": 0
+        },
+        {
+          "status": "success",
+          "convergence_reason": "converged",
+          "converged": true,
+          "num_contacts": 3,
+          "min_distance": 1.000000000116348,
+          "checks": {
+            "residual": 2.6337339059656628e-08,
+            "contact_position_error": 0.0,
+            "acceleration_jump": 6.158837294323316e-09,
+            "jerk_balance": 2.6337339059656628e-08,
+            "normalization": 1.104182523192776e-09,
+            "tangency": 4.842005824068352e-10,
+            "endpoint_error": 8.881784197001252e-16,
+            "minimum_mass": 0.13312823593930548,
+            "minimum_knot_gap": 0.6126861582547045,
+            "valid": true
+          },
+          "active_set_updates": 3,
+          "removed_contacts": [],
+          "collision_backend": "native",
+          "name": "fleet-10d",
+          "cost": 9.217332315538858,
+          "recovery_count": 0
+        },
+        {
+          "status": "success",
+          "convergence_reason": "converged",
+          "converged": true,
+          "num_contacts": 2,
+          "min_distance": 1.0000000036719419,
+          "checks": {
+            "residual": 2.878118997295953e-08,
+            "contact_position_error": 0.0,
+            "acceleration_jump": 1.0746139939704635e-08,
+            "jerk_balance": 2.878118997295953e-08,
+            "normalization": 8.522444527869766e-09,
+            "tangency": 2.4155799999148186e-09,
+            "endpoint_error": 1.3322676295501878e-15,
+            "minimum_mass": 0.11762718001568843,
+            "minimum_knot_gap": 1.0262953725389168,
+            "valid": true
+          },
+          "active_set_updates": 2,
+          "removed_contacts": [],
+          "collision_backend": "native",
+          "name": "fleet5-10d",
+          "cost": 8.05942823796178,
+          "recovery_count": 0
+        },
+        {
+          "status": "success",
+          "convergence_reason": "converged",
+          "converged": true,
+          "num_contacts": 1,
+          "min_distance": 1.0000000000000133,
+          "checks": {
+            "residual": 7.02634088065035e-12,
+            "contact_position_error": 0.0,
+            "acceleration_jump": 3.568937246428705e-12,
+            "jerk_balance": 7.02634088065035e-12,
+            "normalization": 2.6645352591003757e-14,
+            "tangency": 2.754665256749639e-13,
+            "endpoint_error": 4.440892098500626e-16,
+            "minimum_mass": 0.18967329047638976,
+            "minimum_knot_gap": 2.7967895767229765,
+            "valid": true
+          },
+          "active_set_updates": 1,
+          "removed_contacts": [],
+          "collision_backend": "native",
+          "name": "endpoint-velocities",
+          "cost": 1.6634812462040691,
+          "recovery_count": 0
+        },
+        {
+          "status": "success",
+          "convergence_reason": "converged",
+          "converged": true,
+          "num_contacts": 3,
+          "min_distance": 0.5000000000007433,
+          "checks": {
+            "residual": 6.034577141635078e-08,
+            "contact_position_error": 0.0,
+            "acceleration_jump": 3.159643749374094e-08,
+            "jerk_balance": 6.034577141635078e-08,
+            "normalization": 3.608564558277294e-10,
+            "tangency": 8.886756885928548e-10,
+            "endpoint_error": 5.329070518200751e-15,
+            "minimum_mass": 0.0028235772896006133,
+            "minimum_knot_gap": 1.8040903044862695,
+            "valid": true
+          },
+          "active_set_updates": 5,
+          "removed_contacts": [
+            {
+              "pair": [
+                16,
+                17
+              ],
+              "time": 10.894280593828066,
+              "mass": -0.0048385709389038
+            }
+          ],
+          "collision_backend": "native",
+          "name": "fleet20-seed2",
+          "cost": 1.5530393323714629,
+          "recovery_count": 0
+        },
+        {
+          "status": "success",
+          "convergence_reason": "converged",
+          "converged": true,
+          "num_contacts": 13,
+          "min_distance": 0.49999999999999983,
+          "checks": {
+            "residual": 7.254410318985327e-09,
+            "contact_position_error": 0.0,
+            "acceleration_jump": 4.814502581329538e-10,
+            "jerk_balance": 7.254410318985327e-09,
+            "normalization": 7.353007092092412e-12,
+            "tangency": 3.2374936065338034e-12,
+            "endpoint_error": 2.6645352591003757e-15,
+            "minimum_mass": 0.0017928479567438696,
+            "minimum_knot_gap": 0.1305672787436052,
+            "valid": true
+          },
+          "active_set_updates": 15,
+          "removed_contacts": [
+            {
+              "pair": [
+                15,
+                19
+              ],
+              "time": 12.32015630686729,
+              "mass": -0.008288130087335805
+            }
+          ],
+          "collision_backend": "native",
+          "name": "fleet20-seed9",
+          "cost": 2.1161530096447656,
+          "recovery_count": 3
+        },
+        {
+          "status": "success",
+          "convergence_reason": "converged",
+          "converged": true,
+          "num_contacts": 8,
+          "min_distance": 0.49999999999999867,
+          "checks": {
+            "residual": 5.931349161825139e-12,
+            "contact_position_error": 0.0,
+            "acceleration_jump": 4.760601635123152e-13,
+            "jerk_balance": 5.931349161825139e-12,
+            "normalization": 8.881784197001252e-16,
+            "tangency": 2.220446049250313e-16,
+            "endpoint_error": 2.6645352591003757e-15,
+            "minimum_mass": 0.001342262381608483,
+            "minimum_knot_gap": 0.1882482123467959,
+            "valid": true
+          },
+          "active_set_updates": 8,
+          "removed_contacts": [],
+          "collision_backend": "native",
+          "name": "fleet20-seed15",
+          "cost": 1.7967644600860964,
+          "recovery_count": 1
+        },
+        {
+          "status": "success",
+          "convergence_reason": "converged",
+          "converged": true,
+          "num_contacts": 7,
+          "min_distance": 0.49999999999999956,
+          "checks": {
+            "residual": 6.170405909367103e-09,
+            "contact_position_error": 0.0,
+            "acceleration_jump": 8.626069233907963e-10,
+            "jerk_balance": 6.170405909367103e-09,
+            "normalization": 2.1154633600417583e-11,
+            "tangency": 1.0014211682118912e-12,
+            "endpoint_error": 2.6645352591003757e-15,
+            "minimum_mass": 0.0009603927973816865,
+            "minimum_knot_gap": 0.15005391924556033,
+            "valid": true
+          },
+          "active_set_updates": 9,
+          "removed_contacts": [
+            {
+              "pair": [
+                6,
+                19
+              ],
+              "time": 13.853448405183846,
+              "mass": -0.0026932383060864883
+            }
+          ],
+          "collision_backend": "native",
+          "name": "fleet20-seed35",
+          "cost": 2.077043437028851,
+          "recovery_count": 1
+        },
+        {
+          "status": "success",
+          "convergence_reason": "converged",
+          "converged": true,
+          "num_contacts": 6,
+          "min_distance": 0.4999999999990777,
+          "checks": {
+            "residual": 1.908639912784338e-12,
+            "contact_position_error": 1.908639912784338e-12,
+            "acceleration_jump": 2.7755575615628914e-17,
+            "jerk_balance": 1.3010426069826053e-18,
+            "normalization": 8.415490526658687e-14,
+            "tangency": 1.971756091734278e-13,
+            "endpoint_error": 3.019806626980426e-14,
+            "minimum_mass": 0.0012483860419418371,
+            "minimum_knot_gap": 0.001717400860426821,
+            "valid": true
+          },
+          "active_set_updates": 8,
+          "removed_contacts": [
+            {
+              "pair": [
+                2,
+                11
+              ],
+              "time": 17.83317695595944,
+              "mass": -0.0003532368399014013
+            }
+          ],
+          "collision_backend": "native",
+          "name": "fleet20-seed47",
+          "cost": 2.0134649046422393,
+          "recovery_count": 3
+        },
+        {
+          "status": "root_failure",
+          "convergence_reason": "iteration_limit",
+          "converged": false,
+          "num_contacts": 1,
+          "min_distance": 0.9999999999999997,
+          "checks": {
+            "residual": 0.5333333333333332,
+            "contact_position_error": 0.0,
+            "acceleration_jump": 7.078782005009998e-13,
+            "jerk_balance": 0.5333333333333332,
+            "normalization": 0.0,
+            "tangency": 0.0,
+            "endpoint_error": 2.220446049250313e-16,
+            "minimum_mass": 0.0,
+            "minimum_knot_gap": 2.999999999999973,
+            "valid": false
+          },
+          "active_set_updates": 1,
+          "removed_contacts": [],
+          "collision_backend": "native",
+          "name": "iteration-limit",
+          "cost": 1.937777777777777,
+          "recovery_count": 0
+        },
+        {
+          "status": "unresolved",
+          "convergence_reason": "minimum_knot_gap",
+          "converged": false,
+          "num_contacts": 0,
+          "min_distance": 0.4,
+          "checks": {
+            "residual": 0.0,
+            "contact_position_error": 0.0,
+            "acceleration_jump": 0.0,
+            "jerk_balance": 0.0,
+            "normalization": 0.0,
+            "tangency": 0.0,
+            "endpoint_error": 0.0,
+            "minimum_mass": 0.0,
+            "minimum_knot_gap": 6.0,
+            "valid": true
+          },
+          "active_set_updates": 0,
+          "removed_contacts": [],
+          "collision_backend": "native",
+          "name": "minimum-gap",
+          "cost": 1.7777777777777781,
+          "recovery_count": 0
+        },
+        {
+          "status": "invalid_solution",
+          "convergence_reason": "infeasible_endpoint_separation",
+          "converged": false,
+          "num_contacts": 0,
+          "min_distance": 0.0,
+          "checks": {
+            "residual": 0.0,
+            "contact_position_error": 0.0,
+            "acceleration_jump": 0.0,
+            "jerk_balance": 0.0,
+            "normalization": 0.0,
+            "tangency": 0.0,
+            "endpoint_error": 5.551115123125783e-17,
+            "minimum_mass": 0.0,
+            "minimum_knot_gap": 6.0,
+            "valid": true
+          },
+          "active_set_updates": 0,
+          "removed_contacts": [],
+          "collision_backend": "native",
+          "name": "invalid-endpoints",
+          "cost": 0.4488888888888889,
+          "recovery_count": 0
+        }
+      ],
+      "sources": {
+        "src/sci_solver/solvers/base.py": "a3d1e66c04f57d69eb7fb9eb0416d77ce60c9360e9448c22b3c4da3ff7080a30",
+        "src/sci_solver/solvers/contact_solver.py": "0bfdc5d163a40b1c880f043690d351b49e585b78c2c0ca2b1be9892532aead48",
+        "src/sci_solver/solvers/collision_search.py": "9667839d4a5a724591de4540ffaa7eb607f88c6803aff7981ea46a702ee34c3c",
+        "src/sci_solver/solvers/cubic_utils.py": "198ed08248d1648f0c196ed346a3a0a3e139662d728e98ef42f1701d40971a18",
+        "src/sci_solver/solvers/matching_numerics.py": "e10f5dbf0747163754355cdffd62b9067b2dea82a31d72222e368f67f7a8cd66",
+        "src/sci_solver/solvers/reaction_matching.py": "6efdce28648e49c9418f1a42da3d93cb4636112c561e9da3f9c29a64fc3b7b70",
+        "src/sci_solver/solvers/vector_matching.py": "326ffe29e94e4f5e080d4224fd7ab4fb4d38a14789ab9345d5985232c3b9d358",
+        "src/sci_solver/solvers/_cubic_minima.c": "7b2730c03652ae121191a81ef22e31a9283bc3f779f3e6a5465d14d947e32a97"
+      },
+      "environment": {
+        "python": "3.14.7 (main, Aug  5 2026, 10:29:49) [Clang 21.0.0 (clang-2100.1.1.101)]",
+        "platform": "macOS-26.5.1-arm64-arm-64bit-Mach-O",
+        "packages": {
+          "numpy": "2.5.3",
+          "scipy": "1.18.1"
+        }
+      }
+    },
+    "after": {
+      "records": [
+        {
+          "status": "success",
+          "convergence_reason": "converged",
+          "converged": true,
+          "num_contacts": 0,
+          "min_distance": 3.0,
+          "checks": {
+            "residual": 0.0,
+            "contact_position_error": 0.0,
+            "acceleration_jump": 0.0,
+            "jerk_balance": 0.0,
+            "normalization": 0.0,
+            "tangency": 0.0,
+            "endpoint_error": 0.0,
+            "minimum_mass": 0.0,
+            "minimum_knot_gap": 6.0,
+            "valid": true
+          },
+          "active_set_updates": 0,
+          "removed_contacts": [],
+          "collision_backend": "native",
+          "name": "free-2d",
+          "cost": 0.22222222222222227,
+          "recovery_count": 0
+        },
+        {
+          "status": "success",
+          "convergence_reason": "converged",
+          "converged": true,
+          "num_contacts": 1,
+          "min_distance": 1.0,
+          "checks": {
+            "residual": 0.0,
+            "contact_position_error": 0.0,
+            "acceleration_jump": 0.0,
+            "jerk_balance": 0.0,
+            "normalization": 0.0,
+            "tangency": 0.0,
+            "endpoint_error": 0.0,
+            "minimum_mass": 0.4444444444444444,
+            "minimum_knot_gap": 3.0,
+            "valid": true
+          },
+          "active_set_updates": 1,
+          "removed_contacts": [],
+          "collision_backend": "native",
+          "name": "head_on-2d",
+          "cost": 2.2222222222222214,
+          "recovery_count": 0
+        },
+        {
+          "status": "success",
+          "convergence_reason": "converged",
+          "converged": true,
+          "num_contacts": 1,
+          "min_distance": 0.9999999999999994,
+          "checks": {
+            "residual": 7.427353079548451e-14,
+            "contact_position_error": 0.0,
+            "acceleration_jump": 2.9605947323337087e-16,
+            "jerk_balance": 7.427353079548451e-14,
+            "normalization": 0.0,
+            "tangency": 1.5777218104420236e-30,
+            "endpoint_error": 4.440892098500626e-16,
+            "minimum_mass": 0.2666666666666666,
+            "minimum_knot_gap": 2.9999999999999574,
+            "valid": true
+          },
+          "active_set_updates": 1,
+          "removed_contacts": [],
+          "collision_backend": "native",
+          "name": "offset-2d",
+          "cost": 1.9377777777777792,
+          "recovery_count": 0
+        },
+        {
+          "status": "success",
+          "convergence_reason": "converged",
+          "converged": true,
+          "num_contacts": 3,
+          "min_distance": 0.9999999999999999,
+          "checks": {
+            "residual": 1.673106098110111e-13,
+            "contact_position_error": 0.0,
+            "acceleration_jump": 4.0745185003743245e-14,
+            "jerk_balance": 1.673106098110111e-13,
+            "normalization": 6.661338147750939e-16,
+            "tangency": 5.134781488891349e-16,
+            "endpoint_error": 4.440892098500626e-16,
+            "minimum_mass": 0.02555930012903578,
+            "minimum_knot_gap": 0.6449106441840464,
+            "valid": true
+          },
+          "active_set_updates": 3,
+          "removed_contacts": [],
+          "collision_backend": "native",
+          "name": "fleet-2d",
+          "cost": 9.619125862933505,
+          "recovery_count": 0
+        },
+        {
+          "status": "success",
+          "convergence_reason": "converged",
+          "converged": true,
+          "num_contacts": 2,
+          "min_distance": 1.0000000000000249,
+          "checks": {
+            "residual": 1.822034190190891e-11,
+            "contact_position_error": 0.0,
+            "acceleration_jump": 7.2362667073722076e-12,
+            "jerk_balance": 1.822034190190891e-11,
+            "normalization": 2.788880237858393e-13,
+            "tangency": 1.3877787807814457e-13,
+            "endpoint_error": 1.7763568394002505e-15,
+            "minimum_mass": 0.23601690884089824,
+            "minimum_knot_gap": 1.028888093577299,
+            "valid": true
+          },
+          "active_set_updates": 2,
+          "removed_contacts": [],
+          "collision_backend": "native",
+          "name": "fleet5-2d",
+          "cost": 8.104868157798423,
+          "recovery_count": 0
+        },
+        {
+          "status": "success",
+          "convergence_reason": "converged",
+          "converged": true,
+          "num_contacts": 0,
+          "min_distance": 3.0,
+          "checks": {
+            "residual": 0.0,
+            "contact_position_error": 0.0,
+            "acceleration_jump": 0.0,
+            "jerk_balance": 0.0,
+            "normalization": 0.0,
+            "tangency": 0.0,
+            "endpoint_error": 0.0,
+            "minimum_mass": 0.0,
+            "minimum_knot_gap": 6.0,
+            "valid": true
+          },
+          "active_set_updates": 0,
+          "removed_contacts": [],
+          "collision_backend": "native",
+          "name": "free-3d",
+          "cost": 0.33333333333333337,
+          "recovery_count": 0
+        },
+        {
+          "status": "success",
+          "convergence_reason": "converged",
+          "converged": true,
+          "num_contacts": 1,
+          "min_distance": 1.0,
+          "checks": {
+            "residual": 0.0,
+            "contact_position_error": 0.0,
+            "acceleration_jump": 0.0,
+            "jerk_balance": 0.0,
+            "normalization": 0.0,
+            "tangency": 0.0,
+            "endpoint_error": 0.0,
+            "minimum_mass": 0.4444444444444444,
+            "minimum_knot_gap": 3.0,
+            "valid": true
+          },
+          "active_set_updates": 1,
+          "removed_contacts": [],
+          "collision_backend": "native",
+          "name": "head_on-3d",
+          "cost": 2.2222222222222214,
+          "recovery_count": 0
+        },
+        {
+          "status": "success",
+          "convergence_reason": "converged",
+          "converged": true,
+          "num_contacts": 1,
+          "min_distance": 0.9999999999999994,
+          "checks": {
+            "residual": 7.427353079548451e-14,
+            "contact_position_error": 0.0,
+            "acceleration_jump": 2.9605947323337087e-16,
+            "jerk_balance": 7.427353079548451e-14,
+            "normalization": 0.0,
+            "tangency": 1.5777218104420236e-30,
+            "endpoint_error": 4.440892098500626e-16,
+            "minimum_mass": 0.2666666666666666,
+            "minimum_knot_gap": 2.9999999999999574,
+            "valid": true
+          },
+          "active_set_updates": 1,
+          "removed_contacts": [],
+          "collision_backend": "native",
+          "name": "offset-3d",
+          "cost": 1.9377777777777792,
+          "recovery_count": 0
+        },
+        {
+          "status": "success",
+          "convergence_reason": "converged",
+          "converged": true,
+          "num_contacts": 3,
+          "min_distance": 1.0000000001498603,
+          "checks": {
+            "residual": 4.579913115421164e-09,
+            "contact_position_error": 0.0,
+            "acceleration_jump": 2.3642829360959183e-10,
+            "jerk_balance": 2.147250155459801e-09,
+            "normalization": 4.579913115421164e-09,
+            "tangency": 8.348495506016462e-10,
+            "endpoint_error": 4.440892098500626e-16,
+            "minimum_mass": 0.24776437152334832,
+            "minimum_knot_gap": 0.5744939193023213,
+            "valid": true
+          },
+          "active_set_updates": 3,
+          "removed_contacts": [],
+          "collision_backend": "native",
+          "name": "fleet-3d",
+          "cost": 9.450383211994716,
+          "recovery_count": 0
+        },
+        {
+          "status": "success",
+          "convergence_reason": "converged",
+          "converged": true,
+          "num_contacts": 2,
+          "min_distance": 1.0000000012771872,
+          "checks": {
+            "residual": 3.76804187851576e-09,
+            "contact_position_error": 0.0,
+            "acceleration_jump": 3.382373547911044e-10,
+            "jerk_balance": 9.309003481255962e-10,
+            "normalization": 3.76804187851576e-09,
+            "tangency": 5.725592231234367e-10,
+            "endpoint_error": 8.881784197001252e-16,
+            "minimum_mass": 0.23537339857561734,
+            "minimum_knot_gap": 1.028999265526617,
+            "valid": true
+          },
+          "active_set_updates": 2,
+          "removed_contacts": [],
+          "collision_backend": "native",
+          "name": "fleet5-3d",
+          "cost": 8.108237684902479,
+          "recovery_count": 0
+        },
+        {
+          "status": "success",
+          "convergence_reason": "converged",
+          "converged": true,
+          "num_contacts": 0,
+          "min_distance": 3.0,
+          "checks": {
+            "residual": 0.0,
+            "contact_position_error": 0.0,
+            "acceleration_jump": 0.0,
+            "jerk_balance": 0.0,
+            "normalization": 0.0,
+            "tangency": 0.0,
+            "endpoint_error": 0.0,
+            "minimum_mass": 0.0,
+            "minimum_knot_gap": 6.0,
+            "valid": true
+          },
+          "active_set_updates": 0,
+          "removed_contacts": [],
+          "collision_backend": "native",
+          "name": "free-5d",
+          "cost": 0.5555555555555558,
+          "recovery_count": 0
+        },
+        {
+          "status": "success",
+          "convergence_reason": "converged",
+          "converged": true,
+          "num_contacts": 1,
+          "min_distance": 1.0,
+          "checks": {
+            "residual": 0.0,
+            "contact_position_error": 0.0,
+            "acceleration_jump": 0.0,
+            "jerk_balance": 0.0,
+            "normalization": 0.0,
+            "tangency": 0.0,
+            "endpoint_error": 0.0,
+            "minimum_mass": 0.4444444444444444,
+            "minimum_knot_gap": 3.0,
+            "valid": true
+          },
+          "active_set_updates": 1,
+          "removed_contacts": [],
+          "collision_backend": "native",
+          "name": "head_on-5d",
+          "cost": 2.2222222222222214,
+          "recovery_count": 0
+        },
+        {
+          "status": "success",
+          "convergence_reason": "converged",
+          "converged": true,
+          "num_contacts": 1,
+          "min_distance": 0.9999999999999994,
+          "checks": {
+            "residual": 7.427353079548451e-14,
+            "contact_position_error": 0.0,
+            "acceleration_jump": 2.9605947323337087e-16,
+            "jerk_balance": 7.427353079548451e-14,
+            "normalization": 0.0,
+            "tangency": 1.5777218104420236e-30,
+            "endpoint_error": 4.440892098500626e-16,
+            "minimum_mass": 0.2666666666666666,
+            "minimum_knot_gap": 2.9999999999999574,
+            "valid": true
+          },
+          "active_set_updates": 1,
+          "removed_contacts": [],
+          "collision_backend": "native",
+          "name": "offset-5d",
+          "cost": 1.9377777777777792,
+          "recovery_count": 0
+        },
+        {
+          "status": "success",
+          "convergence_reason": "converged",
+          "converged": true,
+          "num_contacts": 3,
+          "min_distance": 1.000000000000001,
+          "checks": {
+            "residual": 1.5509815654013437e-12,
+            "contact_position_error": 0.0,
+            "acceleration_jump": 3.3545388689049105e-13,
+            "jerk_balance": 1.5509815654013437e-12,
+            "normalization": 1.2878587085651816e-14,
+            "tangency": 5.662137425588298e-15,
+            "endpoint_error": 4.440892098500626e-16,
+            "minimum_mass": 0.1754088544258849,
+            "minimum_knot_gap": 0.5554359001160769,
+            "valid": true
+          },
+          "active_set_updates": 3,
+          "removed_contacts": [],
+          "collision_backend": "native",
+          "name": "fleet-5d",
+          "cost": 9.313521859682847,
+          "recovery_count": 0
+        },
+        {
+          "status": "success",
+          "convergence_reason": "converged",
+          "converged": true,
+          "num_contacts": 2,
+          "min_distance": 1.0000000000004245,
+          "checks": {
+            "residual": 1.645350522494482e-12,
+            "contact_position_error": 0.0,
+            "acceleration_jump": 2.3350765765428605e-13,
+            "jerk_balance": 4.0138031787151363e-13,
+            "normalization": 1.645350522494482e-12,
+            "tangency": 1.325606291402437e-13,
+            "endpoint_error": 8.881784197001252e-16,
+            "minimum_mass": 0.21370981355035928,
+            "minimum_knot_gap": 1.0296087272721604,
+            "valid": true
+          },
+          "active_set_updates": 2,
+          "removed_contacts": [],
+          "collision_backend": "native",
+          "name": "fleet5-5d",
+          "cost": 8.132752374954453,
+          "recovery_count": 0
+        },
+        {
+          "status": "success",
+          "convergence_reason": "converged",
+          "converged": true,
+          "num_contacts": 0,
+          "min_distance": 3.0,
+          "checks": {
+            "residual": 0.0,
+            "contact_position_error": 0.0,
+            "acceleration_jump": 0.0,
+            "jerk_balance": 0.0,
+            "normalization": 0.0,
+            "tangency": 0.0,
+            "endpoint_error": 0.0,
+            "minimum_mass": 0.0,
+            "minimum_knot_gap": 6.0,
+            "valid": true
+          },
+          "active_set_updates": 0,
+          "removed_contacts": [],
+          "collision_backend": "native",
+          "name": "free-10d",
+          "cost": 1.1111111111111112,
+          "recovery_count": 0
+        },
+        {
+          "status": "success",
+          "convergence_reason": "converged",
+          "converged": true,
+          "num_contacts": 1,
+          "min_distance": 1.0,
+          "checks": {
+            "residual": 0.0,
+            "contact_position_error": 0.0,
+            "acceleration_jump": 0.0,
+            "jerk_balance": 0.0,
+            "normalization": 0.0,
+            "tangency": 0.0,
+            "endpoint_error": 0.0,
+            "minimum_mass": 0.4444444444444444,
+            "minimum_knot_gap": 3.0,
+            "valid": true
+          },
+          "active_set_updates": 1,
+          "removed_contacts": [],
+          "collision_backend": "native",
+          "name": "head_on-10d",
+          "cost": 2.2222222222222214,
+          "recovery_count": 0
+        },
+        {
+          "status": "success",
+          "convergence_reason": "converged",
+          "converged": true,
+          "num_contacts": 1,
+          "min_distance": 0.9999999999999994,
+          "checks": {
+            "residual": 7.427353079548451e-14,
+            "contact_position_error": 0.0,
+            "acceleration_jump": 2.9605947323337087e-16,
+            "jerk_balance": 7.427353079548451e-14,
+            "normalization": 0.0,
+            "tangency": 1.5777218104420236e-30,
+            "endpoint_error": 4.440892098500626e-16,
+            "minimum_mass": 0.2666666666666666,
+            "minimum_knot_gap": 2.9999999999999574,
+            "valid": true
+          },
+          "active_set_updates": 1,
+          "removed_contacts": [],
+          "collision_backend": "native",
+          "name": "offset-10d",
+          "cost": 1.9377777777777792,
+          "recovery_count": 0
+        },
+        {
+          "status": "success",
+          "convergence_reason": "converged",
+          "converged": true,
+          "num_contacts": 3,
+          "min_distance": 1.000000000116348,
+          "checks": {
+            "residual": 2.6337339059656628e-08,
+            "contact_position_error": 0.0,
+            "acceleration_jump": 6.158837294323316e-09,
+            "jerk_balance": 2.6337339059656628e-08,
+            "normalization": 1.104182523192776e-09,
+            "tangency": 4.842005824068352e-10,
+            "endpoint_error": 8.881784197001252e-16,
+            "minimum_mass": 0.13312823593930548,
+            "minimum_knot_gap": 0.6126861582547045,
+            "valid": true
+          },
+          "active_set_updates": 3,
+          "removed_contacts": [],
+          "collision_backend": "native",
+          "name": "fleet-10d",
+          "cost": 9.217332315538858,
+          "recovery_count": 0
+        },
+        {
+          "status": "success",
+          "convergence_reason": "converged",
+          "converged": true,
+          "num_contacts": 2,
+          "min_distance": 1.0000000036719419,
+          "checks": {
+            "residual": 2.878118997295953e-08,
+            "contact_position_error": 0.0,
+            "acceleration_jump": 1.0746139939704635e-08,
+            "jerk_balance": 2.878118997295953e-08,
+            "normalization": 8.522444527869766e-09,
+            "tangency": 2.4155799999148186e-09,
+            "endpoint_error": 1.3322676295501878e-15,
+            "minimum_mass": 0.11762718001568843,
+            "minimum_knot_gap": 1.0262953725389168,
+            "valid": true
+          },
+          "active_set_updates": 2,
+          "removed_contacts": [],
+          "collision_backend": "native",
+          "name": "fleet5-10d",
+          "cost": 8.05942823796178,
+          "recovery_count": 0
+        },
+        {
+          "status": "success",
+          "convergence_reason": "converged",
+          "converged": true,
+          "num_contacts": 1,
+          "min_distance": 1.0000000000000133,
+          "checks": {
+            "residual": 7.02634088065035e-12,
+            "contact_position_error": 0.0,
+            "acceleration_jump": 3.568937246428705e-12,
+            "jerk_balance": 7.02634088065035e-12,
+            "normalization": 2.6645352591003757e-14,
+            "tangency": 2.754665256749639e-13,
+            "endpoint_error": 4.440892098500626e-16,
+            "minimum_mass": 0.18967329047638976,
+            "minimum_knot_gap": 2.7967895767229765,
+            "valid": true
+          },
+          "active_set_updates": 1,
+          "removed_contacts": [],
+          "collision_backend": "native",
+          "name": "endpoint-velocities",
+          "cost": 1.6634812462040691,
+          "recovery_count": 0
+        },
+        {
+          "status": "success",
+          "convergence_reason": "converged",
+          "converged": true,
+          "num_contacts": 3,
+          "min_distance": 0.5000000000007433,
+          "checks": {
+            "residual": 6.034577141635078e-08,
+            "contact_position_error": 0.0,
+            "acceleration_jump": 3.159643749374094e-08,
+            "jerk_balance": 6.034577141635078e-08,
+            "normalization": 3.608564558277294e-10,
+            "tangency": 8.886756885928548e-10,
+            "endpoint_error": 5.329070518200751e-15,
+            "minimum_mass": 0.0028235772896006133,
+            "minimum_knot_gap": 1.8040903044862695,
+            "valid": true
+          },
+          "active_set_updates": 5,
+          "removed_contacts": [
+            {
+              "pair": [
+                16,
+                17
+              ],
+              "time": 10.894280593828066,
+              "mass": -0.0048385709389038
+            }
+          ],
+          "collision_backend": "native",
+          "name": "fleet20-seed2",
+          "cost": 1.5530393323714629,
+          "recovery_count": 0
+        },
+        {
+          "status": "success",
+          "convergence_reason": "converged",
+          "converged": true,
+          "num_contacts": 13,
+          "min_distance": 0.49999999999999983,
+          "checks": {
+            "residual": 7.254410318985327e-09,
+            "contact_position_error": 0.0,
+            "acceleration_jump": 4.814502581329538e-10,
+            "jerk_balance": 7.254410318985327e-09,
+            "normalization": 7.353007092092412e-12,
+            "tangency": 3.2374936065338034e-12,
+            "endpoint_error": 2.6645352591003757e-15,
+            "minimum_mass": 0.0017928479567438696,
+            "minimum_knot_gap": 0.1305672787436052,
+            "valid": true
+          },
+          "active_set_updates": 15,
+          "removed_contacts": [
+            {
+              "pair": [
+                15,
+                19
+              ],
+              "time": 12.32015630686729,
+              "mass": -0.008288130087335805
+            }
+          ],
+          "collision_backend": "native",
+          "name": "fleet20-seed9",
+          "cost": 2.1161530096447656,
+          "recovery_count": 3
+        },
+        {
+          "status": "success",
+          "convergence_reason": "converged",
+          "converged": true,
+          "num_contacts": 8,
+          "min_distance": 0.49999999999999867,
+          "checks": {
+            "residual": 5.931349161825139e-12,
+            "contact_position_error": 0.0,
+            "acceleration_jump": 4.760601635123152e-13,
+            "jerk_balance": 5.931349161825139e-12,
+            "normalization": 8.881784197001252e-16,
+            "tangency": 2.220446049250313e-16,
+            "endpoint_error": 2.6645352591003757e-15,
+            "minimum_mass": 0.001342262381608483,
+            "minimum_knot_gap": 0.1882482123467959,
+            "valid": true
+          },
+          "active_set_updates": 8,
+          "removed_contacts": [],
+          "collision_backend": "native",
+          "name": "fleet20-seed15",
+          "cost": 1.7967644600860964,
+          "recovery_count": 1
+        },
+        {
+          "status": "success",
+          "convergence_reason": "converged",
+          "converged": true,
+          "num_contacts": 7,
+          "min_distance": 0.49999999999999956,
+          "checks": {
+            "residual": 6.170405909367103e-09,
+            "contact_position_error": 0.0,
+            "acceleration_jump": 8.626069233907963e-10,
+            "jerk_balance": 6.170405909367103e-09,
+            "normalization": 2.1154633600417583e-11,
+            "tangency": 1.0014211682118912e-12,
+            "endpoint_error": 2.6645352591003757e-15,
+            "minimum_mass": 0.0009603927973816865,
+            "minimum_knot_gap": 0.15005391924556033,
+            "valid": true
+          },
+          "active_set_updates": 9,
+          "removed_contacts": [
+            {
+              "pair": [
+                6,
+                19
+              ],
+              "time": 13.853448405183846,
+              "mass": -0.0026932383060864883
+            }
+          ],
+          "collision_backend": "native",
+          "name": "fleet20-seed35",
+          "cost": 2.077043437028851,
+          "recovery_count": 1
+        },
+        {
+          "status": "success",
+          "convergence_reason": "converged",
+          "converged": true,
+          "num_contacts": 6,
+          "min_distance": 0.4999999999990777,
+          "checks": {
+            "residual": 1.908639912784338e-12,
+            "contact_position_error": 1.908639912784338e-12,
+            "acceleration_jump": 2.7755575615628914e-17,
+            "jerk_balance": 1.3010426069826053e-18,
+            "normalization": 8.415490526658687e-14,
+            "tangency": 1.971756091734278e-13,
+            "endpoint_error": 3.019806626980426e-14,
+            "minimum_mass": 0.0012483860419418371,
+            "minimum_knot_gap": 0.001717400860426821,
+            "valid": true
+          },
+          "active_set_updates": 8,
+          "removed_contacts": [
+            {
+              "pair": [
+                2,
+                11
+              ],
+              "time": 17.83317695595944,
+              "mass": -0.0003532368399014013
+            }
+          ],
+          "collision_backend": "native",
+          "name": "fleet20-seed47",
+          "cost": 2.0134649046422393,
+          "recovery_count": 3
+        },
+        {
+          "status": "root_failure",
+          "convergence_reason": "iteration_limit",
+          "converged": false,
+          "num_contacts": 1,
+          "min_distance": 0.9999999999999997,
+          "checks": {
+            "residual": 0.5333333333333332,
+            "contact_position_error": 0.0,
+            "acceleration_jump": 7.078782005009998e-13,
+            "jerk_balance": 0.5333333333333332,
+            "normalization": 0.0,
+            "tangency": 0.0,
+            "endpoint_error": 2.220446049250313e-16,
+            "minimum_mass": 0.0,
+            "minimum_knot_gap": 2.999999999999973,
+            "valid": false
+          },
+          "active_set_updates": 1,
+          "removed_contacts": [],
+          "collision_backend": "native",
+          "name": "iteration-limit",
+          "cost": 1.937777777777777,
+          "recovery_count": 0
+        },
+        {
+          "status": "unresolved",
+          "convergence_reason": "minimum_knot_gap",
+          "converged": false,
+          "num_contacts": 0,
+          "min_distance": 0.4,
+          "checks": {
+            "residual": 0.0,
+            "contact_position_error": 0.0,
+            "acceleration_jump": 0.0,
+            "jerk_balance": 0.0,
+            "normalization": 0.0,
+            "tangency": 0.0,
+            "endpoint_error": 0.0,
+            "minimum_mass": 0.0,
+            "minimum_knot_gap": 6.0,
+            "valid": true
+          },
+          "active_set_updates": 0,
+          "removed_contacts": [],
+          "collision_backend": "native",
+          "name": "minimum-gap",
+          "cost": 1.7777777777777781,
+          "recovery_count": 0
+        },
+        {
+          "status": "invalid_solution",
+          "convergence_reason": "infeasible_endpoint_separation",
+          "converged": false,
+          "num_contacts": 0,
+          "min_distance": 0.0,
+          "checks": {
+            "residual": 0.0,
+            "contact_position_error": 0.0,
+            "acceleration_jump": 0.0,
+            "jerk_balance": 0.0,
+            "normalization": 0.0,
+            "tangency": 0.0,
+            "endpoint_error": 5.551115123125783e-17,
+            "minimum_mass": 0.0,
+            "minimum_knot_gap": 6.0,
+            "valid": true
+          },
+          "active_set_updates": 0,
+          "removed_contacts": [],
+          "collision_backend": "native",
+          "name": "invalid-endpoints",
+          "cost": 0.4488888888888889,
+          "recovery_count": 0
+        }
+      ],
+      "sources": {
+        "src/sci_solver/solvers/base.py": "a3d1e66c04f57d69eb7fb9eb0416d77ce60c9360e9448c22b3c4da3ff7080a30",
+        "src/sci_solver/solvers/contact_solver.py": "57c277b44d28f6eaf69cf851ff86cec1f4733c15cfc52a5a4255934df0826e19",
+        "src/sci_solver/solvers/collision_search.py": "9667839d4a5a724591de4540ffaa7eb607f88c6803aff7981ea46a702ee34c3c",
+        "src/sci_solver/solvers/cubic_utils.py": "198ed08248d1648f0c196ed346a3a0a3e139662d728e98ef42f1701d40971a18",
+        "src/sci_solver/solvers/matching_numerics.py": "67abc420c4b84ea8947a798b3913597baee9aaa9b5c9ad069dac82811b400889",
+        "src/sci_solver/solvers/reaction_matching.py": "6efdce28648e49c9418f1a42da3d93cb4636112c561e9da3f9c29a64fc3b7b70",
+        "src/sci_solver/solvers/vector_matching.py": "326ffe29e94e4f5e080d4224fd7ab4fb4d38a14789ab9345d5985232c3b9d358",
+        "src/sci_solver/solvers/_cubic_minima.c": "7b2730c03652ae121191a81ef22e31a9283bc3f779f3e6a5465d14d947e32a97"
+      },
+      "environment": {
+        "python": "3.14.7 (main, Aug  5 2026, 10:29:49) [Clang 21.0.0 (clang-2100.1.1.101)]",
+        "platform": "macOS-26.5.1-arm64-arm-64bit-Mach-O",
+        "packages": {
+          "numpy": "2.5.3",
+          "scipy": "1.18.1"
+        }
+      }
+    }
+  },
+  "max_relative_cost_difference": 1.185662764663467e-11,
+  "max_position_difference": 6.300178503337861e-07,
+  "checker_sha256": "f9f536f877f316baaf4d4ce336a8cbef480c1f26db001d9f0c0cac73a87e3788",
+  "validator_sha256": "cc7a96ed83203dac2bcc7d133bd8a791da04b2c2750b0ff8c8b78d8e5373af81",
+  "current_sources": {
+    "src/sci_solver/__init__.py": "cd82771462960a7cbbb85670bc75d727d811a67a7d4c2fef7b7bcd66a5aee940",
+    "src/sci_solver/api.py": "0917f47cf45202c0f45290e8a99044492467297990c694af24696c3b5c2c9d0a",
+    "src/sci_solver/cli/__init__.py": "9dcb5a2c0b5a433396ad231bc346a881672ab1f6b1139ef5b1815e49c0d7730d",
+    "src/sci_solver/cli/vector_sci.py": "602e9a9de83d038174c31d813592f4b7f3d8ba27f150b638435bcd19762851ec",
+    "src/sci_solver/config.py": "c49ca19fa36e8962b6cb2f01976358d3f82beef4d91135830c53c8ed6fcfb9c9",
+    "src/sci_solver/evaluation.py": "23927d3c4c8279b71d38d06092e5f7d64ba35b70560895adc955c7d09e771b35",
+    "src/sci_solver/solvers/__init__.py": "024fe39bfba704d8fa355db14ad56cfa290ef918ca5c8b98f201bcdbd6656e8d",
+    "src/sci_solver/solvers/_cubic_minima.c": "7b2730c03652ae121191a81ef22e31a9283bc3f779f3e6a5465d14d947e32a97",
+    "src/sci_solver/solvers/_cubic_minima.cpython-314-darwin.so": "2e21735b9451b2a8e1a13d9f1c78845b1c70b30a4d2e67e55857456cbea51b52",
+    "src/sci_solver/solvers/base.py": "a3d1e66c04f57d69eb7fb9eb0416d77ce60c9360e9448c22b3c4da3ff7080a30",
+    "src/sci_solver/solvers/collision_search.py": "9667839d4a5a724591de4540ffaa7eb607f88c6803aff7981ea46a702ee34c3c",
+    "src/sci_solver/solvers/contact_solver.py": "57c277b44d28f6eaf69cf851ff86cec1f4733c15cfc52a5a4255934df0826e19",
+    "src/sci_solver/solvers/cubic_utils.py": "198ed08248d1648f0c196ed346a3a0a3e139662d728e98ef42f1701d40971a18",
+    "src/sci_solver/solvers/matching_numerics.py": "67abc420c4b84ea8947a798b3913597baee9aaa9b5c9ad069dac82811b400889",
+    "src/sci_solver/solvers/matching_operations.py": "be4eae1b83c0077ffbb68ccf48b460b491907838eb96544b608200f1a66644ab",
+    "src/sci_solver/solvers/partitioned_matching.py": "2567390b08035eacde190695600c098c25cb5ce4f6bf00ecb88a00082eb45098",
+    "src/sci_solver/solvers/reaction_matching.py": "6efdce28648e49c9418f1a42da3d93cb4636112c561e9da3f9c29a64fc3b7b70",
+    "src/sci_solver/solvers/stage_timing.py": "528dc2bc8b24f2f63431e486fd04b72ce32ba42a6def986d6ac0ce3d001cd8a8",
+    "src/sci_solver/solvers/vector_matching.py": "326ffe29e94e4f5e080d4224fd7ab4fb4d38a14789ab9345d5985232c3b9d358"
+  }
+}

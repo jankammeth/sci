@@ -5,9 +5,11 @@ from time import perf_counter
 
 
 class StageTiming:
-    def __init__(self):
+    def __init__(self, names=None):
         self.seconds = dict.fromkeys(
-            (
+            names
+            if names is not None
+            else (
                 "partition",
                 "assembly",
                 "newton",

@@ -11,10 +11,11 @@
       "upstream_path": "src/contact_solver/solvers/contact_solver.py",
       "sha256": "9ae40bc11838b8fc0ca76f439f21af878d27669f3d3440bfd8519196e624b7a1",
       "extracted_sha256": "9ae40bc11838b8fc0ca76f439f21af878d27669f3d3440bfd8519196e624b7a1",
-      "current_sha256": "0bfdc5d163a40b1c880f043690d351b49e585b78c2c0ca2b1be9892532aead48",
+      "current_sha256": "57c277b44d28f6eaf69cf851ff86cec1f4733c15cfc52a5a4255934df0826e19",
       "post_extraction_changes": [
         "Optional active-robot and connected-component matching drivers; full mode remains the default.",
-        "Disjoint stage timings and system sizes for benchmark comparisons."
+        "Disjoint stage timings and system sizes for benchmark comparisons.",
+        "Share pure contact initialization, recovery and validation operations with lightweight components; allow selected-coordinate evaluation."
       ]
     },
     "src/sci_solver/solvers/collision_search.py": {
@@ -36,7 +37,11 @@
     "src/sci_solver/solvers/matching_numerics.py": {
       "upstream_path": "src/contact_solver/solvers/matching_numerics.py",
       "sha256": "e10f5dbf0747163754355cdffd62b9067b2dea82a31d72222e368f67f7a8cd66",
-      "extracted_sha256": "e10f5dbf0747163754355cdffd62b9067b2dea82a31d72222e368f67f7a8cd66"
+      "extracted_sha256": "e10f5dbf0747163754355cdffd62b9067b2dea82a31d72222e368f67f7a8cd66",
+      "current_sha256": "67abc420c4b84ea8947a798b3913597baee9aaa9b5c9ad069dac82811b400889",
+      "post_extraction_changes": [
+        "Optional Newton-stage timing and LSMR iteration diagnostics; numerical algorithm and tolerances unchanged."
+      ]
     },
     "src/sci_solver/solvers/reaction_matching.py": {
       "upstream_path": "src/contact_solver/solvers/reaction_matching.py",

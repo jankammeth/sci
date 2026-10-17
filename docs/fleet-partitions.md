@@ -1,5 +1,10 @@
 # Fleet partition experiment
 
+This report describes the original component prototype. See the subsequent
+[component reuse benchmark](component-reuse.md) for the optimized implementation,
+small-fleet overhead, and detailed Newton timings. The measurements below are
+retained as historical results, not a recommendation for fleet-size dispatch.
+
 These N=20 cases favor connected components. Rebuilding the graph is cheap enough
 here that incremental union-find or cached component state is unnecessary.
 The subsequent [N=2 and N=4 comparison](fleet-partitions-small.md) favors the

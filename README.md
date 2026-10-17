@@ -92,8 +92,10 @@ For fleet-reduction experiments, select `SolverConfig(sci_fleet_mode="active")`
 to include only participating robots, or `sci_fleet_mode="components"` to solve
 each connected contact group separately. The default remains `"full"` for
 comparison. All modes check continuous separation across the entire fleet.
-[The benchmark report](docs/fleet-partitions.md) records stage timings on five
-saved 20-robot cases and explains the current limitations.
+[The component reuse benchmark](docs/component-reuse.md) compares the optimized
+driver with its prototype and full-fleet mode on saved 2-, 4-, and 20-robot cases,
+including a detailed Newton breakdown. Unchanged components retain their solved
+states and checks; graph rebuilding remains simple union-find.
 
 ## Development and provenance
 
@@ -106,12 +108,14 @@ ruff check .
 The numerical implementation is preserved from
 [`contact-solver` at `641a234`](https://github.com/jankammeth/contact-solver/tree/641a2341a6a59938e285b8ff872bd484713e0605).
 [UPSTREAM.json](UPSTREAM.json) records source paths, SHA-256 hashes, and every
-extraction edit. Five core files remain byte-identical. The collision wrapper changes
+extraction edit. Four core files remain byte-identical. The collision wrapper changes
 only the package name in its fallback warning; the C kernel adds equivalent
 stack workspace allocation for Microsoft's C compiler. Numerical formulas and
 control flow in the default full-fleet solver are retained; its driver now records
-stage timings and dispatches optional fleet reductions. The original extraction
-hashes are retained alongside the current driver hash and its change description.
+stage timings and dispatches optional fleet reductions. Contact initialization,
+recovery, and validation are shared with the component driver; Newton has optional
+fine stage profiling. Original extraction hashes are retained alongside current
+hashes and change descriptions.
 [The migration guide](docs/migration.md) describes the extraction and comparison
 procedure. The paper and historical experiment infrastructure remain separate.
 

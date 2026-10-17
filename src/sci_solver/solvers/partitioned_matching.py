@@ -6,14 +6,16 @@ No sampled trajectories or time perturbations are used to join solved components
 """
 
 from collections import Counter
-from dataclasses import dataclass, replace
+from dataclasses import dataclass
 import time
 
 import numpy as np
 
 from .collision_search import COLLISION_BACKEND
 from .cubic_utils import cubic_coefficients
-from .matching_numerics import insertion_time
+from .matching_numerics import insertion_time, damped_newton
+from .matching_operations import check_matching, recover_reactions, initial_contact_geometry
+from .vector_matching import MatchingSystem, VectorContact
 from .stage_timing import StageTiming
 
 
@@ -69,110 +71,155 @@ def shift_cubics(coefficients, offsets):
     )
 
 
+@dataclass(frozen=True)
+class ContactEvent:
+    uid: int
+    pair: tuple
+    t_star: float
+    normal: np.ndarray
+    velocity: np.ndarray
+    mass: float
+
+
 @dataclass
 class Component:
     robots: tuple
-    solver: object
-    system: object
+    events: tuple
+    endpoints: np.ndarray
+    system: MatchingSystem
     x: np.ndarray
-    trajectory: object
+    barycenter: np.ndarray
+    trajectory: object = None
+    checks: dict | None = None
+    dirty: bool = True
 
-    def global_contacts(self):
-        return [
-            replace(c, pair=tuple(self.robots[p] for p in c.pair))
-            for c in self.system.contacts(self.x)
-        ]
-
-
-def assemble_components(owner, contacts, groups, trajectory):
-    # Import locally to keep ContactSolver's dispatch free of import cycles.
-    from .contact_solver import ContactSolver, RelativeTrajectory
-    from ..config import Config, ProblemConfig
-
-    endpoints = [
-        a.reshape(owner.N, owner.d)
-        for a in (
-            owner.initial_positions,
-            owner.initial_velocities,
-            owner.final_positions,
-            owner.final_velocities,
+    def update_events(self, order=None):
+        previous = self.events if order is None else tuple(self.events[k] for k in order)
+        d = self.system.d
+        self.events = tuple(
+            ContactEvent(
+                event.uid,
+                event.pair,
+                z[0],
+                z[1 : 1 + d].copy(),
+                z[1 + d : 1 + 2 * d].copy(),
+                z[1 + 2 * d],
+            )
+            for event, z in zip(previous, self.system.unpack(self.x), strict=True)
         )
-    ]
-    components = []
+
+
+def relative_states(trajectory, robots, times, derivative=0):
+    """Read only the selected relative coordinates, without absolute positions."""
+    if robots[0] == 0:
+        return trajectory.relative(times, derivative, np.asarray(robots[1:]) - 1)
+    values = trajectory.relative(times, derivative, np.asarray(robots) - 1)
+    return values[:, 1:] - values[:, :1]
+
+
+def initialize_event(owner, pair, time, trajectory, uid):
+    position = relative_states(trajectory, pair, [time])[0, 0]
+    velocity = relative_states(trajectory, pair, [time], 1)[0, 0]
+    normal, velocity = initial_contact_geometry(position, velocity, owner.R)
+    return ContactEvent(uid, pair, time, normal, velocity, 0.0)
+
+
+def assemble_components(owner, contacts, groups, trajectory, previous, endpoints):
+    """Rebuild only groups whose contact identities changed, including splits."""
+    previous = {c.robots: c for c in previous}
+    components, rebuilt, reused = [], [], []
     for robots, indices in groups:
-        local = ContactSolver(
-            Config(
-                problem=ProblemConfig(
-                    len(robots), owner.R, owner.T, dimension=owner.d, timestep=owner.h
-                ),
-                solver=owner.options,
-            )
-        )
-        local.min_gap = owner.min_gap
-        states = [a[list(robots)] for a in endpoints]
-        local.set_initial_states(*states[:2])
-        local.set_final_states(*states[2:])
+        selected = tuple(sorted((contacts[k] for k in indices), key=lambda c: c.t_star))
+        old = previous.get(robots)
+        if old is not None and {c.uid for c in selected} == {c.uid for c in old.events}:
+            components.append(old)
+            reused.append(list(robots))
+            continue
+        states = endpoints[:, robots, :]
+        relative = states[:, :1] - states[:, 1:]
         lookup = {p: j for j, p in enumerate(robots)}
-        selected = sorted((contacts[k] for k in indices), key=lambda c: c.t_star)
+        pairs = [tuple(lookup[p] for p in c.pair) for c in selected]
+        system = MatchingSystem(pairs, *relative, owner.R, owner.T, owner.min_gap)
         times = [c.t_star for c in selected]
-        positions = trajectory.robots(times)[list(robots)].transpose(1, 0, 2)
-        velocities = trajectory.robots(times, 1)[list(robots)].transpose(1, 0, 2)
-        r = positions[:, :1] - positions[:, 1:]
-        v = velocities[:, :1] - velocities[:, 1:]
-        local_contacts = []
-        for k, c in enumerate(selected):
-            pair = tuple(lookup[p] for p in c.pair)
-            others = [j for j in range(len(robots) - 1) if j != pair[1] - 1]
-            local_contacts.append(
-                replace(c, pair=pair, r_others=r[k, others], v_others=v[k, others])
-            )
-        system = local.matching_system(local_contacts)
-        x = np.concatenate([c.to_vector() for c in local_contacts])
-        center = np.array(cubic_coefficients(*[a.mean(axis=0) for a in states], owner.T))
-        path = RelativeTrajectory.from_system(system, x, center)
-        components.append(Component(robots, local, system, x, path))
-    return components
+        r = relative_states(trajectory, robots, times)
+        v = relative_states(trajectory, robots, times, 1)
+        z = np.empty((len(selected), system.b))
+        d = owner.d
+        for k, (c, (_, q)) in enumerate(zip(selected, pairs, strict=True)):
+            z[k, 0] = c.t_star
+            z[k, 1 : 1 + d] = c.normal
+            z[k, 1 + d : 1 + 2 * d] = c.velocity
+            z[k, 1 + 2 * d] = c.mass
+            others = [j for j in range(len(robots) - 1) if j != q - 1]
+            z[k, 2 * d + 2 :] = np.stack((r[k, others], v[k, others]), axis=1).ravel()
+        center = np.array(cubic_coefficients(*states.mean(axis=1), owner.T))
+        components.append(Component(robots, selected, states, system, z.ravel(), center))
+        rebuilt.append(list(robots))
+    return components, rebuilt, reused
 
 
-def reconstruct_fleet(owner, components, free):
+def reconstruct_fleet(owner, components, free, free_path):
+    """Assemble relative coefficients once; retain an already identical layout."""
     from .contact_solver import RelativeTrajectory
 
-    times = np.unique(np.concatenate(([0.0, owner.T], *[c.trajectory.times for c in components])))
+    if not components:
+        return free_path
+    if len(components) == 1 and len(components[0].robots) == owner.N:
+        return components[0].trajectory
+    times = np.unique(np.concatenate([c.trajectory.times for c in components]))
     left = times[:-1]
-    robot_coefficients = shift_cubics(np.broadcast_to(free, (len(left), *free.shape)), left)
+    relative = shift_cubics(
+        np.broadcast_to(free[0] - free[1:], (len(left), owner.N - 1, 4, owner.d)), left
+    )
+    first_free = shift_cubics(np.broadcast_to(free[0], (len(left), 1, 4, owner.d)), left)[:, 0]
+    local = []
+    first = first_free
     for component in components:
         path = component.trajectory
         segments = np.searchsorted(path.times, left, side="right") - 1
-        relative = shift_cubics(path.coefficients[segments], left - path.times[segments])
+        c = shift_cubics(path.coefficients[segments], left - path.times[segments])
         center = shift_cubics(np.broadcast_to(path.barycenter, (len(left), 1, 4, owner.d)), left)[
             :, 0
         ]
-        first = center + relative.sum(axis=1) / len(component.robots)
-        robot_coefficients[:, component.robots] = np.concatenate(
-            (first[:, None], first[:, None] - relative), axis=1
-        )
-    relative = robot_coefficients[:, :1] - robot_coefficients[:, 1:]
-    path = RelativeTrajectory(times, relative, free.mean(axis=0))
-    contacts = sorted(
-        (c for block in components for c in block.global_contacts()), key=lambda c: c.t_star
-    )
-    if contacts:
-        r = path.relative([c.t_star for c in contacts])
-        v = path.relative([c.t_star for c in contacts], 1)
-        # Public contact vectors keep the original fleet indexing/shape.
-        contacts = [
-            replace(
-                c,
-                r_others=r[k, [j for j in range(owner.N - 1) if j != c.pair[1] - 1]],
-                v_others=v[k, [j for j in range(owner.N - 1) if j != c.pair[1] - 1]],
+        local_first = center + c.sum(axis=1) / len(component.robots)
+        local.append((component.robots, c, local_first))
+        if component.robots[0] == 0:
+            first = local_first
+    relative += (first - first_free)[:, None]
+    for robots, c, local_first in local:
+        if robots[0] == 0:
+            relative[:, np.asarray(robots[1:]) - 1] = c
+        else:
+            offset = first - local_first
+            relative[:, robots[0] - 1] = offset
+            relative[:, np.asarray(robots[1:]) - 1] = offset[:, None] + c
+    return RelativeTrajectory(times, relative, free_path.barycenter)
+
+
+def export_contacts(trajectory, contacts, n_robots):
+    """Full-fleet contact vectors are an output format, not solver state."""
+    if not contacts:
+        return []
+    times = [c.t_star for c in contacts]
+    r, v = trajectory.relative(times), trajectory.relative(times, 1)
+    result = []
+    for k, c in enumerate(contacts):
+        others = [j for j in range(n_robots - 1) if j != c.pair[1] - 1]
+        result.append(
+            VectorContact(
+                c.pair, c.t_star, c.normal, c.velocity, c.mass, r[k, others], v[k, others]
             )
-            for k, c in enumerate(contacts)
-        ]
-    return path, contacts
+        )
+    return result
 
 
 def fleet_checks(owner, components, trajectory):
-    checks = [c.solver._checks(c.system, c.x, c.trajectory) for c in components]
+    for c in components:
+        if c.checks is None:
+            c.checks = check_matching(c.system, c.x, c.trajectory, c.endpoints, owner.options)
+    if len(components) == 1 and trajectory is components[0].trajectory:
+        return components[0].checks.copy()
+    checks = [c.checks for c in components]
     result = {
         key: max((c[key] for c in checks), default=0.0)
         for key in (
@@ -186,7 +233,6 @@ def fleet_checks(owner, components, trajectory):
         )
     }
     result["minimum_mass"] = min((c["minimum_mass"] for c in checks), default=0.0)
-    # Knot restrictions are local. Independent components can meet simultaneously.
     result["minimum_knot_gap"] = min((c["minimum_knot_gap"] for c in checks), default=owner.T)
     endpoints = trajectory.endpoint_states()
     error = max(
@@ -206,35 +252,46 @@ def fleet_checks(owner, components, trajectory):
     return result
 
 
-def solve_components(components, deadline, stages, roots):
+def solve_components(owner, components, deadline, stages, roots):
     from .contact_solver import RelativeTrajectory
 
     info = dict(success=True, message="empty_active_set")
     for c in components:
+        if not c.dirty:
+            continue
         initial = c.x.copy()
         with stages.measure("newton"):
-            c.x, info = c.solver._solve_system(c.system, c.x, deadline)
+            c.x, info = damped_newton(c.system, c.x, deadline, owner.options)
         roots.append({**info, "robots": c.robots, "system_size": len(c.x)})
         recovered = None
+        order = None
         if (
-            c.solver.options.sci_reaction_recovery
+            owner.options.sci_reaction_recovery
             and not info["success"]
             and info["message"] != "timeout"
-            and c.solver.options.sci_root_max_iterations > 0
+            and owner.options.sci_root_max_iterations > 0
         ):
             with stages.measure("recovery"):
-                recovered = c.solver._recover_reactions(
-                    c.system, initial, c.trajectory.barycenter, deadline
+                recovered = recover_reactions(
+                    c.system, initial, c.barycenter, c.endpoints, owner.options, deadline
                 )
             if recovered is not None:
                 c.system, c.x, c.trajectory, info = recovered
+                order = info["contact_order"]
                 roots.append({**info, "robots": c.robots})
         if recovered is None:
             with stages.measure("reconstruction"):
-                c.trajectory = RelativeTrajectory.from_system(
-                    c.system, c.x, c.trajectory.barycenter
-                )
+                c.trajectory = RelativeTrajectory.from_system(c.system, c.x, c.barycenter)
+        c.update_events(order)
+        c.dirty = False
         if not info["success"]:
+            # Retain validly represented initial iterates for unvisited groups.
+            for pending in components:
+                if pending.trajectory is None:
+                    with stages.measure("reconstruction"):
+                        pending.trajectory = RelativeTrajectory.from_system(
+                            pending.system, pending.x, pending.barycenter
+                        )
             break
     return info
 
@@ -265,7 +322,13 @@ def generate_partitioned(owner, verbose=None):
         ]
         free = np.array(cubic_coefficients(*endpoints, owner.T)).transpose(1, 0, 2)
         components = []
-        trajectory, contacts = reconstruct_fleet(owner, components, free)
+        from .contact_solver import RelativeTrajectory
+
+        free_path = RelativeTrajectory(
+            np.array([0.0, owner.T]), (free[0] - free[1:])[None], free.mean(axis=0)
+        )
+        trajectory, contacts = free_path, []
+        endpoints = np.array(endpoints)
     roots, removed, offsets, history = [], [], [], []
     updates = 0
     status, reason = "success", "converged"
@@ -318,21 +381,26 @@ def generate_partitioned(owner, verbose=None):
             break
         if initial_time != contact_time:
             offsets.append(dict(pair=pair, collision_time=contact_time, initial_time=initial_time))
-        contacts.append(owner.initialize_contact(pair, initial_time, trajectory))
+        contacts.append(initialize_event(owner, pair, initial_time, trajectory, updates))
         updates += 1
         while True:
             with stages.measure("assembly"):
-                components = assemble_components(owner, contacts, groups, trajectory)
+                components, rebuilt, reused = assemble_components(
+                    owner, contacts, groups, trajectory, components, endpoints
+                )
             history.append(
                 dict(
                     robots=[list(c.robots) for c in components],
+                    rebuilt=rebuilt,
+                    reused=reused,
                     contacts=[c.system.m for c in components],
                     system_sizes=[len(c.x) for c in components],
                 )
             )
-            info = solve_components(components, deadline, stages, roots)
+            info = solve_components(owner, components, deadline, stages, roots)
             with stages.measure("reconstruction"):
-                trajectory, contacts = reconstruct_fleet(owner, components, free)
+                trajectory = reconstruct_fleet(owner, components, free, free_path)
+                contacts = sorted((e for c in components for e in c.events), key=lambda c: c.t_star)
             if not info["success"] or not contacts:
                 break
             index = min(range(len(contacts)), key=lambda k: contacts[k].mass)
@@ -358,8 +426,11 @@ def generate_partitioned(owner, verbose=None):
     owner.matching_components = components
     owner.system = tuple(c.system for c in components)
     owner.solution = np.concatenate([c.x for c in components]) if components else np.empty(0)
-    owner.trajectory, owner.contacts = trajectory, contacts
+    owner.trajectory = trajectory
     solve_time = time.perf_counter() - started
+    export_started = time.perf_counter()
+    owner.contacts = export_contacts(trajectory, contacts, owner.N)
+    export_seconds = time.perf_counter() - export_started
     times, positions, velocities, accelerations = owner.sample()
     owner.trajectories = dict(
         positions=positions, velocities=velocities, accelerations=accelerations
@@ -369,7 +440,7 @@ def generate_partitioned(owner, verbose=None):
     return dict(
         trajectories=owner.trajectories,
         times=times,
-        contacts=contacts,
+        contacts=owner.contacts,
         contact_times=[c.t_star for c in contacts],
         metrics=dict(
             converged=status == "success",
@@ -394,6 +465,8 @@ def generate_partitioned(owner, verbose=None):
             max_contacts_single_pair=max(Counter(c.pair for c in contacts).values(), default=0),
             fleet_mode=mode,
             partition_history=history,
+            component_builds=sum(len(h["rebuilt"]) for h in history),
+            component_reuses=sum(len(h["reused"]) for h in history),
             matching_seconds=stages.seconds["newton"] + stages.seconds["recovery"],
             matching_solves=len(roots),
             nfev=sum(r["nfev"] for r in roots),
@@ -408,6 +481,7 @@ def generate_partitioned(owner, verbose=None):
                 total_time=solve_time,
                 solve_time=solve_time,
                 postprocess_time=time.perf_counter() - started - solve_time,
+                contact_export_seconds=export_seconds,
                 wall_time=time.perf_counter() - started,
                 **stages.result(solve_time),
             ),

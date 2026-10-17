@@ -128,8 +128,84 @@ def test_simultaneous_independent_contacts_need_no_offsets():
     assert metrics["system_size"] == 12
     assert len(solver.matching_components) == 2
     assert not metrics["insertion_offsets"]
+    assert metrics["component_builds"] == 2
+    assert metrics["component_reuses"] == 1
+    assert len(metrics["roots"]) == 2  # the first component is not solved again
     np.testing.assert_allclose([c.t_star for c in solver.contacts], 2.5, atol=1e-12)
     check_physics(solver)
+
+
+def test_merge_and_split_invalidate_only_changed_components():
+    from sci_solver.solvers.contact_solver import RelativeTrajectory
+    from sci_solver.solvers.cubic_utils import cubic_coefficients
+    from sci_solver.solvers.partitioned_matching import assemble_components, initialize_event
+
+    start = np.array([[-2, -0.2], [2, 0.2], [-2, 9.8], [2, 10.2], [-2, 19.8], [2, 20.2]])
+    goal = start.copy()
+    goal[:, 0] *= -1
+    owner = ContactSolver(Config(ProblemConfig(6, 1, 5), SolverConfig(sci_fleet_mode="components")))
+    owner.set_initial_states(start)
+    owner.set_final_states(goal)
+    owner.min_gap = 0
+    endpoints = np.array([start, np.zeros_like(start), goal, np.zeros_like(start)])
+    free = np.array(cubic_coefficients(*endpoints, 5)).transpose(1, 0, 2)
+    path = RelativeTrajectory(np.array([0.0, 5.0]), (free[0] - free[1:])[None], free.mean(0))
+    events = [
+        initialize_event(owner, pair, t, path, uid)
+        for uid, (pair, t) in enumerate([((0, 1), 1.5), ((2, 3), 2.5), ((4, 5), 3.5)])
+    ]
+    groups = contact_groups([e.pair for e in events], "components")
+    original, _, _ = assemble_components(owner, events, groups, path, [], endpoints)
+    bridge = initialize_event(owner, (1, 2), 2.0, path, 3)
+    merged, rebuilt, reused = assemble_components(
+        owner,
+        events + [bridge],
+        contact_groups([e.pair for e in events] + [bridge.pair], "components"),
+        path,
+        original,
+        endpoints,
+    )
+    assert rebuilt == [[0, 1, 2, 3]] and reused == [[4, 5]]
+    assert merged[1] is original[2]
+    split, rebuilt, reused = assemble_components(owner, events, groups, path, merged, endpoints)
+    assert rebuilt == [[0, 1], [2, 3]] and reused == [[4, 5]]
+    assert split[2] is original[2]
+    assert split[0] is not original[0] and split[1] is not original[1]
+
+
+def test_no_nested_solver_construction(monkeypatch):
+    solver = ContactSolver(
+        Config(
+            ProblemConfig(2, 1, 5),
+            SolverConfig(sci_detection_tol=1e-6, sci_fleet_mode="components"),
+        )
+    )
+    solver.set_initial_states([[-2, -0.2], [2, 0.2]])
+    solver.set_final_states([[2, -0.2], [-2, 0.2]])
+
+    def forbidden(*args, **kwargs):
+        raise AssertionError("A component must not construct another solver")
+
+    monkeypatch.setattr(ContactSolver, "__init__", forbidden)
+    assert solver.generate_trajectories()["metrics"]["converged"]
+    check_physics(solver)
+
+
+def test_newton_profiling_preserves_the_trajectory():
+    start, goal = smoke_endpoints(3, "fleet5")
+    plain, _ = run(start, goal, "components", horizon=6)
+    profiled, metrics = run(start, goal, "components", horizon=6, sci_profile_newton=True)
+    assert metrics["converged"]
+    np.testing.assert_array_equal(plain.trajectory.times, profiled.trajectory.times)
+    np.testing.assert_array_equal(plain.trajectory.coefficients, profiled.trajectory.coefficients)
+    nested = [r["newton_timing"] for r in metrics["roots"] if "newton_timing" in r]
+    assert nested
+    assert (
+        sum(sum(r["stage_seconds"].values()) for r in nested)
+        <= metrics["timing"]["stage_seconds"]["newton"]
+    )
+    assert sum(r["stage_calls"]["band_solve"] for r in nested) > 0
+    check_physics(profiled)
 
 
 @pytest.mark.parametrize("mode", ["active", "components"])

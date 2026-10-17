@@ -1,12 +1,14 @@
 """Admissible damped Newton shared by joint and prioritized matching."""
 
 import time
+from contextlib import nullcontext
 
 import numpy as np
 from scipy.linalg import LinAlgError, solve_banded
 from scipy.sparse.linalg import lsmr
 
 from .vector_matching import blocks_to_banded, blocks_to_sparse
+from .stage_timing import StageTiming
 
 
 def insertion_time(candidate, existing, horizon):
@@ -54,6 +56,34 @@ def finite_difference_blocks(system, x):
 
 def damped_newton(system, x, deadline, options):
     """Feasible damped Newton, with no post-solve change to contact times."""
+    profile = (
+        StageTiming(
+            (
+                "residual_jacobian",
+                "band_assembly",
+                "band_solve",
+                "sparse_assembly_scaling",
+                "lsmr",
+                "line_search_residual",
+            )
+        )
+        if (getattr(options, "sci_profile_newton", False))
+        else None
+    )
+    started = time.perf_counter() if profile else 0.0
+    measure = profile.measure if profile else lambda stage: nullcontext()
+    lsmr_iterations = 0
+
+    def diagnostics():
+        return (
+            {
+                "newton_timing": profile.result(time.perf_counter() - started),
+                "lsmr_iterations": lsmr_iterations,
+            }
+            if profile
+            else {}
+        )
+
     root_tolerance = options.sci_residual_tol
     nfev, fallbacks = 0, 0
     message = "iteration_limit"
@@ -61,12 +91,13 @@ def damped_newton(system, x, deadline, options):
     stagnant_iterations = 0
     for iteration in range(options.sci_root_max_iterations + 1):
         try:
-            if options.use_analytical_jacobian and getattr(system, "analytical_jacobian", True):
-                residual, blocks = system.evaluate(x, True)
-                nfev += 1
-            else:
-                residual, blocks, calls = finite_difference_blocks(system, x)
-                nfev += calls
+            with measure("residual_jacobian"):
+                if options.use_analytical_jacobian and getattr(system, "analytical_jacobian", True):
+                    residual, blocks = system.evaluate(x, True)
+                    nfev += 1
+                else:
+                    residual, blocks, calls = finite_difference_blocks(system, x)
+                    nfev += calls
         except (ValueError, FloatingPointError):
             message = "invalid_matching_evaluation"
             break
@@ -80,6 +111,7 @@ def damped_newton(system, x, deadline, options):
                 iterations=iteration,
                 nfev=nfev,
                 sparse_fallbacks=fallbacks,
+                **diagnostics(),
             )
         if time.perf_counter() >= deadline:
             message = "timeout"
@@ -92,10 +124,12 @@ def damped_newton(system, x, deadline, options):
             break
         if iteration == options.sci_root_max_iterations:
             break
-        bandwidth, band = blocks_to_banded(blocks)
+        with measure("band_assembly"):
+            bandwidth, band = blocks_to_banded(blocks)
         steps = []
         try:
-            newton = solve_banded((bandwidth, bandwidth), band, -residual)
+            with measure("band_solve"):
+                newton = solve_banded((bandwidth, bandwidth), band, -residual)
             if np.all(np.isfinite(newton)):
                 steps.append(newton)
         except (LinAlgError, ValueError):
@@ -107,23 +141,24 @@ def damped_newton(system, x, deadline, options):
             if attempt < len(steps):
                 step = steps[attempt]
             else:
-                if jacobian is None:
-                    jacobian = blocks_to_sparse(blocks)
-                column_norm = np.sqrt(np.asarray(jacobian.power(2).sum(axis=0)).ravel())
-                scale = 1 / np.maximum(column_norm, 1e-12)
-                scaled = jacobian.multiply(scale).tocsr()
-                damping = (0.0, 1e-5, 1e-3, 1e-1, 1.0)[attempt]
-                step = (
-                    scale
-                    * lsmr(
+                with measure("sparse_assembly_scaling"):
+                    if jacobian is None:
+                        jacobian = blocks_to_sparse(blocks)
+                    column_norm = np.sqrt(np.asarray(jacobian.power(2).sum(axis=0)).ravel())
+                    scale = 1 / np.maximum(column_norm, 1e-12)
+                    scaled = jacobian.multiply(scale).tocsr()
+                    damping = (0.0, 1e-5, 1e-3, 1e-1, 1.0)[attempt]
+                with measure("lsmr"):
+                    result = lsmr(
                         scaled,
                         -residual,
                         damp=damping,
                         atol=1e-12,
                         btol=1e-12,
                         maxiter=max(100, 4 * len(x)),
-                    )[0]
-                )
+                    )
+                    step = scale * result[0]
+                lsmr_iterations += result[2]
                 fallbacks += 1
             time_step = np.concatenate(([0], step.reshape(system.m, system.b)[:, 0], [0]))
             gaps = np.diff(system.knot_times(x))
@@ -144,8 +179,9 @@ def damped_newton(system, x, deadline, options):
                     break
                 candidate = x + length * step
                 try:
-                    next_residual = system.evaluate(candidate)
-                    nfev += 1
+                    with measure("line_search_residual"):
+                        next_residual = system.evaluate(candidate)
+                        nfev += 1
                 except ValueError:
                     length *= 0.5
                     continue
@@ -167,4 +203,5 @@ def damped_newton(system, x, deadline, options):
         iterations=iteration,
         nfev=nfev,
         sparse_fallbacks=fallbacks,
+        **diagnostics(),
     )

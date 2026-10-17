@@ -102,6 +102,7 @@ class SolverConfig:
     timeout: float = 300.0
     use_analytical_jacobian: bool = True
     sci_fleet_mode: str = "full"
+    sci_profile_newton: bool = False
 
     def __post_init__(self):
         if self.sci_fleet_mode not in ("full", "active", "components"):

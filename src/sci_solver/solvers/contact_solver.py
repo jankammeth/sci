@@ -11,7 +11,7 @@ from .base import Solver
 from .collision_search import COLLISION_BACKEND, minima
 from .cubic_utils import cubic_coefficients, distance_candidates
 from .matching_numerics import damped_newton, insertion_time
-from .reaction_matching import ReactionMatching
+from .matching_operations import check_matching, recover_reactions, initial_contact_geometry
 from .vector_matching import MatchingSystem, VectorContact
 from .stage_timing import StageTiming
 
@@ -47,7 +47,7 @@ class RelativeTrajectory:
         )
         return cls(times, coefficients, barycenter)
 
-    def relative(self, times, derivative=0):
+    def relative(self, times, derivative=0, indices=None):
         times = np.asarray(times, dtype=float)
         if (
             times.ndim != 1
@@ -62,7 +62,8 @@ class RelativeTrajectory:
             np.searchsorted(self.times, times, side="right") - 1, 0, len(self.times) - 2
         )
         local = times - self.times[segments]
-        c = self.coefficients[segments]
+        c = (self.coefficients[segments] if indices is None else
+             self.coefficients[segments[:, None], np.asarray(indices)[None, :]])
         result = np.zeros_like(c[:, :, 0])
         for power in range(3, derivative - 1, -1):
             factor = ((1, 1, 1, 1), (0, 1, 2, 3), (0, 0, 2, 6), (0, 0, 0, 6))[derivative][power]
@@ -247,20 +248,7 @@ class ContactSolver(Solver):
         p, q = pair
         relative_position = r[q - 1] - (r[p - 1] if p else 0)
         relative_velocity = v[q - 1] - (v[p - 1] if p else 0)
-        distance = np.linalg.norm(relative_position)
-        if distance > 1e-12 * max(1.0, self.R):
-            normal = relative_position / distance
-        else:
-            speed = np.linalg.norm(relative_velocity)
-            normal = np.zeros(self.d)
-            if speed > 1e-12:
-                direction = relative_velocity / speed
-                normal[np.argmin(np.abs(direction))] = 1
-                normal -= (normal @ direction) * direction
-                normal /= np.linalg.norm(normal)
-            else:
-                normal[0] = 1
-        velocity = relative_velocity - (normal @ relative_velocity) * normal
+        normal, velocity = initial_contact_geometry(relative_position, relative_velocity, self.R)
         others = [j for j in range(self.N - 1) if j != q - 1]
         return VectorContact(
             pair, contact_time, normal, velocity, 0.0, r[others].copy(), v[others].copy()
@@ -270,130 +258,14 @@ class ContactSolver(Solver):
         return damped_newton(system, x, deadline, self.options)
 
     def _recover_reactions(self, system, initial, barycenter, deadline):
-        reduced = ReactionMatching(system)
-        try:
-            result = reduced.solve(initial, deadline, max(100, 20 * len(initial)))
-            times, coefficients, order = reduced.coefficients(result.x)
-            if (
-                not result.success
-                or not np.all(np.isfinite(result.x))
-                or np.min(np.diff(times)) <= 0
-                or np.min(np.diff(times)) < self.min_gap
-            ):
-                return None
-            trajectory = RelativeTrajectory(times, coefficients, barycenter, True)
-            states = result.x.reshape(system.m, self.d + 2)
-            relative = trajectory.relative(times[1:-1])
-            velocities = trajectory.relative(times[1:-1], 1)
-            contacts = []
-            for k, index in enumerate(order):
-                p, q = system.pairs[index]
-                others = [j for j in range(self.N - 1) if j != q - 1]
-                velocity = velocities[k, q - 1] - (velocities[k, p - 1] if p else 0)
-                contacts.append(
-                    VectorContact(
-                        (p, q),
-                        states[index, 0],
-                        states[index, 1 : 1 + self.d],
-                        velocity,
-                        states[index, -1],
-                        relative[k, others],
-                        velocities[k, others],
-                    )
-                )
-            recovered = self.matching_system(contacts)
-            x = np.concatenate([c.to_vector() for c in contacts])
-            checks = self._checks(recovered, x, trajectory)
-            # Negative masses are handled by the active-set loop, not accepted.
-            if (
-                checks["residual"] > self.options.sci_residual_tol
-                or checks["endpoint_error"] > self.options.sci_residual_tol
-            ):
-                return None
-            info = dict(
-                success=True,
-                message="reaction_recovery",
-                termination_status=int(result.status),
-                termination_message=str(result.message),
-                nfev=result.nfev,
-                iterations=None,
-                sparse_fallbacks=0,
-                reordered=bool(np.any(order != np.arange(system.m))),
-                system_size=system.m * (self.d + 2),
-            )
-            return recovered, x, trajectory, info
-        except (TimeoutError, ValueError, FloatingPointError):
-            return None
+        endpoints = (self.initial_positions, self.initial_velocities,
+                     self.final_positions, self.final_velocities)
+        return recover_reactions(system, initial, barycenter, endpoints, self.options, deadline)
 
     def _checks(self, system, x, trajectory, endpoint_states=None):
-        z = system.unpack(x) if system.m else x.reshape(0, system.b)
-        md = (self.N - 1) * self.d
-        if trajectory.reaction_constructed:
-            residual = np.zeros((system.m, system.b))
-            h = np.diff(trajectory.times)[:-1, None, None]
-            c = trajectory.coefficients
-            residual[:, :md] = (2 * c[1:, :, 2] - 2 * c[:-1, :, 2] - 6 * c[:-1, :, 3] * h).reshape(
-                system.m, md
-            )
-            jump = 6 * (c[1:, :, 3] - c[:-1, :, 3])
-            mass_normal = z[:, 1 + 2 * self.d, None] * z[:, 1 : 1 + self.d]
-            residual[:, md : 2 * md] = (
-                jump - self.R * system.jerk_factors[:, :, None] * mass_normal[:, None]
-            ).reshape(system.m, md)
-            residual[:, -2] = np.sum(z[:, 1 : 1 + self.d] ** 2, axis=1) - 1
-            residual[:, -1] = np.sum(
-                z[:, 1 : 1 + self.d] * z[:, 1 + self.d : 1 + 2 * self.d], axis=1
-            )
-            r = trajectory.relative(trajectory.times[1:-1])
-            contact_error = max(
-                np.max(
-                    np.abs(r[k, q - 1] - (r[k, p - 1] if p else 0) - self.R * z[k, 1 : 1 + self.d])
-                )
-                for k, (p, q) in enumerate(system.pairs)
-            )
-        else:
-            residual = (
-                system.evaluate(x).reshape(system.m, system.b)
-                if system.m
-                else np.empty((0, system.b))
-            )
-            contact_error = 0.0
-
-        def norm(a):
-            return float(np.max(np.abs(a))) if a.size else 0.0
-
-        if endpoint_states is None:
-            endpoint_states = trajectory.endpoint_states()
-        endpoint_error = max(
-            norm(states[:, endpoint] - target.reshape(self.N, self.d))
-            for states, targets in zip(
-                endpoint_states,
-                (
-                    (self.initial_positions, self.final_positions),
-                    (self.initial_velocities, self.final_velocities),
-                ),
-                strict=True,
-            )
-            for endpoint, target in enumerate(targets)
-        )
-        checks = dict(
-            residual=max(norm(residual), contact_error),
-            contact_position_error=contact_error,
-            acceleration_jump=norm(residual[:, :md]),
-            jerk_balance=norm(residual[:, md : 2 * md]),
-            normalization=norm(residual[:, -2]),
-            tangency=norm(residual[:, -1]),
-            endpoint_error=endpoint_error,
-            minimum_mass=float(np.min(z[:, 1 + 2 * self.d])) if len(z) else 0.0,
-            minimum_knot_gap=(float(np.min(np.diff(trajectory.times))) if system.m else self.T),
-        )
-        checks["valid"] = bool(
-            checks["residual"] <= self.options.sci_residual_tol
-            and endpoint_error <= self.options.sci_residual_tol
-            and checks["minimum_mass"] >= -self.options.sci_mass_tol
-            and checks["minimum_knot_gap"] >= self.min_gap
-        )
-        return checks
+        endpoints = (self.initial_positions, self.initial_velocities,
+                     self.final_positions, self.final_velocities)
+        return check_matching(system, x, trajectory, endpoints, self.options, endpoint_states)
 
     def generate_trajectories(self, verbose=None):
         if self.fleet_mode != "full":

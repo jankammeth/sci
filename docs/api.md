@@ -34,6 +34,7 @@ Pass `SolverConfig(...)` through `options`. Defaults match the reference impleme
 | `timeout` | `300.0` | Cooperative solve deadline in seconds. |
 | `use_analytical_jacobian` | `True` | Use the analytical matching Jacobian. |
 | `sci_fleet_mode` | `"full"` | `"full"`, `"active"`, or `"components"`; see below. |
+| `sci_profile_newton` | `False` | Record detailed Newton-stage times and LSMR iteration counts. |
 
 Statuses are `success`, `unresolved`, `root_failure`, and `invalid_solution`.
 `metrics["convergence_reason"]` supplies details. Unsuccessful iterates remain
@@ -53,8 +54,10 @@ function requires an explicit horizon.
 current contacts and solves one system for the remaining robots. `components`
 also partitions the contact graph and solves one system per connected group.
 The graph is rebuilt with union-find after every insertion or removal; there is
-no persistent graph cache. Every group uses the same Newton and recovery routines
-and its own endpoint barycenter. Uninvolved robots follow their unconstrained
+no persistent graph cache. Groups whose robot and contact identities have not
+changed retain their solution, trajectory, and validation checks. Changed groups,
+including merges and splits, are rebuilt. Every group uses the same Newton and
+recovery routines and its own endpoint barycenter. Uninvolved robots follow their unconstrained
 endpoint cubics. Collision search still covers all pairs and can activate robots
 or join components on later iterations.
 
@@ -71,20 +74,33 @@ shape. For low-level diagnostics in the reduced modes, `ContactSolver.system`
 is a tuple of local matching systems, `solution` concatenates their local vectors,
 and `matching_components` associates each local system/vector/trajectory with
 its original robot IDs. `metrics["system_size"]` is the sum of local system sizes;
-`partition_history` records robot groups, contact counts, and sizes after each
-contact-set change. Each root record also reports the size actually solved.
+`partition_history` records robot groups, contact counts, sizes, and `rebuilt` and
+`reused` groups after each contact-set change. `component_builds` and
+`component_reuses` total these events. Each root record reports a solve actually
+performed; reused components do not add root records.
 
 `metrics["timing"]` includes `stage_seconds` and `stage_calls` for partitioning,
 assembly, Newton, recovery, reconstruction, validation, and collision search.
 Stages do not overlap. Partitioning includes union-find, index grouping, and
-sorting; assembly includes initial local paths; recovery includes its own
+sorting; assembly includes local systems and initial vectors; recovery includes its own
 assembly/reconstruction/checks. `other` accounts for remaining solve overhead.
-Final output sampling is separately reported as `postprocess_time`.
+Final output sampling and export of fleet-indexed contact vectors are separately
+reported as `postprocess_time`; `contact_export_seconds` is the export portion in
+reduced modes. `wall_time` includes postprocessing.
 Use these stages for comparisons: the legacy `matching_seconds` in full mode
 also contains active-set bookkeeping, while reduced modes report Newton plus
 recovery there. Timings are wall-clock seconds, not CPU-time measurements.
 
-See [the fleet benchmark](fleet-partitions.md) for measured costs and reproduction.
+When `sci_profile_newton=True`, Newton root records additionally contain
+`newton_timing.stage_seconds`, `newton_timing.stage_calls`, and `lsmr_iterations`.
+These nested stages separate residual/Jacobian evaluation, band assembly, band
+solve, sparse assembly/scaling, LSMR, line-search residual evaluation, and other
+Newton work. They are subdivisions of the outer `newton` stage, not additional
+solve time. Recovery retains its own outer timer. Use profiling separately from
+baseline timing comparisons because instrumentation itself adds overhead.
+
+See [the component reuse benchmark](component-reuse.md) for current measured
+costs and [the original fleet benchmark](fleet-partitions.md) for the prototype.
 
 ## Saved problems
 
