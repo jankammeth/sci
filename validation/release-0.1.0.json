@@ -1,0 +1,111 @@
+{
+  "version": "0.1.0",
+  "source_commit": "38188d9f3fe58ab9d93b786e5d2237676811c813",
+  "github_release": "https://github.com/jankammeth/sci/releases/tag/v0.1.0",
+  "pypi_release": "https://pypi.org/project/sci-solver/0.1.0/",
+  "tests_workflow": "https://github.com/jankammeth/sci/actions/runs/39032775054",
+  "publishing_workflow": "https://github.com/jankammeth/sci/actions/runs/39033753562",
+  "all_workflow_jobs_passed": true,
+  "native_wheels": 20,
+  "source_distributions": 1,
+  "pypi_file_hashes_match_tested_artifacts": true,
+  "fresh_pypi_install": {
+    "version": "0.1.0",
+    "backend": "native",
+    "success": true,
+    "minimum_distance": 0.9999999999999997,
+    "acceleration_cost": 3.3484800000000003,
+    "sample_shape": [
+      2,
+      201,
+      2
+    ],
+    "source_hashes_verified": 8
+  },
+  "files": {
+    "sci_solver-0.1.0-cp310-cp310-macosx_10_9_x86_64.whl": {
+      "sha256": "ec5b65a992644e191409f5954967e4f6de535b1afc7346afd9ffdf2cde8ac353",
+      "size": 43398
+    },
+    "sci_solver-0.1.0-cp311-cp311-macosx_10_9_x86_64.whl": {
+      "sha256": "fbe62e4431857a45dbe4e924e0f663b8b11baadae1cd738e39642f1591eed17d",
+      "size": 43396
+    },
+    "sci_solver-0.1.0-cp312-cp312-macosx_10_13_x86_64.whl": {
+      "sha256": "19c6e00c879bf2fed5e98d246c92842898c138514e8459368633aa1eb61dd640",
+      "size": 43353
+    },
+    "sci_solver-0.1.0-cp313-cp313-macosx_10_13_x86_64.whl": {
+      "sha256": "ca28ba39babca7cd52c599ef5d9e8d1cec7f83422d48a68cbba1c4ed0ad5f2e6",
+      "size": 43356
+    },
+    "sci_solver-0.1.0-cp314-cp314-macosx_10_15_x86_64.whl": {
+      "sha256": "59c8e106164f78d98b8347dfdbbae23f3dcd4ae99f6851f468de5c00c6e6647a",
+      "size": 43409
+    },
+    "sci_solver-0.1.0-cp310-cp310-macosx_11_0_arm64.whl": {
+      "sha256": "d64fedd997b51d3b8231f2fb14751a58687e20607e3da20e97c516d1e1d7859c",
+      "size": 44764
+    },
+    "sci_solver-0.1.0-cp311-cp311-macosx_11_0_arm64.whl": {
+      "sha256": "5e3e3bedbc87e77bedfc830389ccc88490178af0be74cdff179deb892921dd9b",
+      "size": 44762
+    },
+    "sci_solver-0.1.0-cp312-cp312-macosx_11_0_arm64.whl": {
+      "sha256": "e4956faf37da4596d8ce0779e85ddd7efc0584e303b8503a2c8a5fee048d8af9",
+      "size": 44765
+    },
+    "sci_solver-0.1.0-cp313-cp313-macosx_11_0_arm64.whl": {
+      "sha256": "ed9ebbbcad2fbbbee1a126d8c71739ba0a651316766f578176978dd293ef7774",
+      "size": 44757
+    },
+    "sci_solver-0.1.0-cp314-cp314-macosx_11_0_arm64.whl": {
+      "sha256": "c75dcff87a7ff55b887552374e2aca0a1fc68f9d632c3acfd18b2fb682dd9ca6",
+      "size": 44765
+    },
+    "sci_solver-0.1.0.tar.gz": {
+      "sha256": "1e660de2c2963ef1dd853b60123d1da9b9817036e8dba2e8fe5c73723a4f5960",
+      "size": 60566
+    },
+    "sci_solver-0.1.0-cp310-cp310-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl": {
+      "sha256": "037221f041db08f3886ec0d4d323654784ba9b604e269e74a9611c073daf4442",
+      "size": 63669
+    },
+    "sci_solver-0.1.0-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl": {
+      "sha256": "7f7dcba663ce196a3bc38964536ab6e42c62ba43740dfa1d291d2fafecae2c93",
+      "size": 63698
+    },
+    "sci_solver-0.1.0-cp312-cp312-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl": {
+      "sha256": "0203d0d4146a6621d83eb8fad312b0998498238a1a33dec5589afa8154364789",
+      "size": 63834
+    },
+    "sci_solver-0.1.0-cp313-cp313-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl": {
+      "sha256": "f50f4fca688bd2749a73dc6693f9aa3ebbcadc5e0c18d83fc12b106ad89ed88c",
+      "size": 63863
+    },
+    "sci_solver-0.1.0-cp314-cp314-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl": {
+      "sha256": "e4f66a432269c8eca40665baf189f74c03f6beaba9e8b1a158c6808d4dcbe881",
+      "size": 63926
+    },
+    "sci_solver-0.1.0-cp310-cp310-win_amd64.whl": {
+      "sha256": "e2c3402257c876c8bc108a4d7d5eac62090f7f0b5e79806c368e29beb26d75d9",
+      "size": 46525
+    },
+    "sci_solver-0.1.0-cp311-cp311-win_amd64.whl": {
+      "sha256": "3d19344511c249f48093f0f4b9dd54ca8f76be07b1d68020c5f2adba144c1dc9",
+      "size": 46524
+    },
+    "sci_solver-0.1.0-cp312-cp312-win_amd64.whl": {
+      "sha256": "3a5124bea020869f230ffa79619925814d479735e0c7ac2148e3cda85ccac874",
+      "size": 46524
+    },
+    "sci_solver-0.1.0-cp313-cp313-win_amd64.whl": {
+      "sha256": "93c97eb4c1b81aeda7bdad906dde7821da0d03a3ef031afc7902f50642eb859f",
+      "size": 46518
+    },
+    "sci_solver-0.1.0-cp314-cp314-win_amd64.whl": {
+      "sha256": "c1a2847bccef5d8a4e2ac0dcfe8dc0d413c2367073841a6464b53fc530c9b000",
+      "size": 46907
+    }
+  }
+}
