@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "If you use SCI Solver, please cite this software and the accompanying paper when available."
+type: software
+title: "SCI: Sequential Contact Insertion"
+authors:
+  - family-names: Kamm
+    given-names: Jan
+version: 0.1.0
+license: Apache-2.0
+repository-code: "https://github.com/jankammeth/sci"
+abstract: "Continuous-time robot fleet planning with sequential contact insertion."

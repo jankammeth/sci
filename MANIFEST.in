@@ -1,0 +1,7 @@
+include LICENSE NOTICE CITATION.cff UPSTREAM.json
+recursive-include docs *.md
+recursive-include examples *.py *.json
+recursive-include tests *.py *.npz
+recursive-include tools *.py
+recursive-include validation *.json
+include src/sci_solver/solvers/_cubic_minima.c

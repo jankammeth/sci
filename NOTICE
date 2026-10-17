@@ -1,0 +1,10 @@
+SCI — Sequential Contact Insertion
+Copyright 2026 Jan Kamm
+
+This distribution derives from https://github.com/jankammeth/contact-solver,
+commit 641a2341a6a59938e285b8ff872bd484713e0605, whose package metadata declares
+Apache-2.0. UPSTREAM.json identifies the unchanged numerical source files.
+
+Packaging, configuration, and convenience API changes are recorded in this
+repository. Historical experiments remain in the source repository and the
+associated paper repository.
