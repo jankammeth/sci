@@ -8,6 +8,43 @@ import pytest
 from sci_solver import Config, ContactSolver, ProblemConfig, SolverConfig, solve
 
 
+def test_default_api_partitions_contacts_and_reuses_unchanged_groups():
+    start = np.array([[-2, -.2], [2, .2], [-2, 9.8], [2, 10.2], [100, 100.]])
+    goal = start.copy()
+    goal[:4, 0] *= -1
+    goal[4] += 1
+    solution = solve(start, goal, time_horizon=5, min_distance=1,
+                     options=SolverConfig(sci_detection_tol=1e-6))
+    assert solution.success
+    assert solution.metrics["fleet_mode"] == "components"
+    assert solution.metrics["system_size"] == 12  # two independent two-robot systems
+    assert solution.metrics["component_builds"] == 2
+    assert solution.metrics["component_reuses"] == 1
+    assert {c.pair for c in solution.contacts} == {(0, 1), (2, 3)}
+    assert solution.sample([0, 2.5, 5]).shape == (5, 3, 2)
+    np.testing.assert_allclose(solution.sample([0, 5])[:, 0], start, atol=1e-12)
+    np.testing.assert_allclose(solution.sample([0, 5])[:, 1], goal, atol=1e-12)
+    np.testing.assert_allclose(solution.sample([2.5])[4, 0], [100.5, 100.5], atol=1e-12)
+
+
+def test_omitted_options_use_components_without_contact_systems():
+    solution = solve([[0, 0], [3, 0]], [[1, 1], [4, 1]],
+                     time_horizon=5, min_distance=1)
+    assert solution.success
+    assert solution.metrics["fleet_mode"] == "components"
+    assert solution.metrics["system_size"] == 0
+    assert solution.metrics["timing"]["stage_calls"]["newton"] == 0
+
+
+def test_full_mode_remains_available_through_public_api():
+    solution = solve([[-2, -.2], [2, .2]], [[2, -.2], [-2, .2]],
+                     time_horizon=5, min_distance=1,
+                     options=SolverConfig(sci_fleet_mode="full", sci_detection_tol=1e-6))
+    assert solution.success
+    assert solution.metrics["fleet_mode"] == "full"
+    assert len(solution.contacts) == 1
+
+
 def test_convenience_api_preserves_reference_result():
     start = np.array([[-2., -.2, .1], [2., .2, -.1]])
     goal = start.copy()
@@ -54,6 +91,7 @@ def test_configuration_json_roundtrip_and_unknown_options(tmp_path):
     path = tmp_path / "config.json"
     cfg.to_json(path)
     assert Config.from_json(path).to_dict() == cfg.to_dict()
+    assert Config.from_dict({"problem": {"n_robots": 2, "min_distance": 1}}).solver.sci_fleet_mode == "components"
     with pytest.raises(TypeError):
         Config.from_dict({"problem": {"n_robots": 2, "min_distance": 1}, "solver": {"typo": 1}})
 

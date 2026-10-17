@@ -5,7 +5,7 @@ on:
       tag:
         description: Existing release tag matching pyproject.toml
         required: true
-        default: v0.1.0
+        default: v0.2.0
       publish:
         description: Publish tested artifacts to PyPI (requires the pypi environment)
         type: boolean

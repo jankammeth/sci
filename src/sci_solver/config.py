@@ -101,7 +101,7 @@ class SolverConfig:
     sci_reaction_recovery: bool = True
     timeout: float = 300.0
     use_analytical_jacobian: bool = True
-    sci_fleet_mode: str = "full"
+    sci_fleet_mode: str = "components"
     sci_profile_newton: bool = False
 
     def __post_init__(self):

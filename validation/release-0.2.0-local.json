@@ -1,0 +1,116 @@
+{
+  "version": "0.2.0",
+  "validation_scope": "Local source, native wheel, native source installation, and Python fallback wheel; hosted CI and publication remain pending.",
+  "default_fleet_mode": "components",
+  "runtime_sources_sha256": {
+    "src/sci_solver/__init__.py": "cd82771462960a7cbbb85670bc75d727d811a67a7d4c2fef7b7bcd66a5aee940",
+    "src/sci_solver/api.py": "4e28265ef198acfb3ec7ff8af3b5d28e1097d2d84ce67555021676c2cc563d8a",
+    "src/sci_solver/cli/__init__.py": "9dcb5a2c0b5a433396ad231bc346a881672ab1f6b1139ef5b1815e49c0d7730d",
+    "src/sci_solver/cli/vector_sci.py": "602e9a9de83d038174c31d813592f4b7f3d8ba27f150b638435bcd19762851ec",
+    "src/sci_solver/config.py": "d4fefdc68485251b27b64c2615cc03fda48c71cf7aa64bf343d64cca1dc7288e",
+    "src/sci_solver/evaluation.py": "23927d3c4c8279b71d38d06092e5f7d64ba35b70560895adc955c7d09e771b35",
+    "src/sci_solver/solvers/__init__.py": "024fe39bfba704d8fa355db14ad56cfa290ef918ca5c8b98f201bcdbd6656e8d",
+    "src/sci_solver/solvers/_cubic_minima.c": "7b2730c03652ae121191a81ef22e31a9283bc3f779f3e6a5465d14d947e32a97",
+    "src/sci_solver/solvers/base.py": "a3d1e66c04f57d69eb7fb9eb0416d77ce60c9360e9448c22b3c4da3ff7080a30",
+    "src/sci_solver/solvers/collision_search.py": "9667839d4a5a724591de4540ffaa7eb607f88c6803aff7981ea46a702ee34c3c",
+    "src/sci_solver/solvers/contact_solver.py": "08214666e733cfe2fe8c3f5b249ab08ec4c6ee6475cc6c771914cd46a46f6cc6",
+    "src/sci_solver/solvers/cubic_utils.py": "198ed08248d1648f0c196ed346a3a0a3e139662d728e98ef42f1701d40971a18",
+    "src/sci_solver/solvers/matching_numerics.py": "67abc420c4b84ea8947a798b3913597baee9aaa9b5c9ad069dac82811b400889",
+    "src/sci_solver/solvers/matching_operations.py": "be4eae1b83c0077ffbb68ccf48b460b491907838eb96544b608200f1a66644ab",
+    "src/sci_solver/solvers/partitioned_matching.py": "57ac9cd413d053bbcc07cbd61303438baa9b6bfb2e4971ef0ecbf1b3c8000c3a",
+    "src/sci_solver/solvers/reaction_matching.py": "6efdce28648e49c9418f1a42da3d93cb4636112c561e9da3f9c29a64fc3b7b70",
+    "src/sci_solver/solvers/stage_timing.py": "528dc2bc8b24f2f63431e486fd04b72ce32ba42a6def986d6ac0ce3d001cd8a8",
+    "src/sci_solver/solvers/vector_matching.py": "326ffe29e94e4f5e080d4224fd7ab4fb4d38a14789ab9345d5985232c3b9d358"
+  },
+  "source_tests": {
+    "passed": 175,
+    "seconds": 8.51
+  },
+  "installed_artifact_tests": {
+    "native": {
+      "environment": {
+        "python": "3.14.7",
+        "platform": "macOS-26.5.1-arm64-arm-64bit-Mach-O",
+        "packages": {
+          "sci-solver": "0.2.0",
+          "numpy": "2.5.4",
+          "scipy": "1.18.1",
+          "pytest": "9.1.1"
+        },
+        "backend": "native",
+        "default_fleet_mode": "components"
+      },
+      "passed": 175,
+      "skipped": 0,
+      "seconds": 18.26,
+      "imported_from_site_packages": true,
+      "tested_outside_checkout": true
+    },
+    "fallback": {
+      "environment": {
+        "python": "3.12.14",
+        "platform": "macOS-26.5.1-arm64-arm-64bit",
+        "packages": {
+          "sci-solver": "0.2.0",
+          "numpy": "2.5.4",
+          "scipy": "1.18.1",
+          "pytest": "9.1.1"
+        },
+        "backend": "python",
+        "default_fleet_mode": "components"
+      },
+      "passed": 174,
+      "skipped": 1,
+      "seconds": 37.64,
+      "imported_from_site_packages": true,
+      "tested_outside_checkout": true
+    },
+    "older": {
+      "environment": {
+        "python": "3.11.15",
+        "platform": "macOS-26.5.1-arm64-arm-64bit",
+        "packages": {
+          "sci-solver": "0.2.0",
+          "numpy": "1.23.5",
+          "scipy": "1.10.0",
+          "pytest": "9.1.1"
+        },
+        "backend": "native",
+        "default_fleet_mode": "components"
+      },
+      "passed": 175,
+      "skipped": 0,
+      "seconds": 34.02,
+      "imported_from_site_packages": true,
+      "tested_outside_checkout": true
+    }
+  },
+  "full_mode_reference_comparison": {
+    "upstream_commit": "641a2341a6a59938e285b8ff872bd484713e0605",
+    "sci_fleet_mode": "full",
+    "passed": true,
+    "cases": 29,
+    "max_absolute_array_difference": 0.0
+  },
+  "cli_smoke": {
+    "cases": 20,
+    "converged": 20,
+    "all_used_default_components": true
+  },
+  "examples": {
+    "two_robots": "passed",
+    "fleet": "passed"
+  },
+  "paper_integration_tests": {
+    "test_sci_release": 2,
+    "test_rerun_all_sci": 6
+  },
+  "ruff": "passed",
+  "diff_check": "passed",
+  "archive_checks": {
+    "benchmark_data_and_regression_fixtures_in_sdist": true,
+    "no_compiled_files_in_sdist": true,
+    "native_extension_in_native_wheel": true,
+    "no_native_extension_in_fallback_wheel": true
+  }
+}

@@ -88,10 +88,16 @@ and diagnostics; it is not a usable collision-free plan. Tolerances are absolute
 and should be chosen for the physical scale of the problem. The reference default
 separation allowance is zero; the examples explicitly use `1e-6`.
 
-For fleet-reduction experiments, select `SolverConfig(sci_fleet_mode="active")`
-to include only participating robots, or `sci_fleet_mode="components"` to solve
-each connected contact group separately. The default remains `"full"` for
-comparison. All modes check continuous separation across the entire fleet.
+Starting with 0.2.0, the default `sci_fleet_mode="components"` uses union-find to
+group robots connected by contacts and solves one system per group. Robots with
+no contacts follow their unconstrained trajectories. Unchanged groups reuse their
+solutions and checks. All modes check continuous separation across the entire fleet.
+
+Select `SolverConfig(sci_fleet_mode="full")` to reproduce the earlier full-fleet
+formulation, or `sci_fleet_mode="active"` to solve one system containing all
+participating robots. The default uses the same component algorithm for every
+fleet size; it has no robot-count threshold. Small contacting fleets can incur
+extra bookkeeping overhead; the benchmarks report those cases as well.
 [The component reuse benchmark](docs/component-reuse.md) compares the optimized
 driver with its prototype and full-fleet mode on saved 2-, 4-, and 20-robot cases,
 including a detailed Newton breakdown. Unchanged components retain their solved
@@ -111,8 +117,8 @@ The numerical implementation is preserved from
 extraction edit. Four core files remain byte-identical. The collision wrapper changes
 only the package name in its fallback warning; the C kernel adds equivalent
 stack workspace allocation for Microsoft's C compiler. Numerical formulas and
-control flow in the default full-fleet solver are retained; its driver now records
-stage timings and dispatches optional fleet reductions. Contact initialization,
+control flow in the explicit full-fleet mode are retained; its driver records
+stage timings and dispatches the default component solver. Contact initialization,
 recovery, and validation are shared with the component driver; Newton has optional
 fine stage profiling. Original extraction hashes are retained alongside current
 hashes and change descriptions.

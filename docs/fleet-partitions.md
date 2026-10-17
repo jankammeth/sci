@@ -1,5 +1,8 @@
 # Fleet partition experiment
 
+The default-selection discussion below is historical. Version 0.2.0 adopts the
+subsequently optimized component implementation as its default.
+
 This report describes the original component prototype. See the subsequent
 [component reuse benchmark](component-reuse.md) for the optimized implementation,
 small-fleet overhead, and detailed Newton timings. The measurements below are

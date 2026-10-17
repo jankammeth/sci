@@ -48,8 +48,9 @@ def solve(
 
     Positions and optional velocities have shape (N, d). Omitted velocities
     are zero. Use SolverConfig(sci_detection_tol=...) to set the absolute
-    separation allowance explicitly; omitted options retain the reference
-    solver's defaults. This local solver can return an unsuccessful iterate.
+    separation allowance explicitly. By default, union-find groups contacting
+    robots into independently solved components. This local solver can return
+    an unsuccessful iterate.
     """
     initial_positions = np.asarray(initial_positions, dtype=float)
     final_positions = np.asarray(final_positions, dtype=float)

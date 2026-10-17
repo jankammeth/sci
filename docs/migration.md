@@ -1,3 +1,18 @@
+# Migrating to 0.2.0
+
+The public `solve`, `Config`, `SolverConfig`, and `ContactSolver` interfaces now
+default to union-find contact components. Existing configurations that omit
+`sci_fleet_mode` use this default, including older configuration objects supplied
+directly to `ContactSolver`. Select `sci_fleet_mode="full"` explicitly to reproduce
+the 0.1.0 formulation. Numerical tolerances are unchanged.
+
+Returned trajectories, samples, and contact indices retain their fleet-wide
+shape. Low-level users of `ContactSolver.system` should note that the component
+mode exposes a tuple of local systems; `matching_components` maps them to robot
+IDs. `metrics["system_size"]` counts the unknowns actually solved. The reference
+full mode retains its single-system representation. See [the API guide](api.md)
+for component reuse, simultaneous contacts, merge limitations, and stage timing.
+
 # Extraction from contact-solver
 
 Reference: `https://github.com/jankammeth/contact-solver`, commit
@@ -8,10 +23,11 @@ reference. The collision wrapper changes only `contact-solver` to `sci-solver`
 in the reinstall warning. The C kernel uses `_alloca` for the same three stack
 arrays under MSVC, which does not support C variable-length arrays. Other
 compilers retain the original declarations. Numerical formulas and control flow
-in the default full-fleet solver are retained; `UPSTREAM.json` records both
+in the explicit full-fleet mode are retained; `UPSTREAM.json` records both
 extraction edits as explicit text replacements. Since extraction, the contact
-solver driver has gained stage timing and dispatch to optional active-robot and
-connected-component reductions. Its original extraction hash remains recorded;
+solver driver has gained stage timing and dispatch to active-robot and
+connected-component reductions, with components selected by default in 0.2.0.
+Its original extraction hash remains recorded;
 `current_sha256` identifies the revised file and `post_extraction_changes`
 describes the additions. The reductions live in a separate module and reuse the
 matching equations and Newton algorithm. Shared contact initialization, recovery,
@@ -35,8 +51,10 @@ removed from the environment report. Plotting is an optional example dependency.
 
 ## Numerical comparison
 
-`tools/compare_upstream.py` compares the installed package against a checkout of
-the reference commit. Install the reference package in a separate environment,
+`tools/compare_upstream.py` compares the installed package's explicit `full` mode
+against a checkout of the reference commit. Component behavior is checked by
+independent physical tests and comparisons with full mode. Install the reference
+package in a separate environment,
 then pass its interpreter and checkout paths. The reference environment needs
 the original package's declared dependencies.
 

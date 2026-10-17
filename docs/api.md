@@ -21,7 +21,8 @@ last segment. Orders 0–2 are continuous up to the matching tolerance.
 
 ## Options
 
-Pass `SolverConfig(...)` through `options`. Defaults match the reference implementation.
+Pass `SolverConfig(...)` through `options`. Numerical tolerances retain the
+reference defaults; equation systems use contact components by default since 0.2.0.
 
 | Option | Default | Meaning |
 | --- | --- | --- |
@@ -33,7 +34,7 @@ Pass `SolverConfig(...)` through `options`. Defaults match the reference impleme
 | `sci_reaction_recovery` | `True` | Enable condensed recovery when matching fails. |
 | `timeout` | `300.0` | Cooperative solve deadline in seconds. |
 | `use_analytical_jacobian` | `True` | Use the analytical matching Jacobian. |
-| `sci_fleet_mode` | `"full"` | `"full"`, `"active"`, or `"components"`; see below. |
+| `sci_fleet_mode` | `"components"` | `"full"`, `"active"`, or `"components"`; see below. |
 | `sci_profile_newton` | `False` | Record detailed Newton-stage times and LSMR iteration counts. |
 
 Statuses are `success`, `unresolved`, `root_failure`, and `invalid_solution`.
@@ -48,9 +49,11 @@ field used by automatic horizon selection when the horizon is omitted; it does
 not discretize contact matching or collision checking. The convenience `solve`
 function requires an explicit horizon.
 
-## Experimental fleet reductions
+## Contact components
 
-`full` uses all robots in every contact block. `active` eliminates robots with no
+`components` is the default for `solve`, `ContactSolver`, and the CLI, including
+saved configurations that omit `sci_fleet_mode`. `full` uses all robots in every
+contact block. `active` eliminates robots with no
 current contacts and solves one system for the remaining robots. `components`
 also partitions the contact graph and solves one system per connected group.
 The graph is rebuilt with union-find after every insertion or removal; there is

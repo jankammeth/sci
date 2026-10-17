@@ -1,4 +1,4 @@
-"""Experimental fleet reductions using the existing local matching solver.
+"""Contact-graph fleet reductions using the existing local matching solver.
 
 Rebuild the contact graph after each insertion/removal. Components have their own
 endpoint barycenters and knot sequences; only collision checking uses their union.

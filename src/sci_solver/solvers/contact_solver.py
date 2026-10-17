@@ -7,6 +7,7 @@ from itertools import combinations
 
 import numpy as np
 
+from ..config import SolverConfig
 from .base import Solver
 from .collision_search import COLLISION_BACKEND, minima
 from .cubic_utils import cubic_coefficients, distance_candidates
@@ -157,7 +158,7 @@ class ContactSolver(Solver):
         self.verbose = verbose
         self.options = config.solver
         # The paper's historical configuration objects predate fleet reductions.
-        self.fleet_mode = getattr(self.options, "sci_fleet_mode", "full")
+        self.fleet_mode = getattr(self.options, "sci_fleet_mode", SolverConfig.sci_fleet_mode)
         if self.fleet_mode not in ("full", "active", "components"):
             raise ValueError("sci_fleet_mode must be full, active, or components")
         if (

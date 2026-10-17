@@ -11,11 +11,12 @@
       "upstream_path": "src/contact_solver/solvers/contact_solver.py",
       "sha256": "9ae40bc11838b8fc0ca76f439f21af878d27669f3d3440bfd8519196e624b7a1",
       "extracted_sha256": "9ae40bc11838b8fc0ca76f439f21af878d27669f3d3440bfd8519196e624b7a1",
-      "current_sha256": "57c277b44d28f6eaf69cf851ff86cec1f4733c15cfc52a5a4255934df0826e19",
+      "current_sha256": "08214666e733cfe2fe8c3f5b249ab08ec4c6ee6475cc6c771914cd46a46f6cc6",
       "post_extraction_changes": [
-        "Optional active-robot and connected-component matching drivers; full mode remains the default.",
+        "Active-robot and connected-component matching drivers; components become the default in 0.2.0, with explicit full mode retained.",
         "Disjoint stage timings and system sizes for benchmark comparisons.",
-        "Share pure contact initialization, recovery and validation operations with lightweight components; allow selected-coordinate evaluation."
+        "Share pure contact initialization, recovery and validation operations with lightweight components; allow selected-coordinate evaluation.",
+        "Configuration objects without a fleet-mode field inherit the public SolverConfig default."
       ]
     },
     "src/sci_solver/solvers/collision_search.py": {

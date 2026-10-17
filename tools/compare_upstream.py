@@ -41,6 +41,10 @@ def worker(package, output):
     inputs.append(("invalid-endpoints", np.zeros((2, 2)), goal, None, None, 6., 1., 1e-6, {}))
     records, arrays = [], {}
     for name, start, goal, v0, vf, horizon, distance, tolerance, options in inputs:
+        # Compare the retained reference formulation, including its local-vector
+        # layout. The default component algorithm has separate physical/parity tests.
+        if package == "sci_solver":
+            options = dict(options, sci_fleet_mode="full")
         cfg = api.Config(
             name=name,
             problem=config.ProblemConfig(n_robots=len(start), dimension=start.shape[1],
@@ -131,7 +135,8 @@ def main():
             for key in old.files:
                 np.testing.assert_allclose(old[key], new[key], rtol=1e-8, atol=1e-9, err_msg=key)
                 max_error = max(max_error, float(np.max(np.abs(old[key] - new[key]), initial=0)))
-        output = dict(upstream_commit=commit, passed=True, cases=len(reports[0]["records"]),
+        output = dict(upstream_commit=commit, sci_fleet_mode="full", passed=True,
+                      cases=len(reports[0]["records"]),
                       max_absolute_array_difference=max_error, reference=reports[0], extracted=reports[1])
         args.output.parent.mkdir(parents=True, exist_ok=True)
         args.output.write_text(json.dumps(output, indent=2) + "\n")

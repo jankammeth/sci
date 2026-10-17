@@ -3,5 +3,5 @@ recursive-include docs *.md
 recursive-include examples *.py *.json
 recursive-include tests *.py *.npz
 recursive-include tools *.py
-recursive-include validation *.json
+recursive-include validation *.json *.json.gz *.csv
 include src/sci_solver/solvers/_cubic_minima.c

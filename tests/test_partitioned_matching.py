@@ -313,7 +313,7 @@ def test_cli_exports_fleet_indexed_contact_states(mode, tmp_path):
         np.testing.assert_array_equal(data["contact_pairs"], [[0, 1]])
 
 
-def test_legacy_configuration_defaults_to_full():
+def test_legacy_configuration_uses_current_default():
     from types import SimpleNamespace
 
     cfg = Config(ProblemConfig(2, 1, 5))
@@ -323,4 +323,4 @@ def test_legacy_configuration_defaults_to_full():
     solver = ContactSolver(cfg)
     solver.set_initial_states([[0, 0], [2, 0]])
     solver.set_final_states([[1, 1], [3, 1]])
-    assert solver.generate_trajectories()["metrics"]["fleet_mode"] == "full"
+    assert solver.generate_trajectories()["metrics"]["fleet_mode"] == "components"

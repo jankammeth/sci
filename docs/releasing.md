@@ -10,7 +10,7 @@ trusted publisher and the `pypi` environment's required review.
    Wait for the Tests workflow to pass on Linux, macOS, and Windows, including
    native, Python-fallback, and minimum-dependency jobs.
 3. Record the release version in `pyproject.toml` and `CITATION.cff`. Review the
-   release notes, create the matching tag (for example, `v0.1.0`), and push it after
+   release notes, create the matching tag (for example, `v0.2.0`), and push it after
    approval. The tag must point to the tested commit.
 4. Run **Build release** manually with that tag and `publish=false`. It builds
    and tests CPython 3.10–3.14 wheels for Linux x86_64, Windows AMD64, and macOS
@@ -23,8 +23,9 @@ trusted publisher and the `pypi` environment's required review.
    and approve its environment deployment. It publishes only after every build
    and artifact test succeeds; it does not need a stored PyPI API token.
 7. In a fresh environment, install the released version from PyPI (for example,
-   `sci-solver==0.1.0`) and run the README
-   example. Check `collision_backend` on each advertised wheel platform. Record
+   `sci-solver==0.2.0`) and run the README
+   example. Confirm `metrics["fleet_mode"] == "components"` without selecting a
+   mode, and check `collision_backend` on each advertised wheel platform. Record
    the release URL and pin the paper's solver integration to the released commit.
 
 Ordinary pushes and pull requests never publish packages. The workflow is manual

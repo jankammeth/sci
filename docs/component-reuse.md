@@ -1,5 +1,9 @@
 # Component reuse benchmark
 
+This report records the benchmark before the 0.2.0 release. At that time, full
+mode remained the default. Version 0.2.0 adopts the optimized component method;
+the measurements and source hashes below retain their original meaning.
+
 The three general improvements reduce component-driver overhead without any
 fleet-size threshold. The selected small interacting cases improve by 11–24%
 against the prototype, but remain 9–24% slower than full-fleet solves. At N=20,

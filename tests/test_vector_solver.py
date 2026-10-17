@@ -30,6 +30,9 @@ def config(d=2, n=2, **options):
         solver=SolverConfig(
             **dict(
                 sci_detection_tol=1e-6,
+                # Preserve reference-representation regressions; component and
+                # default public-API behavior have their own integration tests.
+                sci_fleet_mode="full",
                 use_analytical_jacobian=True,
                 **options,
             )

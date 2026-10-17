@@ -5,7 +5,7 @@ title: "SCI: Sequential Contact Insertion"
 authors:
   - family-names: Kamm
     given-names: Jan
-version: 0.1.0
+version: 0.2.0
 license: Apache-2.0
 repository-code: "https://github.com/jankammeth/sci"
 abstract: "Continuous-time robot fleet planning with sequential contact insertion."
