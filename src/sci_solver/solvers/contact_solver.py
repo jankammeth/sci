@@ -13,6 +13,7 @@ from .cubic_utils import cubic_coefficients, distance_candidates
 from .matching_numerics import damped_newton, insertion_time
 from .reaction_matching import ReactionMatching
 from .vector_matching import MatchingSystem, VectorContact
+from .stage_timing import StageTiming
 
 
 @dataclass
@@ -154,6 +155,10 @@ class ContactSolver(Solver):
         self.contact_selection = contact_selection
         self.verbose = verbose
         self.options = config.solver
+        # The paper's historical configuration objects predate fleet reductions.
+        self.fleet_mode = getattr(self.options, "sci_fleet_mode", "full")
+        if self.fleet_mode not in ("full", "active", "components"):
+            raise ValueError("sci_fleet_mode must be full, active, or components")
         if (
             not np.isfinite(self.R)
             or self.R <= 0
@@ -391,7 +396,11 @@ class ContactSolver(Solver):
         return checks
 
     def generate_trajectories(self, verbose=None):
+        if self.fleet_mode != "full":
+            from .partitioned_matching import generate_partitioned
+            return generate_partitioned(self, verbose)
         started = time.perf_counter()
+        stages = StageTiming()
         verbose = self.verbose if verbose is None else verbose
         if self.initial_positions is None or self.final_positions is None:
             raise ValueError("Set initial and final states before solving")
@@ -409,8 +418,10 @@ class ContactSolver(Solver):
         barycenter = np.array(cubic_coefficients(*endpoint_arrays.mean(axis=1), self.T))
         self.contacts = []
         x = np.empty(0)
-        system = self.matching_system(self.contacts)
-        trajectory = RelativeTrajectory.from_system(system, x, barycenter)
+        with stages.measure("assembly"):
+            system = self.matching_system(self.contacts)
+        with stages.measure("reconstruction"):
+            trajectory = RelativeTrajectory.from_system(system, x, barycenter)
         deadline = started + self.options.timeout
         roots = []
         matching_seconds = 0.0
@@ -419,10 +430,12 @@ class ContactSolver(Solver):
         active_set_updates = 0
         status, reason = "success", "converged"
         while True:
-            closest = trajectory.closest()
+            with stages.measure("collision_search"):
+                closest = trajectory.closest()
             pair, contact_time, distance = closest
-            endpoint_states = trajectory.endpoint_states()
-            checks = self._checks(system, x, trajectory, endpoint_states)
+            with stages.measure("validation"):
+                endpoint_states = trajectory.endpoint_states()
+                checks = self._checks(system, x, trajectory, endpoint_states)
             if not checks["valid"]:
                 status, reason = "invalid_solution", "invalid_matching_solution"
                 break
@@ -439,9 +452,10 @@ class ContactSolver(Solver):
                 status, reason = "invalid_solution", "infeasible_endpoint_separation"
                 break
             if self.contact_selection == "earliest":
-                pair, contact_time, _ = trajectory.first_violation(
-                    self.R - self.options.sci_detection_tol
-                )
+                with stages.measure("collision_search"):
+                    pair, contact_time, _ = trajectory.first_violation(
+                        self.R - self.options.sci_detection_tol
+                    )
             try:
                 initial_time = insertion_time(
                     contact_time, [c.t_star for c in self.contacts], self.T
@@ -463,16 +477,19 @@ class ContactSolver(Solver):
                 status, reason = "unresolved", "timeout"
                 break
             active_set_updates += 1
-            self.contacts.append(self.initialize_contact(pair, initial_time, trajectory))
-            self.contacts.sort(key=lambda c: c.t_star)
-            system = self.matching_system(self.contacts)
-            x = np.concatenate([c.to_vector() for c in self.contacts])
+            with stages.measure("assembly"):
+                self.contacts.append(self.initialize_contact(pair, initial_time, trajectory))
+                self.contacts.sort(key=lambda c: c.t_star)
+                system = self.matching_system(self.contacts)
+                x = np.concatenate([c.to_vector() for c in self.contacts])
             root_started = time.perf_counter()
             while True:
                 recovered_trajectory = None
                 if system.m:
                     initial = x.copy()
-                    x, root_info = self._solve_system(system, x, deadline)
+                    with stages.measure("newton"):
+                        x, root_info = self._solve_system(system, x, deadline)
+                    root_info["system_size"] = len(x)
                     roots.append(root_info)
                     if (
                         self.options.sci_reaction_recovery
@@ -480,7 +497,8 @@ class ContactSolver(Solver):
                         and root_info["message"] != "timeout"
                         and self.options.sci_root_max_iterations > 0
                     ):
-                        recovered = self._recover_reactions(system, initial, barycenter, deadline)
+                        with stages.measure("recovery"):
+                            recovered = self._recover_reactions(system, initial, barycenter, deadline)
                         if recovered is not None:
                             system, x, recovered_trajectory, root_info = recovered
                             roots.append(root_info)
@@ -501,25 +519,29 @@ class ContactSolver(Solver):
                 removed_contacts.append(
                     dict(pair=removed.pair, time=removed.t_star, mass=float(masses[index]))
                 )
-                system = self.matching_system(self.contacts)
-                x = (
-                    np.concatenate([c.to_vector() for c in self.contacts])
-                    if self.contacts
-                    else np.empty(0)
-                )
+                with stages.measure("assembly"):
+                    system = self.matching_system(self.contacts)
+                    x = (
+                        np.concatenate([c.to_vector() for c in self.contacts])
+                        if self.contacts
+                        else np.empty(0)
+                    )
             matching_seconds += time.perf_counter() - root_started
-            trajectory = (
-                recovered_trajectory
-                if recovered_trajectory is not None
-                else RelativeTrajectory.from_system(system, x, barycenter)
-            )
+            with stages.measure("reconstruction"):
+                trajectory = (
+                    recovered_trajectory
+                    if recovered_trajectory is not None
+                    else RelativeTrajectory.from_system(system, x, barycenter)
+                )
             if verbose:
                 print(f"ContactSolver: m={len(self.contacts)}, root={root_info['message']}")
             if not root_info["success"]:
                 status, reason = "root_failure", root_info["message"]
                 # The failed solve changed the trajectory since the last loop checks.
-                checks = self._checks(system, x, trajectory)
-                closest = trajectory.closest()
+                with stages.measure("validation"):
+                    checks = self._checks(system, x, trajectory)
+                with stages.measure("collision_search"):
+                    closest = trajectory.closest()
                 break
         self.system, self.solution, self.trajectory = system, x, trajectory
         # All other exits retain the checks of this exact trajectory from the loop.
@@ -548,6 +570,7 @@ class ContactSolver(Solver):
                 roots=roots,
                 reaction_recovery_enabled=self.options.sci_reaction_recovery,
                 contact_selection=self.contact_selection,
+                fleet_mode="full",
                 analytical_jacobian=self.options.use_analytical_jacobian,
                 removed_contacts=removed_contacts,
                 insertion_offsets=insertion_offsets,
@@ -572,6 +595,7 @@ class ContactSolver(Solver):
                     solve_time=solve_time,
                     postprocess_time=time.perf_counter() - started - solve_time,
                     wall_time=time.perf_counter() - started,
+                    **stages.result(solve_time),
                 ),
             ),
         )

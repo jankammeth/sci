@@ -3,12 +3,18 @@
 Reference: `https://github.com/jankammeth/contact-solver`, commit
 `641a2341a6a59938e285b8ff872bd484713e0605`.
 
-Six of the eight files listed in `UPSTREAM.json` are byte-identical to the
+Five of the eight files listed in `UPSTREAM.json` remain byte-identical to the
 reference. The collision wrapper changes only `contact-solver` to `sci-solver`
 in the reinstall warning. The C kernel uses `_alloca` for the same three stack
 arrays under MSVC, which does not support C variable-length arrays. Other
 compilers retain the original declarations. Numerical formulas and control flow
-are unchanged; `UPSTREAM.json` records both edits as explicit text replacements.
+in the default full-fleet solver are retained; `UPSTREAM.json` records both
+extraction edits as explicit text replacements. Since extraction, the contact
+solver driver has gained stage timing and dispatch to optional active-robot and
+connected-component reductions. Its original extraction hash remains recorded;
+`current_sha256` identifies the revised file and `post_extraction_changes`
+describes the additions. The reductions live in a separate module and reuse the
+unchanged matching equations, Newton routine, and reaction recovery.
 They contain the joint solver, cubic representation, matching equations,
 derivatives, nonlinear solve safeguards, recovery, and collision kernels.
 The test suite retains independent polynomial, derivative, endpoint, reaction,

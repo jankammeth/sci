@@ -1,0 +1,41 @@
+{
+  "passed": true,
+  "cases": 29,
+  "max_absolute_array_difference": 0.0,
+  "reference_sources": {
+    "src/sci_solver/solvers/base.py": "a3d1e66c04f57d69eb7fb9eb0416d77ce60c9360e9448c22b3c4da3ff7080a30",
+    "src/sci_solver/solvers/contact_solver.py": "9ae40bc11838b8fc0ca76f439f21af878d27669f3d3440bfd8519196e624b7a1",
+    "src/sci_solver/solvers/collision_search.py": "d02cf8b7a045a7b8edf964072d52a42f23e590e1bb50453f02b1ca230ce855f3",
+    "src/sci_solver/solvers/cubic_utils.py": "198ed08248d1648f0c196ed346a3a0a3e139662d728e98ef42f1701d40971a18",
+    "src/sci_solver/solvers/matching_numerics.py": "e10f5dbf0747163754355cdffd62b9067b2dea82a31d72222e368f67f7a8cd66",
+    "src/sci_solver/solvers/reaction_matching.py": "6efdce28648e49c9418f1a42da3d93cb4636112c561e9da3f9c29a64fc3b7b70",
+    "src/sci_solver/solvers/vector_matching.py": "326ffe29e94e4f5e080d4224fd7ab4fb4d38a14789ab9345d5985232c3b9d358",
+    "src/sci_solver/solvers/_cubic_minima.c": "02cd37c047bc0df602ff8da1a64c1a80ca926b3519bf584fd8d8879f7dacba9e"
+  },
+  "current_sources": {
+    "src/sci_solver/solvers/base.py": "a3d1e66c04f57d69eb7fb9eb0416d77ce60c9360e9448c22b3c4da3ff7080a30",
+    "src/sci_solver/solvers/contact_solver.py": "0bfdc5d163a40b1c880f043690d351b49e585b78c2c0ca2b1be9892532aead48",
+    "src/sci_solver/solvers/collision_search.py": "9667839d4a5a724591de4540ffaa7eb607f88c6803aff7981ea46a702ee34c3c",
+    "src/sci_solver/solvers/cubic_utils.py": "198ed08248d1648f0c196ed346a3a0a3e139662d728e98ef42f1701d40971a18",
+    "src/sci_solver/solvers/matching_numerics.py": "e10f5dbf0747163754355cdffd62b9067b2dea82a31d72222e368f67f7a8cd66",
+    "src/sci_solver/solvers/reaction_matching.py": "6efdce28648e49c9418f1a42da3d93cb4636112c561e9da3f9c29a64fc3b7b70",
+    "src/sci_solver/solvers/vector_matching.py": "326ffe29e94e4f5e080d4224fd7ab4fb4d38a14789ab9345d5985232c3b9d358",
+    "src/sci_solver/solvers/_cubic_minima.c": "7b2730c03652ae121191a81ef22e31a9283bc3f779f3e6a5465d14d947e32a97"
+  },
+  "reference_environment": {
+    "python": "3.14.7 (main, Aug  5 2026, 10:29:49) [Clang 21.0.0 (clang-2100.1.1.101)]",
+    "platform": "macOS-26.5.1-arm64-arm-64bit-Mach-O",
+    "packages": {
+      "numpy": "2.5.3",
+      "scipy": "1.18.1"
+    }
+  },
+  "current_environment": {
+    "python": "3.14.7 (main, Aug  5 2026, 10:29:49) [Clang 21.0.0 (clang-2100.1.1.101)]",
+    "platform": "macOS-26.5.1-arm64-arm-64bit-Mach-O",
+    "packages": {
+      "numpy": "2.5.3",
+      "scipy": "1.18.1"
+    }
+  }
+}

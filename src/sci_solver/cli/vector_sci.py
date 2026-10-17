@@ -121,7 +121,9 @@ def main(argv=None):
                 args.trajectories,
                 times=result["times"],
                 **result["trajectories"],
-                contact_states=solver.solution.reshape(len(solver.contacts), solver.system.b),
+                contact_states=np.array([c.to_vector() for c in solver.contacts]).reshape(
+                    len(solver.contacts), 2 * solver.d * (solver.N - 1) + 2
+                ),
                 contact_pairs=np.array([c.pair for c in solver.contacts], dtype=int).reshape(-1, 2),
             )
     encoded = json.dumps(

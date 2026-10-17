@@ -33,6 +33,7 @@ Pass `SolverConfig(...)` through `options`. Defaults match the reference impleme
 | `sci_reaction_recovery` | `True` | Enable condensed recovery when matching fails. |
 | `timeout` | `300.0` | Cooperative solve deadline in seconds. |
 | `use_analytical_jacobian` | `True` | Use the analytical matching Jacobian. |
+| `sci_fleet_mode` | `"full"` | `"full"`, `"active"`, or `"components"`; see below. |
 
 Statuses are `success`, `unresolved`, `root_failure`, and `invalid_solution`.
 `metrics["convergence_reason"]` supplies details. Unsuccessful iterates remain
@@ -45,6 +46,45 @@ the reference interface. Its `ProblemConfig.timestep` is a legacy configuration
 field used by automatic horizon selection when the horizon is omitted; it does
 not discretize contact matching or collision checking. The convenience `solve`
 function requires an explicit horizon.
+
+## Experimental fleet reductions
+
+`full` uses all robots in every contact block. `active` eliminates robots with no
+current contacts and solves one system for the remaining robots. `components`
+also partitions the contact graph and solves one system per connected group.
+The graph is rebuilt with union-find after every insertion or removal; there is
+no persistent graph cache. Every group uses the same Newton and recovery routines
+and its own endpoint barycenter. Uninvolved robots follow their unconstrained
+endpoint cubics. Collision search still covers all pairs and can activate robots
+or join components on later iterations.
+
+Component trajectories are joined by translating cubic coefficients onto the
+union of their knots. Independent components can have simultaneous contacts.
+Minimum knot gaps and ordering constraints apply within each component. If a
+new edge joins components whose existing contact times coincide or violate the
+configured gap, the solver returns `unresolved` with reason
+`merged_component_knot_gap`; it does not move already solved contact times to
+make the merge fit the current Hermite representation.
+
+`Solution`, sampling, contact indices, and CLI exports retain their fleet-wide
+shape. For low-level diagnostics in the reduced modes, `ContactSolver.system`
+is a tuple of local matching systems, `solution` concatenates their local vectors,
+and `matching_components` associates each local system/vector/trajectory with
+its original robot IDs. `metrics["system_size"]` is the sum of local system sizes;
+`partition_history` records robot groups, contact counts, and sizes after each
+contact-set change. Each root record also reports the size actually solved.
+
+`metrics["timing"]` includes `stage_seconds` and `stage_calls` for partitioning,
+assembly, Newton, recovery, reconstruction, validation, and collision search.
+Stages do not overlap. Partitioning includes union-find, index grouping, and
+sorting; assembly includes initial local paths; recovery includes its own
+assembly/reconstruction/checks. `other` accounts for remaining solve overhead.
+Final output sampling is separately reported as `postprocess_time`.
+Use these stages for comparisons: the legacy `matching_seconds` in full mode
+also contains active-set bookkeeping, while reduced modes report Newton plus
+recovery there. Timings are wall-clock seconds, not CPU-time measurements.
+
+See [the fleet benchmark](fleet-partitions.md) for measured costs and reproduction.
 
 ## Saved problems
 

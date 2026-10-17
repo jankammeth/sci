@@ -101,8 +101,11 @@ class SolverConfig:
     sci_reaction_recovery: bool = True
     timeout: float = 300.0
     use_analytical_jacobian: bool = True
+    sci_fleet_mode: str = "full"
 
     def __post_init__(self):
+        if self.sci_fleet_mode not in ("full", "active", "components"):
+            raise ValueError("sci_fleet_mode must be full, active, or components")
         if (isinstance(self.sci_root_max_iterations, bool)
                 or not isinstance(self.sci_root_max_iterations, int)
                 or self.sci_root_max_iterations < 0):

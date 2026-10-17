@@ -10,7 +10,12 @@
     "src/sci_solver/solvers/contact_solver.py": {
       "upstream_path": "src/contact_solver/solvers/contact_solver.py",
       "sha256": "9ae40bc11838b8fc0ca76f439f21af878d27669f3d3440bfd8519196e624b7a1",
-      "extracted_sha256": "9ae40bc11838b8fc0ca76f439f21af878d27669f3d3440bfd8519196e624b7a1"
+      "extracted_sha256": "9ae40bc11838b8fc0ca76f439f21af878d27669f3d3440bfd8519196e624b7a1",
+      "current_sha256": "0bfdc5d163a40b1c880f043690d351b49e585b78c2c0ca2b1be9892532aead48",
+      "post_extraction_changes": [
+        "Optional active-robot and connected-component matching drivers; full mode remains the default.",
+        "Disjoint stage timings and system sizes for benchmark comparisons."
+      ]
     },
     "src/sci_solver/solvers/collision_search.py": {
       "upstream_path": "src/contact_solver/solvers/collision_search.py",

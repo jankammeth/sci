@@ -93,9 +93,9 @@ def main():
         transformed = (args.upstream / item["upstream_path"]).read_bytes()
         for replacement in item.get("text_replacements", []):
             transformed = transformed.replace(replacement["old"].encode(), replacement["new"].encode())
-        if transformed != (ROOT / path).read_bytes():
-            raise ValueError(f"Unexpected change beyond recorded extraction edits: {path}")
-        for source, expected in ((ROOT / path, item["extracted_sha256"]),
+        if hashlib.sha256(transformed).hexdigest() != item["extracted_sha256"]:
+            raise ValueError(f"Recorded extraction edits do not reproduce the extracted hash: {path}")
+        for source, expected in ((ROOT / path, item.get("current_sha256", item["extracted_sha256"])),
                                  (args.upstream / item["upstream_path"], item["sha256"])):
             if hashlib.sha256(source.read_bytes()).hexdigest() != expected:
                 raise ValueError(f"Reference source changed: {source}")
@@ -110,7 +110,7 @@ def main():
             reports.append(json.loads(path.read_text()))
         for index, report in enumerate(reports):
             for path, item in manifest["core_files"].items():
-                expected = item["sha256" if index == 0 else "extracted_sha256"]
+                expected = item["sha256"] if index == 0 else item.get("current_sha256", item["extracted_sha256"])
                 if report["sources"][path] != expected:
                     raise ValueError(f"Installed source differs from recorded upstream: {path}")
         for old, new in zip(reports[0]["records"], reports[1]["records"], strict=True):

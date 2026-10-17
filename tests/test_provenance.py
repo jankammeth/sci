@@ -11,6 +11,8 @@ MANIFEST = json.loads((ROOT / "UPSTREAM.json").read_text())
 
 
 @pytest.mark.parametrize("path,item", MANIFEST["core_files"].items())
-def test_installed_numerical_source_matches_extraction_manifest(path, item):
+def test_installed_numerical_source_matches_provenance_manifest(path, item):
     source = Path(sci_solver.__file__).parent / "solvers" / Path(path).name
-    assert hashlib.sha256(source.read_bytes()).hexdigest() == item["extracted_sha256"]
+    assert hashlib.sha256(source.read_bytes()).hexdigest() == item.get(
+        "current_sha256", item["extracted_sha256"]
+    )
