@@ -10,13 +10,13 @@ checks separation over the entire trajectory.
 
 ## Installation
 
-Python 3.10 or newer is required. After the first PyPI release:
+Python 3.10 or newer is required. Install from [PyPI](https://pypi.org/project/sci-solver/):
 
 ```sh
 pip install sci-solver
 ```
 
-To install directly from GitHub now:
+To install directly from GitHub:
 
 ```sh
 python -m pip install git+https://github.com/jankammeth/sci.git
