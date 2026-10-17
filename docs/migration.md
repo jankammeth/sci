@@ -3,9 +3,12 @@
 Reference: `https://github.com/jankammeth/contact-solver`, commit
 `641a2341a6a59938e285b8ff872bd484713e0605`.
 
-Seven of the eight files listed in `UPSTREAM.json` are byte-identical to the
+Six of the eight files listed in `UPSTREAM.json` are byte-identical to the
 reference. The collision wrapper changes only `contact-solver` to `sci-solver`
-in the reinstall warning; its numerical code is unchanged.
+in the reinstall warning. The C kernel uses `_alloca` for the same three stack
+arrays under MSVC, which does not support C variable-length arrays. Other
+compilers retain the original declarations. Numerical formulas and control flow
+are unchanged; `UPSTREAM.json` records both edits as explicit text replacements.
 They contain the joint solver, cubic representation, matching equations,
 derivatives, nonlinear solve safeguards, recovery, and collision kernels.
 The test suite retains independent polynomial, derivative, endpoint, reaction,

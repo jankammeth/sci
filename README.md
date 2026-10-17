@@ -16,7 +16,13 @@ Python 3.10 or newer is required. After the first PyPI release:
 pip install sci-solver
 ```
 
-To install this checkout now:
+To install directly from GitHub now:
+
+```sh
+python -m pip install git+https://github.com/jankammeth/sci.git
+```
+
+Or install a local checkout:
 
 ```sh
 python -m pip install .
@@ -92,9 +98,11 @@ ruff check .
 
 The numerical implementation is preserved from
 [`contact-solver` at `641a234`](https://github.com/jankammeth/contact-solver/tree/641a2341a6a59938e285b8ff872bd484713e0605).
-[UPSTREAM.json](UPSTREAM.json) records source paths and SHA-256 hashes. Seven core
-files are byte-identical; the collision wrapper changes only the package name in
-its fallback warning.
+[UPSTREAM.json](UPSTREAM.json) records source paths, SHA-256 hashes, and every
+extraction edit. Six core files are byte-identical. The collision wrapper changes
+only the package name in its fallback warning; the C kernel adds equivalent
+stack workspace allocation for Microsoft's C compiler. Numerical formulas and
+control flow are unchanged.
 [The migration guide](docs/migration.md) describes the extraction and comparison
 procedure. The paper and historical experiment infrastructure remain separate.
 

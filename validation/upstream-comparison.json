@@ -1558,7 +1558,7 @@
       "src/sci_solver/solvers/matching_numerics.py": "e10f5dbf0747163754355cdffd62b9067b2dea82a31d72222e368f67f7a8cd66",
       "src/sci_solver/solvers/reaction_matching.py": "6efdce28648e49c9418f1a42da3d93cb4636112c561e9da3f9c29a64fc3b7b70",
       "src/sci_solver/solvers/vector_matching.py": "326ffe29e94e4f5e080d4224fd7ab4fb4d38a14789ab9345d5985232c3b9d358",
-      "src/sci_solver/solvers/_cubic_minima.c": "02cd37c047bc0df602ff8da1a64c1a80ca926b3519bf584fd8d8879f7dacba9e"
+      "src/sci_solver/solvers/_cubic_minima.c": "7b2730c03652ae121191a81ef22e31a9283bc3f779f3e6a5465d14d947e32a97"
     },
     "environment": {
       "python": "3.12.14 (main, Sep  1 2026, 14:09:38) [Clang 22.1.3 ]",

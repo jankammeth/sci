@@ -46,7 +46,17 @@
     "src/sci_solver/solvers/_cubic_minima.c": {
       "upstream_path": "src/contact_solver/solvers/_cubic_minima.c",
       "sha256": "02cd37c047bc0df602ff8da1a64c1a80ca926b3519bf584fd8d8879f7dacba9e",
-      "extracted_sha256": "02cd37c047bc0df602ff8da1a64c1a80ca926b3519bf584fd8d8879f7dacba9e"
+      "extracted_sha256": "7b2730c03652ae121191a81ef22e31a9283bc3f779f3e6a5465d14d947e32a97",
+      "text_replacements": [
+        {
+          "old": "#include <stdlib.h>\n",
+          "new": "#include <stdlib.h>\n#ifdef _MSC_VER\n#include <malloc.h>\n#endif\n"
+        },
+        {
+          "old": "    double controls[4*d],direction[d],delta[d],sq=0,dot=0,magnitude=0;\n",
+          "new": "#ifdef _MSC_VER\n    /* MSVC has no C variable-length arrays; retain the same stack workspace. */\n    double *controls=_alloca((size_t)4*d*sizeof(double));\n    double *direction=_alloca((size_t)d*sizeof(double));\n    double *delta=_alloca((size_t)d*sizeof(double));\n    double sq=0,dot=0,magnitude=0;\n#else\n    double controls[4*d],direction[d],delta[d],sq=0,dot=0,magnitude=0;\n#endif\n"
+        }
+      ]
     }
   }
 }

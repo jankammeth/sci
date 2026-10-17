@@ -3,6 +3,9 @@
 #include <math.h>
 #include <float.h>
 #include <stdlib.h>
+#ifdef _MSC_VER
+#include <malloc.h>
+#endif
 
 static double value(const double *p, int degree, double x) {
     double y=p[degree];
@@ -63,7 +66,15 @@ static double distance(const double *c,int d,double t) {
     return sqrt(sum);
 }
 static double lower_bound(const double *c,int d,double *guard) {
+#ifdef _MSC_VER
+    /* MSVC has no C variable-length arrays; retain the same stack workspace. */
+    double *controls=_alloca((size_t)4*d*sizeof(double));
+    double *direction=_alloca((size_t)d*sizeof(double));
+    double *delta=_alloca((size_t)d*sizeof(double));
+    double sq=0,dot=0,magnitude=0;
+#else
     double controls[4*d],direction[d],delta[d],sq=0,dot=0,magnitude=0;
+#endif
     for(int j=0;j<d;++j){
         controls[j]=c[j];controls[d+j]=c[j]+c[d+j]/3;
         controls[2*d+j]=c[j]+2*c[d+j]/3+c[2*d+j]/3;

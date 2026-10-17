@@ -1,5 +1,7 @@
 {
   "date": "2026-10-17",
+  "validated_commit": "554e35a08dfce47b0d0d92e1cbe528e8a82041ac",
+  "scope": "Local validation before the initial public push; subsequent hosted runs are recorded by GitHub Actions.",
   "platform": "macOS arm64",
   "native_wheel": {
     "python": "3.12.14",
@@ -43,6 +45,6 @@
     "two_robots.py",
     "fleet.py"
   ],
-  "hosted_CI": "prepared, not run; repository has not been pushed",
-  "publication": "not published"
+  "hosted_CI_at_validation_time": "not yet run",
+  "publication_at_validation_time": "not published"
 }

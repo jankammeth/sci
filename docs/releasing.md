@@ -1,7 +1,7 @@
 # Releasing SCI Solver
 
-The first release is prepared locally. The repository and PyPI project must be
-created before the public links and PyPI installation instructions become live.
+The public repository is `https://github.com/jankammeth/sci`. The first PyPI
+release requires the account and trusted publisher setup described below.
 
 1. Run the tests and `tools/compare_upstream.py`; review the source and validation
    report. Verify `NOTICE`, `LICENSE`, and `CITATION.cff`.
