@@ -56,7 +56,7 @@ def minima(coefficients, durations, pruning=True):
         if not _warned_fallback:
             warnings.warn(
                 "Compiled collision checker unavailable; using the slower Python checker. "
-                "Reinstall contact-solver with a C compiler to reproduce native runtimes.",
+                "Reinstall sci-solver with a C compiler to reproduce native runtimes.",
                 RuntimeWarning,
                 stacklevel=2,
             )

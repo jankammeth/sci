@@ -90,8 +90,14 @@ def main():
     if commit != manifest["upstream_commit"]:
         raise ValueError("Upstream checkout is not the recorded reference commit")
     for path, item in manifest["core_files"].items():
-        for source in (ROOT / path, args.upstream / item["upstream_path"]):
-            if hashlib.sha256(source.read_bytes()).hexdigest() != item["sha256"]:
+        transformed = (args.upstream / item["upstream_path"]).read_bytes()
+        for replacement in item.get("text_replacements", []):
+            transformed = transformed.replace(replacement["old"].encode(), replacement["new"].encode())
+        if transformed != (ROOT / path).read_bytes():
+            raise ValueError(f"Unexpected change beyond recorded extraction edits: {path}")
+        for source, expected in ((ROOT / path, item["extracted_sha256"]),
+                                 (args.upstream / item["upstream_path"], item["sha256"])):
+            if hashlib.sha256(source.read_bytes()).hexdigest() != expected:
                 raise ValueError(f"Reference source changed: {source}")
     env = dict(os.environ, OPENBLAS_NUM_THREADS="1", OMP_NUM_THREADS="1", VECLIB_MAXIMUM_THREADS="1")
     env.pop("PYTHONPATH", None)
@@ -102,9 +108,10 @@ def main():
             subprocess.run([str(python), str(Path(__file__).resolve()), "--worker", package,
                             "--output", str(path)], env=env, cwd=tmp, check=True, timeout=600)
             reports.append(json.loads(path.read_text()))
-        for report in reports:
+        for index, report in enumerate(reports):
             for path, item in manifest["core_files"].items():
-                if report["sources"][path] != item["sha256"]:
+                expected = item["sha256" if index == 0 else "extracted_sha256"]
+                if report["sources"][path] != expected:
                     raise ValueError(f"Installed source differs from recorded upstream: {path}")
         for old, new in zip(reports[0]["records"], reports[1]["records"], strict=True):
             for key in ("name", "status", "convergence_reason", "converged", "num_contacts",

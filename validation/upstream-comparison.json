@@ -1553,7 +1553,7 @@
     "sources": {
       "src/sci_solver/solvers/base.py": "a3d1e66c04f57d69eb7fb9eb0416d77ce60c9360e9448c22b3c4da3ff7080a30",
       "src/sci_solver/solvers/contact_solver.py": "9ae40bc11838b8fc0ca76f439f21af878d27669f3d3440bfd8519196e624b7a1",
-      "src/sci_solver/solvers/collision_search.py": "d02cf8b7a045a7b8edf964072d52a42f23e590e1bb50453f02b1ca230ce855f3",
+      "src/sci_solver/solvers/collision_search.py": "9667839d4a5a724591de4540ffaa7eb607f88c6803aff7981ea46a702ee34c3c",
       "src/sci_solver/solvers/cubic_utils.py": "198ed08248d1648f0c196ed346a3a0a3e139662d728e98ef42f1701d40971a18",
       "src/sci_solver/solvers/matching_numerics.py": "e10f5dbf0747163754355cdffd62b9067b2dea82a31d72222e368f67f7a8cd66",
       "src/sci_solver/solvers/reaction_matching.py": "6efdce28648e49c9418f1a42da3d93cb4636112c561e9da3f9c29a64fc3b7b70",

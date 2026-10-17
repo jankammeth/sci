@@ -1,0 +1,48 @@
+{
+  "date": "2026-10-17",
+  "platform": "macOS arm64",
+  "native_wheel": {
+    "python": "3.12.14",
+    "passed": 131,
+    "failed": 0,
+    "backend": "native"
+  },
+  "python_fallback_wheel": {
+    "python": "3.12.14",
+    "passed": 130,
+    "skipped": 1,
+    "failed": 0,
+    "backend": "python",
+    "skip_reason": "native buffer API test requires the C extension"
+  },
+  "older_dependencies": {
+    "python": "3.11.15",
+    "numpy": "1.23.5",
+    "scipy": "1.10.0",
+    "passed": 131,
+    "failed": 0
+  },
+  "upstream_comparison": {
+    "cases": 29,
+    "maximum_absolute_array_difference": 0,
+    "reference_commit": "641a2341a6a59938e285b8ff872bd484713e0605"
+  },
+  "source_distribution": {
+    "contains_C_source": true,
+    "contains_license_and_notice": true,
+    "contains_test_fixtures": true,
+    "contains_compiled_binaries_or_virtualenv": false,
+    "builds_native_and_fallback_wheels": true
+  },
+  "import_checks": {
+    "wheel_imported_from_site_packages": true,
+    "core_does_not_import_plotting_or_baselines": true
+  },
+  "ruff": "passed",
+  "examples": [
+    "two_robots.py",
+    "fleet.py"
+  ],
+  "hosted_CI": "prepared, not run; repository has not been pushed",
+  "publication": "not published"
+}

@@ -22,9 +22,9 @@ def main():
         positions = solution.sample(np.linspace(0, 5, 201))
         fig, ax = plt.subplots(figsize=(6, 3))
         for i, path in enumerate(positions):
-            ax.plot(*path.T, label=f"Robot {i + 1}")
-            ax.scatter(*path[0], marker="o")
-            ax.scatter(*path[-1], marker="x")
+            line, = ax.plot(*path.T, label=f"Robot {i + 1}")
+            ax.scatter(*path[0], color=line.get_color(), marker="o")
+            ax.scatter(*path[-1], color=line.get_color(), marker="x")
         ax.set(xlabel="x", ylabel="y", aspect="equal", title="Sequential Contact Insertion")
         ax.legend()
         fig.tight_layout()

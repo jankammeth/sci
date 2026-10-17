@@ -90,9 +90,11 @@ python -m pytest
 ruff check .
 ```
 
-The numerical core is copied verbatim from
+The numerical implementation is preserved from
 [`contact-solver` at `641a234`](https://github.com/jankammeth/contact-solver/tree/641a2341a6a59938e285b8ff872bd484713e0605).
-[UPSTREAM.json](UPSTREAM.json) records source paths and SHA-256 hashes.
+[UPSTREAM.json](UPSTREAM.json) records source paths and SHA-256 hashes. Seven core
+files are byte-identical; the collision wrapper changes only the package name in
+its fallback warning.
 [The migration guide](docs/migration.md) describes the extraction and comparison
 procedure. The paper and historical experiment infrastructure remain separate.
 
