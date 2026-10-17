@@ -1,9 +1,10 @@
 # Fleet partition experiment
 
-Recommendation: use connected components as the candidate for the next solver
-default. Rebuilding the graph is cheap enough here that incremental union-find
-or cached component state is unnecessary. Keep `full` and `active` selectable
-for comparison; this change leaves `full` as the default.
+These N=20 cases favor connected components. Rebuilding the graph is cheap enough
+here that incremental union-find or cached component state is unnecessary.
+The subsequent [N=2 and N=4 comparison](fleet-partitions-small.md) favors the
+full-fleet solver, so the evidence does not support an unconditional default
+switch. Keep all three modes selectable; `full` remains the default.
 
 ## Implementations
 

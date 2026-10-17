@@ -1,0 +1,93 @@
+{
+  "aggregation": "Median across cases of each case median over 21 repetitions; paired slowdown is computed per case before aggregation.",
+  "measured_runs": 6300,
+  "successes": 6300,
+  "max_relative_cost_difference": 4.265061947728614e-15,
+  "max_position_difference": 1.2038112018331049e-07,
+  "rows": [
+    {
+      "n_robots": 2,
+      "subset": "all",
+      "cases": 50,
+      "full_median_ms": 0.1158954983111471,
+      "full_sum_ms": 12.095209094695747,
+      "active_median_ms": 0.1221665006596595,
+      "active_sum_ms": 15.631539950845763,
+      "components_median_ms": 0.12237500050105155,
+      "components_sum_ms": 15.59574794373475,
+      "median_paired_component_slowdown": 1.059564996201225,
+      "component_faster_cases": 1,
+      "component_partition_median_us": 0.0
+    },
+    {
+      "n_robots": 2,
+      "subset": "contact_free",
+      "cases": 41,
+      "full_median_ms": 0.11545798042789102,
+      "full_sum_ms": 4.7326260537374765,
+      "active_median_ms": 0.1211669878102839,
+      "active_sum_ms": 4.981913982192054,
+      "components_median_ms": 0.12174999574199319,
+      "components_sum_ms": 4.988122935174033,
+      "median_paired_component_slowdown": 1.0538013982533894,
+      "component_faster_cases": 1,
+      "component_partition_median_us": 0.0
+    },
+    {
+      "n_robots": 2,
+      "subset": "interacting",
+      "cases": 9,
+      "full_median_ms": 0.8182080055121332,
+      "full_sum_ms": 7.36258304095827,
+      "active_median_ms": 1.1957499955315143,
+      "active_sum_ms": 10.649625968653709,
+      "components_median_ms": 1.1892079783137888,
+      "components_sum_ms": 10.607625008560717,
+      "median_paired_component_slowdown": 1.4553145148189586,
+      "component_faster_cases": 0,
+      "component_partition_median_us": 4.042027285322547
+    },
+    {
+      "n_robots": 4,
+      "subset": "all",
+      "cases": 50,
+      "full_median_ms": 0.12320850510150194,
+      "full_sum_ms": 23.054083081660792,
+      "active_median_ms": 0.13154151383787394,
+      "active_sum_ms": 30.556460114894435,
+      "components_median_ms": 0.13031250273343176,
+      "components_sum_ms": 30.76537308515981,
+      "median_paired_component_slowdown": 1.0819276068338393,
+      "component_faster_cases": 0,
+      "component_partition_median_us": 0.0
+    },
+    {
+      "n_robots": 4,
+      "subset": "contact_free",
+      "cases": 33,
+      "full_median_ms": 0.12108401278965175,
+      "full_sum_ms": 3.9890840416774154,
+      "active_median_ms": 0.12866698671132326,
+      "active_sum_ms": 4.281708097551018,
+      "components_median_ms": 0.12920799781568348,
+      "components_sum_ms": 4.260873014573008,
+      "median_paired_component_slowdown": 1.067464027168252,
+      "component_faster_cases": 0,
+      "component_partition_median_us": 0.0
+    },
+    {
+      "n_robots": 4,
+      "subset": "interacting",
+      "cases": 17,
+      "full_median_ms": 0.8728329848963767,
+      "full_sum_ms": 19.064999039983377,
+      "active_median_ms": 1.2249170104041696,
+      "active_sum_ms": 26.274752017343417,
+      "components_median_ms": 1.2137919839005917,
+      "components_sum_ms": 26.5045000705868,
+      "median_paired_component_slowdown": 1.398846087401622,
+      "component_faster_cases": 0,
+      "component_partition_median_us": 4.250003257766366
+    }
+  ]
+}

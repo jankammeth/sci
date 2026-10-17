@@ -1,4 +1,4 @@
-"""Interleaved, reproducible timings on saved fleet20 regression experiments.
+"""Interleaved timings on saved regression experiments or an input snapshot.
 
 Run from the SCI repository with its package installed (or PYTHONPATH=src).
 Thread limits are set before importing NumPy. Cost/sample comparisons are outside
@@ -48,26 +48,60 @@ def sha(path):
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
-def run(seed, mode, timeout, recovery):
+def default_cases(seeds):
+    cases = []
+    for seed in seeds:
+        path = ROOT / f"tests/data/fleet20_seed{seed}.npz"
+        with np.load(path) as data:
+            cases.append(
+                dict(
+                    case_id=f"n20_seed{seed}",
+                    seed=seed,
+                    problem=dict(
+                        n_robots=20, dimension=2, min_distance=0.5, time_horizon=float(data["T"])
+                    ),
+                    options=dict(sci_detection_tol=1e-3),
+                    states={key: data[key].tolist() for key in ("p0", "v0", "pf", "vf")},
+                    input_source=str(path.relative_to(ROOT)),
+                    input_sha256=sha(path),
+                )
+            )
+    return cases
+
+
+def load_cases(path, seeds):
+    cases = default_cases(seeds) if path is None else json.loads(path.read_text())["cases"]
+    identities = [c["case_id"] for c in cases]
+    keys = [(c["problem"]["n_robots"], c["seed"]) for c in cases]
+    if not cases or len(set(identities)) != len(cases) or len(set(keys)) != len(cases):
+        raise ValueError("Cases must be nonempty with unique IDs and (N, seed) pairs")
+    return cases
+
+
+def run(case, mode, timeout, recovery):
     started = time.perf_counter()
-    with np.load(ROOT / f"tests/data/fleet20_seed{seed}.npz") as data:
-        config = Config(
-            ProblemConfig(20, 0.5, float(data["T"]), dimension=2),
-            SolverConfig(
-                sci_detection_tol=1e-3,
-                sci_fleet_mode=mode,
-                timeout=timeout,
-                sci_reaction_recovery=recovery,
-            ),
-        )
-        solver = ContactSolver(config)
-        solver.set_initial_states(data["p0"], data["v0"])
-        solver.set_final_states(data["pf"], data["vf"])
+    config = Config(
+        ProblemConfig(**case["problem"]),
+        SolverConfig(
+            **{
+                **case.get("options", {}),
+                "sci_fleet_mode": mode,
+                "timeout": timeout,
+                "sci_reaction_recovery": recovery,
+            }
+        ),
+    )
+    solver = ContactSolver(config)
+    data = case["states"]
+    solver.set_initial_states(data["p0"], data["v0"])
+    solver.set_final_states(data["pf"], data["vf"])
     setup_seconds = time.perf_counter() - started
     metrics = solver.generate_trajectories()["metrics"]
     wall_seconds = time.perf_counter() - started
     record = dict(
-        seed=seed,
+        case_id=case["case_id"],
+        n_robots=config.problem.n_robots,
+        seed=case["seed"],
         mode=mode,
         config=config.to_dict(),
         metrics=metrics,
@@ -86,12 +120,13 @@ def run(seed, mode, timeout, recovery):
 def summarize(records):
     groups = defaultdict(list)
     for r in records:
-        groups[r["seed"], r["mode"]].append(r)
+        groups[r["n_robots"], r["seed"], r["mode"]].append(r)
     rows = []
-    for (seed, mode), values in sorted(groups.items()):
+    for (n_robots, seed, mode), values in sorted(groups.items()):
         metrics = [v["metrics"] for v in values]
         times = [m["timing"]["solve_time"] * 1000 for m in metrics]
         row = dict(
+            n_robots=n_robots,
             seed=seed,
             mode=mode,
             runs=len(values),
@@ -101,6 +136,7 @@ def summarize(records):
             p75_ms=float(np.percentile(times, 75)),
             wall_ms=float(np.median([v["wall_seconds"] * 1000 for v in values])),
             contacts=float(np.median([m["num_contacts"] for m in metrics])),
+            baseline_contacts=values[0]["baseline_contacts"],
             system_size=float(np.median([m["system_size"] for m in metrics])),
             max_cost_relative_difference=max(v["cost_relative_difference"] for v in values),
             max_position_difference=max(v["max_position_difference"] for v in values),
@@ -124,6 +160,9 @@ def summarize(records):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--seeds", type=int, nargs="+", default=[2, 9, 15, 35, 47])
+    parser.add_argument(
+        "--cases", type=Path, help="JSON snapshot with a cases list; overrides --seeds"
+    )
     parser.add_argument("--repeats", type=int, default=7)
     parser.add_argument("--warmups", type=int, default=1)
     parser.add_argument("--timeout", type=float, default=30)
@@ -135,25 +174,28 @@ def main():
     if COLLISION_BACKEND != "native":
         parser.error("Build the native collision kernel before comparing runtimes")
     modes = ("full", "active", "components")
+    cases = load_cases(args.cases, args.seeds)
     records, warmups = [], []
-    for seed in args.seeds:
+    for case in cases:
         for _ in range(args.warmups):
             for mode in modes:
-                record, _ = run(seed, mode, args.timeout, not args.no_recovery)
-                warmups.append(dict(seed=seed, mode=mode, status=record["metrics"]["status"]))
+                record, _ = run(case, mode, args.timeout, not args.no_recovery)
+                warmups.append(
+                    dict(case_id=case["case_id"], mode=mode, status=record["metrics"]["status"])
+                )
     rng = np.random.default_rng(20261017)
     for repeat in range(args.repeats):
-        for seed in rng.permutation(args.seeds):
-            seed = int(seed)
+        for index in rng.permutation(len(cases)):
+            case = cases[index]
             batch = {}
             for mode in rng.permutation(modes):
                 mode = str(mode)
-                record, samples = run(seed, mode, args.timeout, not args.no_recovery)
+                record, samples = run(case, mode, args.timeout, not args.no_recovery)
                 record["repeat"] = repeat
                 batch[mode] = (record, samples)
                 records.append(record)
                 print(
-                    f"repeat={repeat} seed={seed} mode={mode}: {record['metrics']['status']} "
+                    f"repeat={repeat} case={case['case_id']} mode={mode}: {record['metrics']['status']} "
                     f"{record['metrics']['timing']['solve_time'] * 1000:.3f} ms",
                     flush=True,
                 )
@@ -164,6 +206,7 @@ def main():
                 )
                 record["max_position_difference"] = float(np.max(np.abs(samples - positions)))
                 record["reference_success"] = reference["metrics"]["converged"]
+                record["baseline_contacts"] = reference["metrics"]["num_contacts"]
     sources = sorted(
         p for p in (ROOT / "src").rglob("*") if p.suffix in (".py", ".c", ".so", ".pyd")
     )
@@ -183,10 +226,8 @@ def main():
             ["git", "-C", str(ROOT), "rev-parse", "HEAD"], text=True
         ).strip(),
         source_hashes={str(p.relative_to(ROOT)): sha(p) for p in sources},
-        input_hashes={
-            f"fleet20_seed{s}.npz": sha(ROOT / f"tests/data/fleet20_seed{s}.npz")
-            for s in args.seeds
-        },
+        input_hashes={c["case_id"]: c["input_sha256"] for c in cases},
+        input_snapshot_sha256=sha(args.cases) if args.cases else None,
         protocol=dict(
             repeats=args.repeats,
             warmups=args.warmups,
@@ -204,7 +245,17 @@ def main():
         summary=summarize(records),
     )
     args.output.parent.mkdir(parents=True, exist_ok=True)
-    args.output.write_text(json.dumps(report, indent=2, allow_nan=False) + "\n")
+    # One compact line per run keeps large repeated benchmarks reviewable.
+    raw_records = report.pop("records")
+    metadata = json.dumps(report, indent=2, allow_nan=False)
+    args.output.write_text(
+        metadata[:-2]
+        + ',\n  "records": [\n'
+        + ",\n".join(
+            "    " + json.dumps(r, separators=(",", ":"), allow_nan=False) for r in raw_records
+        )
+        + "\n  ]\n}\n"
+    )
     with args.output.with_suffix(".csv").open("w", newline="") as stream:
         writer = csv.DictWriter(stream, fieldnames=list(report["summary"][0]))
         writer.writeheader()

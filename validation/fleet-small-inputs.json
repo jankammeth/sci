@@ -1,0 +1,7807 @@
+{
+  "selection": "All 50 saved seeds each for N=2 and N=4 from the paper fleet study; no outcome filtering.",
+  "source_table": "data/numerics/fleet/tables/attempts.csv",
+  "source_table_sha256": "064b95e540ed159c14a1f7f60ad5324d4e5a04ff3e71f905a74e2060dfd63cf8",
+  "cases": [
+    {
+      "case_id": "n2_seed0",
+      "seed": 0,
+      "problem": {
+        "n_robots": 2,
+        "time_horizon": 10.0,
+        "timestep": 0.05,
+        "min_distance": 0.5,
+        "dimension": 2
+      },
+      "options": {
+        "sci_detection_tol": 0.001
+      },
+      "states": {
+        "p0": [
+          [
+            -4.031117997447806,
+            -1.2766447626348045
+          ],
+          [
+            -2.9478130277125993,
+            -2.220918262469445
+          ]
+        ],
+        "v0": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "pf": [
+          [
+            -3.564853030082906,
+            1.8545014695532407
+          ],
+          [
+            3.015786457081654,
+            -0.7007638802958702
+          ]
+        ],
+        "vf": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "input_source": "runs/numerics/fleet-restart/attempts/c7c78a894dc1d99be37e/input.npz",
+      "input_sha256": "6346e283a31819fb66c0b94c3284e66c5e80f99591904b63d580ce5d4194f587",
+      "original_config_source": "runs/numerics/fleet-restart/attempts/c7c78a894dc1d99be37e/config.json",
+      "original_config_sha256": "33ef8dd84f3e24ec44dd95078bba15450f11aa628e2a0d9ef2f5a2b3fc12e260",
+      "original_attempt_id": "c7c78a894dc1d99be37e",
+      "original_interacting_pairs": 0
+    },
+    {
+      "case_id": "n2_seed1",
+      "seed": 1,
+      "problem": {
+        "n_robots": 2,
+        "time_horizon": 10.0,
+        "timestep": 0.05,
+        "min_distance": 0.5,
+        "dimension": 2
+      },
+      "options": {
+        "sci_detection_tol": 0.001
+      },
+      "states": {
+        "p0": [
+          [
+            -3.6797905622125358,
+            2.1135878865818434
+          ],
+          [
+            2.7492381512656565,
+            0.0019757078191254282
+          ]
+        ],
+        "v0": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "pf": [
+          [
+            0.9179271055870462,
+            1.2107331242055503
+          ],
+          [
+            1.1459098659767235,
+            2.706641600791172
+          ]
+        ],
+        "vf": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "input_source": "runs/numerics/fleet-restart/attempts/be65416def2e0fa8f7d2/input.npz",
+      "input_sha256": "dac9a21a21ad860684bbf8eab7231a4e554db2447c6ec73da104d10094928f3c",
+      "original_config_source": "runs/numerics/fleet-restart/attempts/be65416def2e0fa8f7d2/config.json",
+      "original_config_sha256": "fcf7b2ef499d3715e57d9fb1bcb627c0944ca2c90175ee93c5b85038e88ab828",
+      "original_attempt_id": "be65416def2e0fa8f7d2",
+      "original_interacting_pairs": 0
+    },
+    {
+      "case_id": "n2_seed2",
+      "seed": 2,
+      "problem": {
+        "n_robots": 2,
+        "time_horizon": 10.0,
+        "timestep": 0.05,
+        "min_distance": 0.5,
+        "dimension": 2
+      },
+      "options": {
+        "sci_detection_tol": 0.001
+      },
+      "states": {
+        "p0": [
+          [
+            -0.7408512997077015,
+            0.31511132543704745
+          ],
+          [
+            -3.1396411323375637,
+            -1.0127750863795095
+          ]
+        ],
+        "v0": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "pf": [
+          [
+            -2.52146852798062,
+            1.3786105278504497
+          ],
+          [
+            1.106082123675378,
+            3.7760239001431595
+          ]
+        ],
+        "vf": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "input_source": "runs/numerics/fleet-restart/attempts/9cc04dd591189a703c6e/input.npz",
+      "input_sha256": "aad69babd3f013c37327491eae04489cd5dda4523d8978356f04e22a387dcb4a",
+      "original_config_source": "runs/numerics/fleet-restart/attempts/9cc04dd591189a703c6e/config.json",
+      "original_config_sha256": "e5e42a21a7ae6e1eca20751dd63e80f1dcc851a758bffe897a71ebdf2e5e013d",
+      "original_attempt_id": "9cc04dd591189a703c6e",
+      "original_interacting_pairs": 1
+    },
+    {
+      "case_id": "n2_seed3",
+      "seed": 3,
+      "problem": {
+        "n_robots": 2,
+        "time_horizon": 10.0,
+        "timestep": 0.05,
+        "min_distance": 0.5,
+        "dimension": 2
+      },
+      "options": {
+        "sci_detection_tol": 0.001
+      },
+      "states": {
+        "p0": [
+          [
+            -3.9950738396963765,
+            -1.3202577705987102
+          ],
+          [
+            -0.9083827334372333,
+            3.4562307416511815
+          ]
+        ],
+        "v0": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "pf": [
+          [
+            3.7025719699483193,
+            -2.9492860204952955
+          ],
+          [
+            1.6035841621896347,
+            1.6154224797956838
+          ]
+        ],
+        "vf": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "input_source": "runs/numerics/fleet-restart/attempts/70cdbf664a24dc958e04/input.npz",
+      "input_sha256": "2f4d669b2c9f8f549eee5f21d814fea6fa28fb9a4336aab5fbf8216ceb9b7d6c",
+      "original_config_source": "runs/numerics/fleet-restart/attempts/70cdbf664a24dc958e04/config.json",
+      "original_config_sha256": "3f59cd39a4138622a4d6f5d8c2a4aa084694c0cf4f03071f6518bd936081da2c",
+      "original_attempt_id": "70cdbf664a24dc958e04",
+      "original_interacting_pairs": 0
+    },
+    {
+      "case_id": "n2_seed4",
+      "seed": 4,
+      "problem": {
+        "n_robots": 2,
+        "time_horizon": 10.0,
+        "timestep": 0.05,
+        "min_distance": 0.5,
+        "dimension": 2
+      },
+      "options": {
+        "sci_detection_tol": 0.001
+      },
+      "states": {
+        "p0": [
+          [
+            3.619676044959169,
+            -0.7607572273345871
+          ],
+          [
+            -0.7497096558569305,
+            -2.200039277245816
+          ]
+        ],
+        "v0": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "pf": [
+          [
+            0.3902827868946519,
+            -0.05861506946588301
+          ],
+          [
+            -0.061776799914366826,
+            3.2963573739968615
+          ]
+        ],
+        "vf": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "input_source": "runs/numerics/fleet-restart/attempts/9b874172729489f0f272/input.npz",
+      "input_sha256": "248ee9a17882f6af6d954d294c006524e1f25177f477555ddf16d3acf6ca1c25",
+      "original_config_source": "runs/numerics/fleet-restart/attempts/9b874172729489f0f272/config.json",
+      "original_config_sha256": "365ed81c55688ddead44a2b6c2dc4d22376a4686f48cf2c845773600556434cb",
+      "original_attempt_id": "9b874172729489f0f272",
+      "original_interacting_pairs": 0
+    },
+    {
+      "case_id": "n2_seed5",
+      "seed": 5,
+      "problem": {
+        "n_robots": 2,
+        "time_horizon": 10.0,
+        "timestep": 0.05,
+        "min_distance": 0.5,
+        "dimension": 2
+      },
+      "options": {
+        "sci_detection_tol": 0.001
+      },
+      "states": {
+        "p0": [
+          [
+            0.8167937674375708,
+            4.593599416134318
+          ],
+          [
+            -3.9003401827001234,
+            0.28450488885238845
+          ]
+        ],
+        "v0": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "pf": [
+          [
+            0.359234631342632,
+            -3.582094384081428
+          ],
+          [
+            -0.6278849815962791,
+            2.073352639185416
+          ]
+        ],
+        "vf": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "input_source": "runs/numerics/fleet-restart/attempts/d7a680f17b23ef643216/input.npz",
+      "input_sha256": "8c5b5841e9135b346497d8c9ce449ca324cfc65043cb30c31bde5939f846538e",
+      "original_config_source": "runs/numerics/fleet-restart/attempts/d7a680f17b23ef643216/config.json",
+      "original_config_sha256": "8c921878287c603576e4bb7240b542cff5cffea8a873145de47d0890f3980bdd",
+      "original_attempt_id": "d7a680f17b23ef643216",
+      "original_interacting_pairs": 0
+    },
+    {
+      "case_id": "n2_seed6",
+      "seed": 6,
+      "problem": {
+        "n_robots": 2,
+        "time_horizon": 10.0,
+        "timestep": 0.05,
+        "min_distance": 0.5,
+        "dimension": 2
+      },
+      "options": {
+        "sci_detection_tol": 0.001
+      },
+      "states": {
+        "p0": [
+          [
+            2.25240010330219,
+            -1.7961594882341916
+          ],
+          [
+            0.4418367977091062,
+            -0.9204324458217505
+          ]
+        ],
+        "v0": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "pf": [
+          [
+            3.0077296636583575,
+            2.4145111048627603
+          ],
+          [
+            -3.179146001943557,
+            -0.6026743832640105
+          ]
+        ],
+        "vf": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "input_source": "runs/numerics/fleet-restart/attempts/d35828b81c61a686a1cc/input.npz",
+      "input_sha256": "9efa109fa66464ac150000bf23ea84075fa36809be3b047649189458a9e2ccf1",
+      "original_config_source": "runs/numerics/fleet-restart/attempts/d35828b81c61a686a1cc/config.json",
+      "original_config_sha256": "5ca9426d8d09e6d9725b6351d91c56c07a33f1d36919df3a0f7886be97dca07c",
+      "original_attempt_id": "d35828b81c61a686a1cc",
+      "original_interacting_pairs": 0
+    },
+    {
+      "case_id": "n2_seed7",
+      "seed": 7,
+      "problem": {
+        "n_robots": 2,
+        "time_horizon": 10.0,
+        "timestep": 0.05,
+        "min_distance": 0.5,
+        "dimension": 2
+      },
+      "options": {
+        "sci_detection_tol": 0.001
+      },
+      "states": {
+        "p0": [
+          [
+            3.917761927298639,
+            2.0369367410433052
+          ],
+          [
+            -3.93834328268935,
+            1.6050176427283283
+          ]
+        ],
+        "v0": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "pf": [
+          [
+            3.634082453702307,
+            -0.5058077499938693
+          ],
+          [
+            -1.3420838495352216,
+            -0.00944853484721747
+          ]
+        ],
+        "vf": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "input_source": "runs/numerics/fleet-restart/attempts/0f1aef5976afde29e656/input.npz",
+      "input_sha256": "9f0fa8e89b5a9fac0bcb4028f4f1aecb43f74c5206a470bc66ee5931bf1d84e1",
+      "original_config_source": "runs/numerics/fleet-restart/attempts/0f1aef5976afde29e656/config.json",
+      "original_config_sha256": "7f6b109d7ccc822a23f729658c9a8cb7754fa2f0449eb52b870a884bc8e8e9c3",
+      "original_attempt_id": "0f1aef5976afde29e656",
+      "original_interacting_pairs": 0
+    },
+    {
+      "case_id": "n2_seed8",
+      "seed": 8,
+      "problem": {
+        "n_robots": 2,
+        "time_horizon": 10.0,
+        "timestep": 0.05,
+        "min_distance": 0.5,
+        "dimension": 2
+      },
+      "options": {
+        "sci_detection_tol": 0.001
+      },
+      "states": {
+        "p0": [
+          [
+            3.4449711554573637,
+            -3.5136434521149207
+          ],
+          [
+            2.480328161918365,
+            -2.668213727961956
+          ]
+        ],
+        "v0": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "pf": [
+          [
+            0.05781774282558196,
+            0.5306856089534578
+          ],
+          [
+            -2.8736773591484424,
+            1.3419248997062971
+          ]
+        ],
+        "vf": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "input_source": "runs/numerics/fleet-restart/attempts/2801a89e6f1521089f75/input.npz",
+      "input_sha256": "b92262b3f56e5df8e9c19a5b1d2ed07ed273b7cf0d4b019ac3a2a0b8f7e9a6bd",
+      "original_config_source": "runs/numerics/fleet-restart/attempts/2801a89e6f1521089f75/config.json",
+      "original_config_sha256": "9ff2843cc530c4c68dfa37ae67af23532ae5947ae1903d31be031577744ce669",
+      "original_attempt_id": "2801a89e6f1521089f75",
+      "original_interacting_pairs": 0
+    },
+    {
+      "case_id": "n2_seed9",
+      "seed": 9,
+      "problem": {
+        "n_robots": 2,
+        "time_horizon": 10.0,
+        "timestep": 0.05,
+        "min_distance": 0.5,
+        "dimension": 2
+      },
+      "options": {
+        "sci_detection_tol": 0.001
+      },
+      "states": {
+        "p0": [
+          [
+            3.5346331190302682,
+            0.23072389900663653
+          ],
+          [
+            -1.828490930587546,
+            0.0485709866175707
+          ]
+        ],
+        "v0": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "pf": [
+          [
+            1.4659662686653383,
+            1.8206893721300677
+          ],
+          [
+            -2.1710891443876283,
+            1.220205366920329
+          ]
+        ],
+        "vf": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "input_source": "runs/numerics/fleet-restart/attempts/53b475bbd0022af4c2d2/input.npz",
+      "input_sha256": "6212dec5cf4bd2f981432b79e68aa1579e851430f2cd8a825cd586646e778efa",
+      "original_config_source": "runs/numerics/fleet-restart/attempts/53b475bbd0022af4c2d2/config.json",
+      "original_config_sha256": "29d90a867dbe07fc01832a98ed76fb9997b7a0b6b5c3b71eee5a3ede97693384",
+      "original_attempt_id": "53b475bbd0022af4c2d2",
+      "original_interacting_pairs": 0
+    },
+    {
+      "case_id": "n2_seed10",
+      "seed": 10,
+      "problem": {
+        "n_robots": 2,
+        "time_horizon": 10.0,
+        "timestep": 0.05,
+        "min_distance": 0.5,
+        "dimension": 2
+      },
+      "options": {
+        "sci_detection_tol": 0.001
+      },
+      "states": {
+        "p0": [
+          [
+            0.09620106834233311,
+            -0.7138235695428047
+          ],
+          [
+            -2.8887416637553707,
+            -3.221066386082279
+          ]
+        ],
+        "v0": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "pf": [
+          [
+            -2.370531925979474,
+            0.02223794467200632
+          ],
+          [
+            1.3978178057614623,
+            4.130299406443822
+          ]
+        ],
+        "vf": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "input_source": "runs/numerics/fleet-restart/attempts/55a4c413537ca64f5503/input.npz",
+      "input_sha256": "16b6c561ead6925cf61ec664eeb06c358cac83bc7340c938a941d5f644880f0f",
+      "original_config_source": "runs/numerics/fleet-restart/attempts/55a4c413537ca64f5503/config.json",
+      "original_config_sha256": "9a2db772c6dc280b5db4354bcddb87bc6be0f0070380736dd24e546e12319c44",
+      "original_attempt_id": "55a4c413537ca64f5503",
+      "original_interacting_pairs": 1
+    },
+    {
+      "case_id": "n2_seed11",
+      "seed": 11,
+      "problem": {
+        "n_robots": 2,
+        "time_horizon": 10.0,
+        "timestep": 0.05,
+        "min_distance": 0.5,
+        "dimension": 2
+      },
+      "options": {
+        "sci_detection_tol": 0.001
+      },
+      "states": {
+        "p0": [
+          [
+            0.2960251570142727,
+            0.6318624404134889
+          ],
+          [
+            -4.143971631422195,
+            0.9751140178316419
+          ]
+        ],
+        "v0": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "pf": [
+          [
+            -3.0548726380538005,
+            1.6743448329017463
+          ],
+          [
+            3.4793512712534365,
+            0.28000877526228474
+          ]
+        ],
+        "vf": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "input_source": "runs/numerics/fleet-restart/attempts/0a420604a8a50f1280a9/input.npz",
+      "input_sha256": "5e23ce3fb86e386ff07ed7a08829e9abd292da2eaa253388d9e99e2e35a07412",
+      "original_config_source": "runs/numerics/fleet-restart/attempts/0a420604a8a50f1280a9/config.json",
+      "original_config_sha256": "6b9ff86ca48a93beda4fe11c7c2b5332241ce3d2c0ebe9e9e16162ab8890a009",
+      "original_attempt_id": "0a420604a8a50f1280a9",
+      "original_interacting_pairs": 1
+    },
+    {
+      "case_id": "n2_seed12",
+      "seed": 12,
+      "problem": {
+        "n_robots": 2,
+        "time_horizon": 10.0,
+        "timestep": 0.05,
+        "min_distance": 0.5,
+        "dimension": 2
+      },
+      "options": {
+        "sci_detection_tol": 0.001
+      },
+      "states": {
+        "p0": [
+          [
+            2.436372321675942,
+            3.544761250501435
+          ],
+          [
+            -0.3052456169560651,
+            3.6400975190009066
+          ]
+        ],
+        "v0": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "pf": [
+          [
+            4.772482477194675,
+            0.43827640521353745
+          ],
+          [
+            0.7419091142666515,
+            -0.533953702886952
+          ]
+        ],
+        "vf": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "input_source": "runs/numerics/fleet-restart/attempts/8ff68e826c9bfc52703f/input.npz",
+      "input_sha256": "2931f3154306a4fc15b2a9f8d243035f6653e8d7ed029cef1f1a65231fb5186d",
+      "original_config_source": "runs/numerics/fleet-restart/attempts/8ff68e826c9bfc52703f/config.json",
+      "original_config_sha256": "50c01ba66a3bde75ae0ce07851d387758fd091be540551a6656703f5d641aec1",
+      "original_attempt_id": "8ff68e826c9bfc52703f",
+      "original_interacting_pairs": 0
+    },
+    {
+      "case_id": "n2_seed13",
+      "seed": 13,
+      "problem": {
+        "n_robots": 2,
+        "time_horizon": 10.0,
+        "timestep": 0.05,
+        "min_distance": 0.5,
+        "dimension": 2
+      },
+      "options": {
+        "sci_detection_tol": 0.001
+      },
+      "states": {
+        "p0": [
+          [
+            0.4220284811050526,
+            -2.4000880113047875
+          ],
+          [
+            2.210870806866857,
+            -4.388140862189691
+          ]
+        ],
+        "v0": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "pf": [
+          [
+            3.317163226371375,
+            -0.5767662568512946
+          ],
+          [
+            -3.409547974114994,
+            -2.7862421785138327
+          ]
+        ],
+        "vf": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "input_source": "runs/numerics/fleet-restart/attempts/48dffdcfaab2561661c2/input.npz",
+      "input_sha256": "330c75c27911eb08944843b4b9139d4c63c40becb46f81975a82ac6c882e129c",
+      "original_config_source": "runs/numerics/fleet-restart/attempts/48dffdcfaab2561661c2/config.json",
+      "original_config_sha256": "00b64e8916dd04f132db0f6332f3e2264bf747ae32f9144447be7b4d535c3844",
+      "original_attempt_id": "48dffdcfaab2561661c2",
+      "original_interacting_pairs": 0
+    },
+    {
+      "case_id": "n2_seed14",
+      "seed": 14,
+      "problem": {
+        "n_robots": 2,
+        "time_horizon": 10.0,
+        "timestep": 0.05,
+        "min_distance": 0.5,
+        "dimension": 2
+      },
+      "options": {
+        "sci_detection_tol": 0.001
+      },
+      "states": {
+        "p0": [
+          [
+            -4.379628891519878,
+            -0.3846778841404688
+          ],
+          [
+            0.3079132625835914,
+            -0.3261336167440825
+          ]
+        ],
+        "v0": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "pf": [
+          [
+            -1.7936316919974993,
+            4.552249865463171
+          ],
+          [
+            -2.811260692460393,
+            -0.23221528982729714
+          ]
+        ],
+        "vf": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "input_source": "runs/numerics/fleet-restart/attempts/246e14ac5bc8e7bf49ac/input.npz",
+      "input_sha256": "f69eac3fefb208c95dc60a0b6871e84261bc3aa42b848080f63610a7692b4d69",
+      "original_config_source": "runs/numerics/fleet-restart/attempts/246e14ac5bc8e7bf49ac/config.json",
+      "original_config_sha256": "97f15c812779aa71e9aa1246949b41575fb5264dd5ac0676f842e685ae0943f5",
+      "original_attempt_id": "246e14ac5bc8e7bf49ac",
+      "original_interacting_pairs": 0
+    },
+    {
+      "case_id": "n2_seed15",
+      "seed": 15,
+      "problem": {
+        "n_robots": 2,
+        "time_horizon": 10.0,
+        "timestep": 0.05,
+        "min_distance": 0.5,
+        "dimension": 2
+      },
+      "options": {
+        "sci_detection_tol": 0.001
+      },
+      "states": {
+        "p0": [
+          [
+            1.2303069887822218,
+            -1.720099658850784
+          ],
+          [
+            2.8327190444380452,
+            1.0070570825348393
+          ]
+        ],
+        "v0": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "pf": [
+          [
+            -0.5784851543964018,
+            3.59379472821259
+          ],
+          [
+            -0.9495363500985503,
+            2.5904130363119897
+          ]
+        ],
+        "vf": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "input_source": "runs/numerics/fleet-restart/attempts/5b9eb4ca6566d489ae81/input.npz",
+      "input_sha256": "a337ad8f32d3dac654bb9b46d2251c7aab6b8a558549cf7eee9b236c627cf155",
+      "original_config_source": "runs/numerics/fleet-restart/attempts/5b9eb4ca6566d489ae81/config.json",
+      "original_config_sha256": "eaa6902a569ba63da7c18898623bbd9ee49aabe16509c2e2066882ebcbdbdbe2",
+      "original_attempt_id": "5b9eb4ca6566d489ae81",
+      "original_interacting_pairs": 1
+    },
+    {
+      "case_id": "n2_seed16",
+      "seed": 16,
+      "problem": {
+        "n_robots": 2,
+        "time_horizon": 10.0,
+        "timestep": 0.05,
+        "min_distance": 0.5,
+        "dimension": 2
+      },
+      "options": {
+        "sci_detection_tol": 0.001
+      },
+      "states": {
+        "p0": [
+          [
+            0.604066113592187,
+            3.5656959580741785
+          ],
+          [
+            -1.0140081377800023,
+            -0.3344192725249103
+          ]
+        ],
+        "v0": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "pf": [
+          [
+            -1.5136397932560728,
+            1.812710158451685
+          ],
+          [
+            -0.759816761184196,
+            -1.8750904283383345
+          ]
+        ],
+        "vf": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "input_source": "runs/numerics/fleet-restart/attempts/9596ccc58950a2ca6615/input.npz",
+      "input_sha256": "2222b7081a9735b961a7c0bf87a4e8e987178e3ce285ebdc41df6acd717a2da0",
+      "original_config_source": "runs/numerics/fleet-restart/attempts/9596ccc58950a2ca6615/config.json",
+      "original_config_sha256": "face67b5899955f9a94d8728b844af9b50631e48702c30048364dbb9361b98d9",
+      "original_attempt_id": "9596ccc58950a2ca6615",
+      "original_interacting_pairs": 0
+    },
+    {
+      "case_id": "n2_seed17",
+      "seed": 17,
+      "problem": {
+        "n_robots": 2,
+        "time_horizon": 10.0,
+        "timestep": 0.05,
+        "min_distance": 0.5,
+        "dimension": 2
+      },
+      "options": {
+        "sci_detection_tol": 0.001
+      },
+      "states": {
+        "p0": [
+          [
+            -1.0087410795415508,
+            3.4995871648778376
+          ],
+          [
+            0.4680268703711963,
+            1.2159193243767563
+          ]
+        ],
+        "v0": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "pf": [
+          [
+            0.9328831031735852,
+            -3.9418355064880126
+          ],
+          [
+            -2.463253643239298,
+            -2.8848663457592227
+          ]
+        ],
+        "vf": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "input_source": "runs/numerics/fleet-restart/attempts/6fd99a8e3d494af5326d/input.npz",
+      "input_sha256": "cf2b9f7158a2b2519c60f9216a8d4714fc3a332f66291c5f730bc9033e38263d",
+      "original_config_source": "runs/numerics/fleet-restart/attempts/6fd99a8e3d494af5326d/config.json",
+      "original_config_sha256": "ff01b3c028c389d0730518d37d2a6be9516da708cae045db6a511d0128ddda85",
+      "original_attempt_id": "6fd99a8e3d494af5326d",
+      "original_interacting_pairs": 0
+    },
+    {
+      "case_id": "n2_seed18",
+      "seed": 18,
+      "problem": {
+        "n_robots": 2,
+        "time_horizon": 10.0,
+        "timestep": 0.05,
+        "min_distance": 0.5,
+        "dimension": 2
+      },
+      "options": {
+        "sci_detection_tol": 0.001
+      },
+      "states": {
+        "p0": [
+          [
+            -2.0826686388326268,
+            -2.880768245484896
+          ],
+          [
+            1.5413753414111828,
+            -1.4731489032606044
+          ]
+        ],
+        "v0": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "pf": [
+          [
+            2.5943202392513096,
+            -3.4674067613796473
+          ],
+          [
+            -2.500086162978232,
+            -4.294991895752986
+          ]
+        ],
+        "vf": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "input_source": "runs/numerics/fleet-restart/attempts/d1549c23c07aa7d7eea8/input.npz",
+      "input_sha256": "2355c4b018e2cbe322f5f0ff2af6724d5f0e69083077aeccd6b34837de5653cf",
+      "original_config_source": "runs/numerics/fleet-restart/attempts/d1549c23c07aa7d7eea8/config.json",
+      "original_config_sha256": "3621e435549e79197573f65d707bbf7eb5c7f45aadf5b06779b75242ae5a0cd0",
+      "original_attempt_id": "d1549c23c07aa7d7eea8",
+      "original_interacting_pairs": 1
+    },
+    {
+      "case_id": "n2_seed19",
+      "seed": 19,
+      "problem": {
+        "n_robots": 2,
+        "time_horizon": 10.0,
+        "timestep": 0.05,
+        "min_distance": 0.5,
+        "dimension": 2
+      },
+      "options": {
+        "sci_detection_tol": 0.001
+      },
+      "states": {
+        "p0": [
+          [
+            3.5686331478362874,
+            2.50920313506808
+          ],
+          [
+            0.03575022100867421,
+            1.8579596628037487
+          ]
+        ],
+        "v0": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "pf": [
+          [
+            -0.7054019114500004,
+            1.2559447712757945
+          ],
+          [
+            -2.1142798662364717,
+            -3.961649353649125
+          ]
+        ],
+        "vf": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "input_source": "runs/numerics/fleet-restart/attempts/ee481f6bb266d6a15a9b/input.npz",
+      "input_sha256": "71e6f20d223d4833e280b62f780ce9bc122df162bf816684d7d46d8a49ef7654",
+      "original_config_source": "runs/numerics/fleet-restart/attempts/ee481f6bb266d6a15a9b/config.json",
+      "original_config_sha256": "5c2be68e14a88c96924e62e192327358653f0329a62198da2dbf7dd0c94c95d7",
+      "original_attempt_id": "ee481f6bb266d6a15a9b",
+      "original_interacting_pairs": 0
+    },
+    {
+      "case_id": "n2_seed20",
+      "seed": 20,
+      "problem": {
+        "n_robots": 2,
+        "time_horizon": 10.0,
+        "timestep": 0.05,
+        "min_distance": 0.5,
+        "dimension": 2
+      },
+      "options": {
+        "sci_detection_tol": 0.001
+      },
+      "states": {
+        "p0": [
+          [
+            -4.029444797264313,
+            -2.491268316246768
+          ],
+          [
+            3.507306998277389,
+            -2.8451246989414285
+          ]
+        ],
+        "v0": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "pf": [
+          [
+            4.05331181980985,
+            0.9298402203399534
+          ],
+          [
+            -2.604051357961943,
+            2.4863004969831337
+          ]
+        ],
+        "vf": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "input_source": "runs/numerics/fleet-restart/attempts/fbda217be3fc79ef1509/input.npz",
+      "input_sha256": "647229323f011eae9020b498c17895ef536f22d79a9353df387835e684d626e2",
+      "original_config_source": "runs/numerics/fleet-restart/attempts/fbda217be3fc79ef1509/config.json",
+      "original_config_sha256": "4a155d0abd115670568488b5211e59e095cbfd5db5e42d44f446a505c3a2d330",
+      "original_attempt_id": "fbda217be3fc79ef1509",
+      "original_interacting_pairs": 0
+    },
+    {
+      "case_id": "n2_seed21",
+      "seed": 21,
+      "problem": {
+        "n_robots": 2,
+        "time_horizon": 10.0,
+        "timestep": 0.05,
+        "min_distance": 0.5,
+        "dimension": 2
+      },
+      "options": {
+        "sci_detection_tol": 0.001
+      },
+      "states": {
+        "p0": [
+          [
+            2.5634378994864306,
+            0.810263926274653
+          ],
+          [
+            -0.13336144155940793,
+            -0.7229252892269998
+          ]
+        ],
+        "v0": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "pf": [
+          [
+            0.30804617333463524,
+            1.0837153558376424
+          ],
+          [
+            -1.3141251646890553,
+            3.8562718287419084
+          ]
+        ],
+        "vf": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "input_source": "runs/numerics/fleet-restart/attempts/ecb5baab3b12c06f065c/input.npz",
+      "input_sha256": "af44becd3802c7876d30c4bccb283e6127f38f095573bf2848b62c2e3aa83147",
+      "original_config_source": "runs/numerics/fleet-restart/attempts/ecb5baab3b12c06f065c/config.json",
+      "original_config_sha256": "1f809b8b2c3678fb979dbf06b0f639caab02375f0b6db13658992d89d53b1227",
+      "original_attempt_id": "ecb5baab3b12c06f065c",
+      "original_interacting_pairs": 0
+    },
+    {
+      "case_id": "n2_seed22",
+      "seed": 22,
+      "problem": {
+        "n_robots": 2,
+        "time_horizon": 10.0,
+        "timestep": 0.05,
+        "min_distance": 0.5,
+        "dimension": 2
+      },
+      "options": {
+        "sci_detection_tol": 0.001
+      },
+      "states": {
+        "p0": [
+          [
+            0.8954648023297389,
+            3.3526361764845154
+          ],
+          [
+            -4.068858756247414,
+            2.218994904172238
+          ]
+        ],
+        "v0": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "pf": [
+          [
+            1.383540834812533,
+            2.5607447693002805
+          ],
+          [
+            -0.5347433226140653,
+            4.121902878545244
+          ]
+        ],
+        "vf": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "input_source": "runs/numerics/fleet-restart/attempts/85caeec0dc757a4e1ef7/input.npz",
+      "input_sha256": "d50a3ab5b858b3d900c92c03bfd3192aca93ec33cd258458d5aae9de00acc9d5",
+      "original_config_source": "runs/numerics/fleet-restart/attempts/85caeec0dc757a4e1ef7/config.json",
+      "original_config_sha256": "9fd70a49f9383a0e704b79f54ac6057a86fd9a1a8454fa0c8a802b83b8b70937",
+      "original_attempt_id": "85caeec0dc757a4e1ef7",
+      "original_interacting_pairs": 0
+    },
+    {
+      "case_id": "n2_seed23",
+      "seed": 23,
+      "problem": {
+        "n_robots": 2,
+        "time_horizon": 10.0,
+        "timestep": 0.05,
+        "min_distance": 0.5,
+        "dimension": 2
+      },
+      "options": {
+        "sci_detection_tol": 0.001
+      },
+      "states": {
+        "p0": [
+          [
+            -4.8368907491061055,
+            -0.527781182482025
+          ],
+          [
+            0.2576905984728608,
+            -2.6445210633754677
+          ]
+        ],
+        "v0": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "pf": [
+          [
+            0.7493798463485333,
+            4.0735711576973
+          ],
+          [
+            1.558069968738319,
+            2.717255901482512
+          ]
+        ],
+        "vf": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "input_source": "runs/numerics/fleet-restart/attempts/547ce6fe48bb1fed444e/input.npz",
+      "input_sha256": "f18e843b5c79916e1f397fbca7428256107a15ff54587f6aac5721dfe536f7d5",
+      "original_config_source": "runs/numerics/fleet-restart/attempts/547ce6fe48bb1fed444e/config.json",
+      "original_config_sha256": "e285daf7925fed6d5c0bc31e1feed5f71f337f5898bb398e3e43d779a7e91fa4",
+      "original_attempt_id": "547ce6fe48bb1fed444e",
+      "original_interacting_pairs": 0
+    },
+    {
+      "case_id": "n2_seed24",
+      "seed": 24,
+      "problem": {
+        "n_robots": 2,
+        "time_horizon": 10.0,
+        "timestep": 0.05,
+        "min_distance": 0.5,
+        "dimension": 2
+      },
+      "options": {
+        "sci_detection_tol": 0.001
+      },
+      "states": {
+        "p0": [
+          [
+            4.050574640241846,
+            -1.0395414049325022
+          ],
+          [
+            2.3455657461366024,
+            -0.001955791895499334
+          ]
+        ],
+        "v0": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "pf": [
+          [
+            -2.76330334817103,
+            3.2954786239972336
+          ],
+          [
+            2.8115392575821514,
+            -0.06262146468753717
+          ]
+        ],
+        "vf": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "input_source": "runs/numerics/fleet-restart/attempts/fba371d6bdbfe88d5792/input.npz",
+      "input_sha256": "5b001d48d09dd437549ef314ddb138d4d757ee7486659ab5f68695c4c20ad88e",
+      "original_config_source": "runs/numerics/fleet-restart/attempts/fba371d6bdbfe88d5792/config.json",
+      "original_config_sha256": "5eaaf69b4017ed32b82e89fe9f2c281217f5f978c8103633281c462d38b558fe",
+      "original_attempt_id": "fba371d6bdbfe88d5792",
+      "original_interacting_pairs": 1
+    },
+    {
+      "case_id": "n2_seed25",
+      "seed": 25,
+      "problem": {
+        "n_robots": 2,
+        "time_horizon": 10.0,
+        "timestep": 0.05,
+        "min_distance": 0.5,
+        "dimension": 2
+      },
+      "options": {
+        "sci_detection_tol": 0.001
+      },
+      "states": {
+        "p0": [
+          [
+            2.6139578005237127,
+            -2.7792351166994185
+          ],
+          [
+            -0.38851054451754086,
+            2.120575478273095
+          ]
+        ],
+        "v0": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "pf": [
+          [
+            -1.4526486126906448,
+            0.9078549919540194
+          ],
+          [
+            -1.3142060044434036,
+            -3.0353153163017783
+          ]
+        ],
+        "vf": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "input_source": "runs/numerics/fleet-restart/attempts/2c11d5b7d22c090ce88f/input.npz",
+      "input_sha256": "cf01449fb4dfbbddbf56963f40b384a86ca90202d95e247b246e6673e99bc73d",
+      "original_config_source": "runs/numerics/fleet-restart/attempts/2c11d5b7d22c090ce88f/config.json",
+      "original_config_sha256": "989215d75ce2354e2b7042eb04aa6d7fb90f929453e08049f2692c207ef13bd1",
+      "original_attempt_id": "2c11d5b7d22c090ce88f",
+      "original_interacting_pairs": 0
+    },
+    {
+      "case_id": "n2_seed26",
+      "seed": 26,
+      "problem": {
+        "n_robots": 2,
+        "time_horizon": 10.0,
+        "timestep": 0.05,
+        "min_distance": 0.5,
+        "dimension": 2
+      },
+      "options": {
+        "sci_detection_tol": 0.001
+      },
+      "states": {
+        "p0": [
+          [
+            -1.282933039855792,
+            3.3673238332359565
+          ],
+          [
+            0.5095508923007962,
+            -4.412581590455519
+          ]
+        ],
+        "v0": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "pf": [
+          [
+            1.4893231634844168,
+            -1.5747861141312147
+          ],
+          [
+            -0.4305648045033728,
+            3.495628337483764
+          ]
+        ],
+        "vf": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "input_source": "runs/numerics/fleet-restart/attempts/f05d089d0be1f0b49532/input.npz",
+      "input_sha256": "40c6d89c23ffc3d1d0f7d72e4ec91e86a8d9c60ebadf71ac523df03dfb44c5fe",
+      "original_config_source": "runs/numerics/fleet-restart/attempts/f05d089d0be1f0b49532/config.json",
+      "original_config_sha256": "608f0f7a977dba51bc7887f31d607b25bc845d5613ffd5a3de06e2727a908691",
+      "original_attempt_id": "f05d089d0be1f0b49532",
+      "original_interacting_pairs": 1
+    },
+    {
+      "case_id": "n2_seed27",
+      "seed": 27,
+      "problem": {
+        "n_robots": 2,
+        "time_horizon": 10.0,
+        "timestep": 0.05,
+        "min_distance": 0.5,
+        "dimension": 2
+      },
+      "options": {
+        "sci_detection_tol": 0.001
+      },
+      "states": {
+        "p0": [
+          [
+            -4.030103248433602,
+            2.0304830261119506
+          ],
+          [
+            -0.4268098948620528,
+            -4.638740487529049
+          ]
+        ],
+        "v0": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "pf": [
+          [
+            -3.678346109191561,
+            3.3100129462901378
+          ],
+          [
+            1.793206403064342,
+            -1.4238293577070364
+          ]
+        ],
+        "vf": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "input_source": "runs/numerics/fleet-restart/attempts/2e41a11e4e50f6d7bef6/input.npz",
+      "input_sha256": "709f7773729e8680694a97b29a805469fae82d0285d1a6a8321c6d1edbe53d90",
+      "original_config_source": "runs/numerics/fleet-restart/attempts/2e41a11e4e50f6d7bef6/config.json",
+      "original_config_sha256": "786bb4a660694faa1164916e452a09c6eefc33d2821919be4d2c84884baba56f",
+      "original_attempt_id": "2e41a11e4e50f6d7bef6",
+      "original_interacting_pairs": 0
+    },
+    {
+      "case_id": "n2_seed28",
+      "seed": 28,
+      "problem": {
+        "n_robots": 2,
+        "time_horizon": 10.0,
+        "timestep": 0.05,
+        "min_distance": 0.5,
+        "dimension": 2
+      },
+      "options": {
+        "sci_detection_tol": 0.001
+      },
+      "states": {
+        "p0": [
+          [
+            -0.49249266937107217,
+            -3.7132790130566247
+          ],
+          [
+            2.2297891903194302,
+            2.228867287264441
+          ]
+        ],
+        "v0": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "pf": [
+          [
+            0.698571607507291,
+            -3.5052563744343304
+          ],
+          [
+            1.8957871492001552,
+            4.2123405567628165
+          ]
+        ],
+        "vf": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "input_source": "runs/numerics/fleet-restart/attempts/8a8be30c5b883a2fd6bc/input.npz",
+      "input_sha256": "3438624bad73f1f26dc52e3103beef15c1997072034baeea8aa476ed50f2162e",
+      "original_config_source": "runs/numerics/fleet-restart/attempts/8a8be30c5b883a2fd6bc/config.json",
+      "original_config_sha256": "64381b10d2e02fa24fbf236a719f4a196a8abcd226ae3e59d8f3e5c4e3af77d8",
+      "original_attempt_id": "8a8be30c5b883a2fd6bc",
+      "original_interacting_pairs": 0
+    },
+    {
+      "case_id": "n2_seed29",
+      "seed": 29,
+      "problem": {
+        "n_robots": 2,
+        "time_horizon": 10.0,
+        "timestep": 0.05,
+        "min_distance": 0.5,
+        "dimension": 2
+      },
+      "options": {
+        "sci_detection_tol": 0.001
+      },
+      "states": {
+        "p0": [
+          [
+            1.7492775582817943,
+            -2.0156083832883693
+          ],
+          [
+            3.913561930640317,
+            1.9403512886330547
+          ]
+        ],
+        "v0": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "pf": [
+          [
+            -3.520755367624351,
+            1.0778234974074745
+          ],
+          [
+            -0.6738599783139879,
+            -4.557251410663803
+          ]
+        ],
+        "vf": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "input_source": "runs/numerics/fleet-restart/attempts/035abc70b690c6cf96e8/input.npz",
+      "input_sha256": "12bbcefcbd50ac3261e3bce8cc6c3293a0c0eee85108777a7685bda9d49c3592",
+      "original_config_source": "runs/numerics/fleet-restart/attempts/035abc70b690c6cf96e8/config.json",
+      "original_config_sha256": "1ab91edbabff269ca5b1094a4dacf78e501450757bcfd65608e1e8c91d6e10ca",
+      "original_attempt_id": "035abc70b690c6cf96e8",
+      "original_interacting_pairs": 0
+    },
+    {
+      "case_id": "n2_seed30",
+      "seed": 30,
+      "problem": {
+        "n_robots": 2,
+        "time_horizon": 10.0,
+        "timestep": 0.05,
+        "min_distance": 0.5,
+        "dimension": 2
+      },
+      "options": {
+        "sci_detection_tol": 0.001
+      },
+      "states": {
+        "p0": [
+          [
+            -1.9040572353544194,
+            -2.4276075229271306
+          ],
+          [
+            -1.0509083285546095,
+            -1.7282534066343946
+          ]
+        ],
+        "v0": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "pf": [
+          [
+            2.86302449891063,
+            -0.6853004655854827
+          ],
+          [
+            -2.737466609741414,
+            -1.635092994658367
+          ]
+        ],
+        "vf": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "input_source": "runs/numerics/fleet-restart/attempts/dcc95c03d324cde9fe4d/input.npz",
+      "input_sha256": "998bbb2747a09d46cdc216122e918d658b44099efae05977710f60c3fa4f8eb0",
+      "original_config_source": "runs/numerics/fleet-restart/attempts/dcc95c03d324cde9fe4d/config.json",
+      "original_config_sha256": "55f145e6d2f3ca3b37553734a467303f7a8356c25e19957057a2c0e6866dbafa",
+      "original_attempt_id": "dcc95c03d324cde9fe4d",
+      "original_interacting_pairs": 1
+    },
+    {
+      "case_id": "n2_seed31",
+      "seed": 31,
+      "problem": {
+        "n_robots": 2,
+        "time_horizon": 10.0,
+        "timestep": 0.05,
+        "min_distance": 0.5,
+        "dimension": 2
+      },
+      "options": {
+        "sci_detection_tol": 0.001
+      },
+      "states": {
+        "p0": [
+          [
+            -1.0992260913458587,
+            4.769102762897809
+          ],
+          [
+            0.6322265932682571,
+            -4.926666176236826
+          ]
+        ],
+        "v0": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "pf": [
+          [
+            0.4807297276819666,
+            1.7865679807996466
+          ],
+          [
+            1.0987959486863357,
+            -0.7131692734396955
+          ]
+        ],
+        "vf": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "input_source": "runs/numerics/fleet-restart/attempts/d040b3a4d36dd027a353/input.npz",
+      "input_sha256": "7f3353ec1279dac87d39e7a3638fe0bcfa24f62b18819fdf4056c7b681d43144",
+      "original_config_source": "runs/numerics/fleet-restart/attempts/d040b3a4d36dd027a353/config.json",
+      "original_config_sha256": "9ca6737db763766b7156f0504591424a5d72a2b018fbc6555431153535160ced",
+      "original_attempt_id": "d040b3a4d36dd027a353",
+      "original_interacting_pairs": 0
+    },
+    {
+      "case_id": "n2_seed32",
+      "seed": 32,
+      "problem": {
+        "n_robots": 2,
+        "time_horizon": 10.0,
+        "timestep": 0.05,
+        "min_distance": 0.5,
+        "dimension": 2
+      },
+      "options": {
+        "sci_detection_tol": 0.001
+      },
+      "states": {
+        "p0": [
+          [
+            1.9292774128240213,
+            -2.365516336605827
+          ],
+          [
+            -4.597575213847536,
+            -1.6594323962755968
+          ]
+        ],
+        "v0": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "pf": [
+          [
+            -0.3779069492478451,
+            -4.50136810486792
+          ],
+          [
+            3.8783422611022207,
+            2.8584371719432524
+          ]
+        ],
+        "vf": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "input_source": "runs/numerics/fleet-restart/attempts/bd2b8fcd7deefc43c700/input.npz",
+      "input_sha256": "467acaade7c82e0e7597e1f61bbf9853ad5051c812668900a11a5004d273ceea",
+      "original_config_source": "runs/numerics/fleet-restart/attempts/bd2b8fcd7deefc43c700/config.json",
+      "original_config_sha256": "8fd3cfe362158f8b49f275944bd22aee045c535260c7ca258de147e1479ed47b",
+      "original_attempt_id": "bd2b8fcd7deefc43c700",
+      "original_interacting_pairs": 0
+    },
+    {
+      "case_id": "n2_seed33",
+      "seed": 33,
+      "problem": {
+        "n_robots": 2,
+        "time_horizon": 10.0,
+        "timestep": 0.05,
+        "min_distance": 0.5,
+        "dimension": 2
+      },
+      "options": {
+        "sci_detection_tol": 0.001
+      },
+      "states": {
+        "p0": [
+          [
+            0.03139692011049322,
+            3.35386340802327
+          ],
+          [
+            -2.1619048379698143,
+            1.354126930437176
+          ]
+        ],
+        "v0": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "pf": [
+          [
+            1.4762265433792163,
+            -1.5642101430659103
+          ],
+          [
+            4.8445280516020395,
+            0.6015386478305069
+          ]
+        ],
+        "vf": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "input_source": "runs/numerics/fleet-restart/attempts/7f6293dbeca4d3d1a149/input.npz",
+      "input_sha256": "c9cfef3c29d6533cbd401a5a3eb58478244edf74e815e6781b3a9a866ff0a911",
+      "original_config_source": "runs/numerics/fleet-restart/attempts/7f6293dbeca4d3d1a149/config.json",
+      "original_config_sha256": "e7a4b76907303c39f29d606dadfafdf85579ec0d7fd2dc71d89323f9a67d2798",
+      "original_attempt_id": "7f6293dbeca4d3d1a149",
+      "original_interacting_pairs": 1
+    },
+    {
+      "case_id": "n2_seed34",
+      "seed": 34,
+      "problem": {
+        "n_robots": 2,
+        "time_horizon": 10.0,
+        "timestep": 0.05,
+        "min_distance": 0.5,
+        "dimension": 2
+      },
+      "options": {
+        "sci_detection_tol": 0.001
+      },
+      "states": {
+        "p0": [
+          [
+            4.287173236346495,
+            1.059555168299977
+          ],
+          [
+            3.3218154648704394,
+            2.1881177252285853
+          ]
+        ],
+        "v0": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "pf": [
+          [
+            4.819349952834025,
+            0.4216982739373679
+          ],
+          [
+            -2.2524109575065343,
+            1.1197348558733686
+          ]
+        ],
+        "vf": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "input_source": "runs/numerics/fleet-restart/attempts/72f842c49d5c51465b7f/input.npz",
+      "input_sha256": "a2225a3e4c037f514df932c7c0ab5ba1a1d3a735c92627e014c2cb92f3cb516f",
+      "original_config_source": "runs/numerics/fleet-restart/attempts/72f842c49d5c51465b7f/config.json",
+      "original_config_sha256": "0104cedf4bd7e39bc9694bb515ad51957c75982025371c89b3a6b06df964ec9b",
+      "original_attempt_id": "72f842c49d5c51465b7f",
+      "original_interacting_pairs": 0
+    },
+    {
+      "case_id": "n2_seed35",
+      "seed": 35,
+      "problem": {
+        "n_robots": 2,
+        "time_horizon": 10.0,
+        "timestep": 0.05,
+        "min_distance": 0.5,
+        "dimension": 2
+      },
+      "options": {
+        "sci_detection_tol": 0.001
+      },
+      "states": {
+        "p0": [
+          [
+            -2.6805951267573978,
+            0.723291048283665
+          ],
+          [
+            0.30564567688353045,
+            2.615758879198455
+          ]
+        ],
+        "v0": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "pf": [
+          [
+            0.6840491545344632,
+            -1.5217564379667134
+          ],
+          [
+            -1.8431941064018647,
+            -1.876787854830239
+          ]
+        ],
+        "vf": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "input_source": "runs/numerics/fleet-restart/attempts/57500f440186f5954ddc/input.npz",
+      "input_sha256": "179251f09a99202738d20729dd0f3440f2dc6d5dada6f81b37f15be61f2419f0",
+      "original_config_source": "runs/numerics/fleet-restart/attempts/57500f440186f5954ddc/config.json",
+      "original_config_sha256": "bb378ac5de5317451716aa53441b4668fb2812c5f13f0f5ba74b20a71e323ee1",
+      "original_attempt_id": "57500f440186f5954ddc",
+      "original_interacting_pairs": 0
+    },
+    {
+      "case_id": "n2_seed36",
+      "seed": 36,
+      "problem": {
+        "n_robots": 2,
+        "time_horizon": 10.0,
+        "timestep": 0.05,
+        "min_distance": 0.5,
+        "dimension": 2
+      },
+      "options": {
+        "sci_detection_tol": 0.001
+      },
+      "states": {
+        "p0": [
+          [
+            -0.5221331466215843,
+            -3.8428807275863215
+          ],
+          [
+            1.8071577705668604,
+            -0.559925874831282
+          ]
+        ],
+        "v0": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "pf": [
+          [
+            1.0626531013687204,
+            -2.8197753987112457
+          ],
+          [
+            0.9879802187709424,
+            2.3457783451374943
+          ]
+        ],
+        "vf": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "input_source": "runs/numerics/fleet-restart/attempts/68adee2eb5badf12c005/input.npz",
+      "input_sha256": "ee3736c5a1967240023fe0a454028e46ff5f261fa85500fe01c4f795bc0355c2",
+      "original_config_source": "runs/numerics/fleet-restart/attempts/68adee2eb5badf12c005/config.json",
+      "original_config_sha256": "6af9ab3702d9fdda7646dfff277281db63443737eb83d9cfb23833e90f5fa192",
+      "original_attempt_id": "68adee2eb5badf12c005",
+      "original_interacting_pairs": 0
+    },
+    {
+      "case_id": "n2_seed37",
+      "seed": 37,
+      "problem": {
+        "n_robots": 2,
+        "time_horizon": 10.0,
+        "timestep": 0.05,
+        "min_distance": 0.5,
+        "dimension": 2
+      },
+      "options": {
+        "sci_detection_tol": 0.001
+      },
+      "states": {
+        "p0": [
+          [
+            3.2011979292833512,
+            -1.1639528234263505
+          ],
+          [
+            1.3415728428318086,
+            3.5703717214564614
+          ]
+        ],
+        "v0": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "pf": [
+          [
+            -3.013436880996312,
+            -2.832807547439566
+          ],
+          [
+            3.436947099053474,
+            2.612333974708967
+          ]
+        ],
+        "vf": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "input_source": "runs/numerics/fleet-restart/attempts/57c190f9d64f96fadcb3/input.npz",
+      "input_sha256": "9bf50196d6d39c3566b0fde6a41ef8077ac714bab24993956390a1784391535e",
+      "original_config_source": "runs/numerics/fleet-restart/attempts/57c190f9d64f96fadcb3/config.json",
+      "original_config_sha256": "b555a2b3f099b450e7ec430ef35811bf85a9c92ed71ba1a15f0732913e3f800f",
+      "original_attempt_id": "57c190f9d64f96fadcb3",
+      "original_interacting_pairs": 0
+    },
+    {
+      "case_id": "n2_seed38",
+      "seed": 38,
+      "problem": {
+        "n_robots": 2,
+        "time_horizon": 10.0,
+        "timestep": 0.05,
+        "min_distance": 0.5,
+        "dimension": 2
+      },
+      "options": {
+        "sci_detection_tol": 0.001
+      },
+      "states": {
+        "p0": [
+          [
+            -3.473157103976909,
+            3.070810299556163
+          ],
+          [
+            3.93673033081518,
+            -1.4397140836666285
+          ]
+        ],
+        "v0": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "pf": [
+          [
+            -2.598903248781603,
+            -2.897366727433271
+          ],
+          [
+            0.9593093647590444,
+            2.960476774837649
+          ]
+        ],
+        "vf": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "input_source": "runs/numerics/fleet-restart/attempts/57d99ae56c26b3e68e2a/input.npz",
+      "input_sha256": "f201b7bb3fa587de198d97c7e5553662c49a9a6474e545ac3c9389a64d4edb7e",
+      "original_config_source": "runs/numerics/fleet-restart/attempts/57d99ae56c26b3e68e2a/config.json",
+      "original_config_sha256": "a9d3c4106b9e07b84e99a3e3e03d526ba023113c1228a44041d355a52140c1ba",
+      "original_attempt_id": "57d99ae56c26b3e68e2a",
+      "original_interacting_pairs": 0
+    },
+    {
+      "case_id": "n2_seed39",
+      "seed": 39,
+      "problem": {
+        "n_robots": 2,
+        "time_horizon": 10.0,
+        "timestep": 0.05,
+        "min_distance": 0.5,
+        "dimension": 2
+      },
+      "options": {
+        "sci_detection_tol": 0.001
+      },
+      "states": {
+        "p0": [
+          [
+            -4.273828704146487,
+            -1.2968668935857264
+          ],
+          [
+            0.7477321313943762,
+            -1.5786523779589514
+          ]
+        ],
+        "v0": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "pf": [
+          [
+            -2.90534778361848,
+            -2.1672145349129095
+          ],
+          [
+            -3.3452000065756957,
+            0.7718682054721918
+          ]
+        ],
+        "vf": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "input_source": "runs/numerics/fleet-restart/attempts/726c64ee8d0635daa53e/input.npz",
+      "input_sha256": "b556c4d2d702f451c234a9b7f43e6664e78a2c9e1183253e34754662b5bd7c38",
+      "original_config_source": "runs/numerics/fleet-restart/attempts/726c64ee8d0635daa53e/config.json",
+      "original_config_sha256": "1918f46624d524dd75e77b5dfcad76677985a5363c8c901d9bc91895e46fd0d6",
+      "original_attempt_id": "726c64ee8d0635daa53e",
+      "original_interacting_pairs": 0
+    },
+    {
+      "case_id": "n2_seed40",
+      "seed": 40,
+      "problem": {
+        "n_robots": 2,
+        "time_horizon": 10.0,
+        "timestep": 0.05,
+        "min_distance": 0.5,
+        "dimension": 2
+      },
+      "options": {
+        "sci_detection_tol": 0.001
+      },
+      "states": {
+        "p0": [
+          [
+            -0.9840852857579383,
+            0.6447690696297542
+          ],
+          [
+            0.6425752491626616,
+            -2.601869840883127
+          ]
+        ],
+        "v0": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "pf": [
+          [
+            -2.623373621565961,
+            0.8460014628775964
+          ],
+          [
+            -3.894886229824132,
+            -0.6520479881446832
+          ]
+        ],
+        "vf": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "input_source": "runs/numerics/fleet-restart/attempts/82a67ad99289957afbba/input.npz",
+      "input_sha256": "3ae02ee7b4ef9227c4264830cf4fc538213c6feeb65ef1190040d32f10d10d25",
+      "original_config_source": "runs/numerics/fleet-restart/attempts/82a67ad99289957afbba/config.json",
+      "original_config_sha256": "2d57a6b73f63ce17b0fb92b910891f2900409b59057b188d0b27c5592a8972bb",
+      "original_attempt_id": "82a67ad99289957afbba",
+      "original_interacting_pairs": 0
+    },
+    {
+      "case_id": "n2_seed41",
+      "seed": 41,
+      "problem": {
+        "n_robots": 2,
+        "time_horizon": 10.0,
+        "timestep": 0.05,
+        "min_distance": 0.5,
+        "dimension": 2
+      },
+      "options": {
+        "sci_detection_tol": 0.001
+      },
+      "states": {
+        "p0": [
+          [
+            -0.006229788462697155,
+            1.0734787871919054
+          ],
+          [
+            -0.46263968996574467,
+            -0.9341850236367533
+          ]
+        ],
+        "v0": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "pf": [
+          [
+            2.891410012033364,
+            2.5954557145198116
+          ],
+          [
+            1.4826925162790427,
+            3.8097920984850036
+          ]
+        ],
+        "vf": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "input_source": "runs/numerics/fleet-restart/attempts/35374fb157eb2b44b044/input.npz",
+      "input_sha256": "e2ac1cb6d3d304a1fbdd8c7ea0bb56635194902ac2929acfc134647491f4caf3",
+      "original_config_source": "runs/numerics/fleet-restart/attempts/35374fb157eb2b44b044/config.json",
+      "original_config_sha256": "61849510f24102ec6a2bb7ce17676e3896b16017c2b50677477a2185e464a935",
+      "original_attempt_id": "35374fb157eb2b44b044",
+      "original_interacting_pairs": 0
+    },
+    {
+      "case_id": "n2_seed42",
+      "seed": 42,
+      "problem": {
+        "n_robots": 2,
+        "time_horizon": 10.0,
+        "timestep": 0.05,
+        "min_distance": 0.5,
+        "dimension": 2
+      },
+      "options": {
+        "sci_detection_tol": 0.001
+      },
+      "states": {
+        "p0": [
+          [
+            -3.4373320392351028,
+            3.457254128972263
+          ],
+          [
+            -0.43674830675595444,
+            -3.843918966558963
+          ]
+        ],
+        "v0": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "pf": [
+          [
+            1.0995297930567376,
+            1.6403954531105216
+          ],
+          [
+            4.346961702018349,
+            1.6608213647346644
+          ]
+        ],
+        "vf": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "input_source": "runs/numerics/fleet-restart/attempts/8662478d7e7ffd19aa68/input.npz",
+      "input_sha256": "5a11dbc4dada17a95dcde4e11701f2f70ee8b254412eccf7177222a1f62126e1",
+      "original_config_source": "runs/numerics/fleet-restart/attempts/8662478d7e7ffd19aa68/config.json",
+      "original_config_sha256": "74dcaeeacc51de06e4b454c5c99f36b61c352c25d7502204639c172841a71890",
+      "original_attempt_id": "8662478d7e7ffd19aa68",
+      "original_interacting_pairs": 0
+    },
+    {
+      "case_id": "n2_seed43",
+      "seed": 43,
+      "problem": {
+        "n_robots": 2,
+        "time_horizon": 10.0,
+        "timestep": 0.05,
+        "min_distance": 0.5,
+        "dimension": 2
+      },
+      "options": {
+        "sci_detection_tol": 0.001
+      },
+      "states": {
+        "p0": [
+          [
+            2.9261503198804504,
+            2.5815320620613207
+          ],
+          [
+            1.6403805970265093,
+            1.8231544081708144
+          ]
+        ],
+        "v0": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "pf": [
+          [
+            -2.15931865906726,
+            4.100704842136155
+          ],
+          [
+            -1.850618535771632,
+            -3.17872086571683
+          ]
+        ],
+        "vf": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "input_source": "runs/numerics/fleet-restart/attempts/dd0b6235c62526eaad3c/input.npz",
+      "input_sha256": "64d8db5fa322e2882c3503ed0d25e7af95741d4a320516fdcb45d97c54f6a1be",
+      "original_config_source": "runs/numerics/fleet-restart/attempts/dd0b6235c62526eaad3c/config.json",
+      "original_config_sha256": "549c8670ed9b58a9f77feb47d393f499c8dead85e8109c6f54e17d41216b0115",
+      "original_attempt_id": "dd0b6235c62526eaad3c",
+      "original_interacting_pairs": 0
+    },
+    {
+      "case_id": "n2_seed44",
+      "seed": 44,
+      "problem": {
+        "n_robots": 2,
+        "time_horizon": 10.0,
+        "timestep": 0.05,
+        "min_distance": 0.5,
+        "dimension": 2
+      },
+      "options": {
+        "sci_detection_tol": 0.001
+      },
+      "states": {
+        "p0": [
+          [
+            0.8225579982011363,
+            -1.3940232956597547
+          ],
+          [
+            -0.10107568338490311,
+            -3.0003840775199797
+          ]
+        ],
+        "v0": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "pf": [
+          [
+            -2.4746215008555805,
+            3.0178150942291118
+          ],
+          [
+            -2.5117633729842423,
+            1.9793584831094366
+          ]
+        ],
+        "vf": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "input_source": "runs/numerics/fleet-restart/attempts/fcc56aeb85a0f275875d/input.npz",
+      "input_sha256": "ab4451bbc582f2cdabb23f18012997db2ba2799bf363fcb46881c23d8ae9aadd",
+      "original_config_source": "runs/numerics/fleet-restart/attempts/fcc56aeb85a0f275875d/config.json",
+      "original_config_sha256": "4233b30260e9cac0757a3bf5627483f9316a3fcebee3840c519405cbc723373e",
+      "original_attempt_id": "fcc56aeb85a0f275875d",
+      "original_interacting_pairs": 0
+    },
+    {
+      "case_id": "n2_seed45",
+      "seed": 45,
+      "problem": {
+        "n_robots": 2,
+        "time_horizon": 10.0,
+        "timestep": 0.05,
+        "min_distance": 0.5,
+        "dimension": 2
+      },
+      "options": {
+        "sci_detection_tol": 0.001
+      },
+      "states": {
+        "p0": [
+          [
+            3.6977333097924836,
+            -0.2557079208183824
+          ],
+          [
+            -0.27287521637752,
+            1.363003399946691
+          ]
+        ],
+        "v0": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "pf": [
+          [
+            -3.230896826414697,
+            1.175374383313918
+          ],
+          [
+            1.9274880705892778,
+            0.6065483846674498
+          ]
+        ],
+        "vf": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "input_source": "runs/numerics/fleet-restart/attempts/98f139baad08e25213b9/input.npz",
+      "input_sha256": "df72d91a65de1a3678f5abc25f2d9d4a35ea514f22b6bbcbcaaa2f718d1092b4",
+      "original_config_source": "runs/numerics/fleet-restart/attempts/98f139baad08e25213b9/config.json",
+      "original_config_sha256": "2d9e0ca67ea10abd40ab9871321f3e39c7629cefcd8572c540ead2cf974e522c",
+      "original_attempt_id": "98f139baad08e25213b9",
+      "original_interacting_pairs": 0
+    },
+    {
+      "case_id": "n2_seed46",
+      "seed": 46,
+      "problem": {
+        "n_robots": 2,
+        "time_horizon": 10.0,
+        "timestep": 0.05,
+        "min_distance": 0.5,
+        "dimension": 2
+      },
+      "options": {
+        "sci_detection_tol": 0.001
+      },
+      "states": {
+        "p0": [
+          [
+            0.8404972018461432,
+            -3.89415037010733
+          ],
+          [
+            0.026174234937253148,
+            4.353298924456129
+          ]
+        ],
+        "v0": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "pf": [
+          [
+            -1.8685977456755234,
+            4.465341689284964
+          ],
+          [
+            3.2002060873361917,
+            0.8833804867221686
+          ]
+        ],
+        "vf": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "input_source": "runs/numerics/fleet-restart/attempts/873fbdf68e4bc9e04bd6/input.npz",
+      "input_sha256": "496f6db825e4b99b8b2de1ad91a7783b30bcd8934cffc014333bde11cfc92fa9",
+      "original_config_source": "runs/numerics/fleet-restart/attempts/873fbdf68e4bc9e04bd6/config.json",
+      "original_config_sha256": "adb86f76262c0c340798cb9335ace24cebffde66a94f7d3c3ac92ec9daa0912c",
+      "original_attempt_id": "873fbdf68e4bc9e04bd6",
+      "original_interacting_pairs": 0
+    },
+    {
+      "case_id": "n2_seed47",
+      "seed": 47,
+      "problem": {
+        "n_robots": 2,
+        "time_horizon": 10.0,
+        "timestep": 0.05,
+        "min_distance": 0.5,
+        "dimension": 2
+      },
+      "options": {
+        "sci_detection_tol": 0.001
+      },
+      "states": {
+        "p0": [
+          [
+            3.7332272639632555,
+            3.2287910363652896
+          ],
+          [
+            -0.3948867154736751,
+            -2.9378154518723516
+          ]
+        ],
+        "v0": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "pf": [
+          [
+            -1.1769353413469181,
+            -4.313344206504967
+          ],
+          [
+            -1.9642433905260621,
+            -2.550830861205587
+          ]
+        ],
+        "vf": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "input_source": "runs/numerics/fleet-restart/attempts/d9355447b864d3ceb5bc/input.npz",
+      "input_sha256": "bfb4a96c9fdbe096ecc541dc9f523c959ed3cf42320f128104b244e45b60a001",
+      "original_config_source": "runs/numerics/fleet-restart/attempts/d9355447b864d3ceb5bc/config.json",
+      "original_config_sha256": "fca8a3e9d68f7bc31b0906cc4ce35395e9398ad43cdbb1a776560ba7a718b48e",
+      "original_attempt_id": "d9355447b864d3ceb5bc",
+      "original_interacting_pairs": 0
+    },
+    {
+      "case_id": "n2_seed48",
+      "seed": 48,
+      "problem": {
+        "n_robots": 2,
+        "time_horizon": 10.0,
+        "timestep": 0.05,
+        "min_distance": 0.5,
+        "dimension": 2
+      },
+      "options": {
+        "sci_detection_tol": 0.001
+      },
+      "states": {
+        "p0": [
+          [
+            4.692678252964841,
+            0.517786146644834
+          ],
+          [
+            -0.5940621623443542,
+            2.6686137944155006
+          ]
+        ],
+        "v0": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "pf": [
+          [
+            0.7434987369660779,
+            -2.749358937113444
+          ],
+          [
+            2.2073994098054452,
+            -2.5130068943274755
+          ]
+        ],
+        "vf": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "input_source": "runs/numerics/fleet-restart/attempts/50d08184fe297978fad8/input.npz",
+      "input_sha256": "cffdc3068b66ec2aa5721ba40774a236c2d4516109a77ecb15291c5d1db5ab75",
+      "original_config_source": "runs/numerics/fleet-restart/attempts/50d08184fe297978fad8/config.json",
+      "original_config_sha256": "3e0f9511793428c47c759c42db5812ce763b34b4a3a6f6f46ebc3962622e3657",
+      "original_attempt_id": "50d08184fe297978fad8",
+      "original_interacting_pairs": 0
+    },
+    {
+      "case_id": "n2_seed49",
+      "seed": 49,
+      "problem": {
+        "n_robots": 2,
+        "time_horizon": 10.0,
+        "timestep": 0.05,
+        "min_distance": 0.5,
+        "dimension": 2
+      },
+      "options": {
+        "sci_detection_tol": 0.001
+      },
+      "states": {
+        "p0": [
+          [
+            -0.7822984043288067,
+            2.358930903106313
+          ],
+          [
+            4.224486160739952,
+            -2.1080328827275716
+          ]
+        ],
+        "v0": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "pf": [
+          [
+            -1.532417920588406,
+            -3.4385770027950975
+          ],
+          [
+            -2.194456759132416,
+            -0.6670497972169701
+          ]
+        ],
+        "vf": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "input_source": "runs/numerics/fleet-restart/attempts/987566ddbeaa43dcafdb/input.npz",
+      "input_sha256": "7a8b7efafddeed3fa52c73c724c757aa81de7b24eeaf853f38cfe15e25cb1c86",
+      "original_config_source": "runs/numerics/fleet-restart/attempts/987566ddbeaa43dcafdb/config.json",
+      "original_config_sha256": "6e4d0088b2028bbf5ca7dccbf428d85ae33ac2199cb42d3de594aa6febc1154f",
+      "original_attempt_id": "987566ddbeaa43dcafdb",
+      "original_interacting_pairs": 0
+    },
+    {
+      "case_id": "n4_seed0",
+      "seed": 0,
+      "problem": {
+        "n_robots": 4,
+        "time_horizon": 14.142135623730951,
+        "timestep": 0.07071067811865475,
+        "min_distance": 0.5,
+        "dimension": 2
+      },
+      "options": {
+        "sci_detection_tol": 0.001
+      },
+      "states": {
+        "p0": [
+          [
+            -5.700861743516959,
+            -1.8054483376507213
+          ],
+          [
+            -4.168837163131254,
+            -3.1408527277063785
+          ],
+          [
+            -5.041463503010069,
+            2.6226611296830287
+          ],
+          [
+            -6.1705802556338085,
+            2.5519775367126942
+          ]
+        ],
+        "v0": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "pf": [
+          [
+            4.264966108825981,
+            -0.9910297835356159
+          ],
+          [
+            1.3327845210911258,
+            -4.966732467929507
+          ],
+          [
+            -6.190596047986022,
+            -2.820700708209382
+          ],
+          [
+            1.8827431387898186,
+            0.900967956376307
+          ]
+        ],
+        "vf": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "input_source": "runs/numerics/fleet-restart/attempts/fd7709982c9239b71f04/input.npz",
+      "input_sha256": "d03da81bffc00af0fee6a96b08edc9c2d4abdcbc3f43408c5fb45ebf5128971e",
+      "original_config_source": "runs/numerics/fleet-restart/attempts/fd7709982c9239b71f04/config.json",
+      "original_config_sha256": "9e71e5bb662e5918c62c38c2177a464df547b958970a077e1f5192e3c029bb3e",
+      "original_attempt_id": "fd7709982c9239b71f04",
+      "original_interacting_pairs": 1
+    },
+    {
+      "case_id": "n4_seed1",
+      "seed": 1,
+      "problem": {
+        "n_robots": 4,
+        "time_horizon": 14.142135623730951,
+        "timestep": 0.07071067811865475,
+        "min_distance": 0.5,
+        "dimension": 2
+      },
+      "options": {
+        "sci_detection_tol": 0.001
+      },
+      "states": {
+        "p0": [
+          [
+            -5.2040097197734845,
+            2.98906465447153
+          ],
+          [
+            3.8880098797134264,
+            0.002794072793093751
+          ],
+          [
+            1.298144961991081,
+            1.7122352046658385
+          ],
+          [
+            1.6205612737214181,
+            3.8277692603221007
+          ]
+        ],
+        "v0": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "pf": [
+          [
+            -4.136340587228192,
+            3.1355259920173824
+          ],
+          [
+            -5.114938074476075,
+            2.845765892358851
+          ],
+          [
+            1.8705252736138722,
+            6.3566506133591325
+          ],
+          [
+            5.704423008494366,
+            0.9914301029725688
+          ]
+        ],
+        "vf": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "input_source": "runs/numerics/fleet-restart/attempts/ef9f839bdfabbdb3b45e/input.npz",
+      "input_sha256": "a24d3bde21dd177a3181c56d2f9a1fb143eac7ae12f554943f4afbc8c04c4ccc",
+      "original_config_source": "runs/numerics/fleet-restart/attempts/ef9f839bdfabbdb3b45e/config.json",
+      "original_config_sha256": "9a435f5dbf135bf877abd7c07d1490a09570b6df85cd9b5e534487c824f5634a",
+      "original_attempt_id": "ef9f839bdfabbdb3b45e",
+      "original_interacting_pairs": 0
+    },
+    {
+      "case_id": "n4_seed2",
+      "seed": 2,
+      "problem": {
+        "n_robots": 4,
+        "time_horizon": 14.142135623730951,
+        "timestep": 0.07071067811865475,
+        "min_distance": 0.5,
+        "dimension": 2
+      },
+      "options": {
+        "sci_detection_tol": 0.001
+      },
+      "states": {
+        "p0": [
+          [
+            -1.0477219557483664,
+            0.4456347100904346
+          ],
+          [
+            -4.440123070336204,
+            -1.4322802627914852
+          ],
+          [
+            -3.5658949893671172,
+            1.9496497057164377
+          ],
+          [
+            1.5642363404001547,
+            5.340104211427406
+          ]
+        ],
+        "v0": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "pf": [
+          [
+            -1.1211703161115787,
+            3.4762538568714443
+          ],
+          [
+            -3.7243779943760407,
+            -3.547691258954118
+          ],
+          [
+            3.3611760457384534,
+            3.7922818530327276
+          ],
+          [
+            2.508880063157483,
+            5.74214926830752
+          ]
+        ],
+        "vf": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "input_source": "runs/numerics/fleet-restart/attempts/7f3dadeebb408d0768b8/input.npz",
+      "input_sha256": "c775bc89bbb4ece16b9f83b509afeb7fe27b8a165b0b4ec68f9a1cbbe9e53bf8",
+      "original_config_source": "runs/numerics/fleet-restart/attempts/7f3dadeebb408d0768b8/config.json",
+      "original_config_sha256": "3f4fb9854bf72b9c559175518e5d29166193e19d37254d98430f19748d349e4e",
+      "original_attempt_id": "7f3dadeebb408d0768b8",
+      "original_interacting_pairs": 0
+    },
+    {
+      "case_id": "n4_seed3",
+      "seed": 3,
+      "problem": {
+        "n_robots": 4,
+        "time_horizon": 14.142135623730951,
+        "timestep": 0.07071067811865475,
+        "min_distance": 0.5,
+        "dimension": 2
+      },
+      "options": {
+        "sci_detection_tol": 0.001
+      },
+      "states": {
+        "p0": [
+          [
+            -5.649887606780572,
+            -1.8671264450091627
+          ],
+          [
+            -1.2846471814524794,
+            4.8878483895339215
+          ],
+          [
+            5.236227495563381,
+            -4.170920289501821
+          ],
+          [
+            2.2678104705752786,
+            2.2845523798894334
+          ]
+        ],
+        "v0": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "pf": [
+          [
+            4.451390210326396,
+            1.4918503202205464
+          ],
+          [
+            -2.2095461255034117,
+            -3.007036755956207
+          ],
+          [
+            -2.4293400638379503,
+            -4.862247188805745
+          ],
+          [
+            5.226188436157081,
+            0.7935104468890837
+          ]
+        ],
+        "vf": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "input_source": "runs/numerics/fleet-restart/attempts/f1140c2b5abfe2945414/input.npz",
+      "input_sha256": "b92fb571986e5f96aac1d3c8201c22f6e9097c25af2911e36e76e574a3cb0c25",
+      "original_config_source": "runs/numerics/fleet-restart/attempts/f1140c2b5abfe2945414/config.json",
+      "original_config_sha256": "ee62c8e2972f2e5230a8ae524ec40205806b01f4f6262ac35724c42dd2663589",
+      "original_attempt_id": "f1140c2b5abfe2945414",
+      "original_interacting_pairs": 0
+    },
+    {
+      "case_id": "n4_seed4",
+      "seed": 4,
+      "problem": {
+        "n_robots": 4,
+        "time_horizon": 14.142135623730951,
+        "timestep": 0.07071067811865475,
+        "min_distance": 0.5,
+        "dimension": 2
+      },
+      "options": {
+        "sci_detection_tol": 0.001
+      },
+      "states": {
+        "p0": [
+          [
+            5.1189949541782624,
+            -1.0758731885699249
+          ],
+          [
+            -1.060249563154937,
+            -3.111325383634535
+          ],
+          [
+            0.5519432103871852,
+            -0.08289422619809285
+          ],
+          [
+            -0.08736558827890663,
+            4.661753304734923
+          ]
+        ],
+        "v0": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "pf": [
+          [
+            0.5771343239309663,
+            -3.090496675641862
+          ],
+          [
+            4.570519902905197,
+            -5.317930206002436
+          ],
+          [
+            2.816078198726805,
+            4.683631152780774
+          ],
+          [
+            4.389420512048453,
+            0.24809615190439027
+          ]
+        ],
+        "vf": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "input_source": "runs/numerics/fleet-restart/attempts/b2e13a6942dbc7ee14ce/input.npz",
+      "input_sha256": "e9113b82d9245d9d7d4b783f3db1ff4faef8000a11e975ab54f7d14c61647b6d",
+      "original_config_source": "runs/numerics/fleet-restart/attempts/b2e13a6942dbc7ee14ce/config.json",
+      "original_config_sha256": "913d1dd42224c5d17201b7121413e02707da12768484f0837888ba49125008ea",
+      "original_attempt_id": "b2e13a6942dbc7ee14ce",
+      "original_interacting_pairs": 1
+    },
+    {
+      "case_id": "n4_seed5",
+      "seed": 5,
+      "problem": {
+        "n_robots": 4,
+        "time_horizon": 14.142135623730951,
+        "timestep": 0.07071067811865475,
+        "min_distance": 0.5,
+        "dimension": 2
+      },
+      "options": {
+        "sci_detection_tol": 0.001
+      },
+      "states": {
+        "p0": [
+          [
+            1.1551208235720283,
+            6.496330594406284
+          ],
+          [
+            -5.51591398424327,
+            0.4023506723764977
+          ],
+          [
+            0.5080344877188491,
+            -5.065846459668455
+          ],
+          [
+            -0.8879634565838392,
+            2.932163421918066
+          ]
+        ],
+        "v0": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "pf": [
+          [
+            5.311053344153731,
+            2.9520716768909883
+          ],
+          [
+            -2.6243095678253536,
+            1.0141462803032248
+          ],
+          [
+            2.697591677142625,
+            -2.5352164095047334
+          ],
+          [
+            -3.3023355705792703,
+            1.9744813030184107
+          ]
+        ],
+        "vf": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "input_source": "runs/numerics/fleet-restart/attempts/39943abac2d6f52ad23d/input.npz",
+      "input_sha256": "2079d18b8ae05ba2b08a907f4371937f06c701108d6924befa892e6c714dc4d2",
+      "original_config_source": "runs/numerics/fleet-restart/attempts/39943abac2d6f52ad23d/config.json",
+      "original_config_sha256": "0e85b176acf28b16f329c90d578e701135cb3387d0a80a3397eff5222e067317",
+      "original_attempt_id": "39943abac2d6f52ad23d",
+      "original_interacting_pairs": 0
+    },
+    {
+      "case_id": "n4_seed6",
+      "seed": 6,
+      "problem": {
+        "n_robots": 4,
+        "time_horizon": 14.142135623730951,
+        "timestep": 0.07071067811865475,
+        "min_distance": 0.5,
+        "dimension": 2
+      },
+      "options": {
+        "sci_detection_tol": 0.001
+      },
+      "states": {
+        "p0": [
+          [
+            3.185374773980518,
+            -2.5401531084459115
+          ],
+          [
+            0.6248515916757157,
+            -1.3016880481293587
+          ],
+          [
+            4.253572082297517,
+            3.4146343509973622
+          ],
+          [
+            -4.495991392712781,
+            -0.8523102865068043
+          ]
+        ],
+        "v0": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "pf": [
+          [
+            -2.852271969546123,
+            4.794842669112928
+          ],
+          [
+            -5.613391557142106,
+            2.2986823494428794
+          ],
+          [
+            -5.345354059480715,
+            -0.6083748762900193
+          ],
+          [
+            -4.300256242703471,
+            -5.569471233049028
+          ]
+        ],
+        "vf": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "input_source": "runs/numerics/fleet-restart/attempts/913cb2ce912e72cb5711/input.npz",
+      "input_sha256": "c43680c76bb838d1e3b0509ffc084d6b6c6de30e4af78780e5e808a7519cbf89",
+      "original_config_source": "runs/numerics/fleet-restart/attempts/913cb2ce912e72cb5711/config.json",
+      "original_config_sha256": "93034687f570362d24485e89e5613928bd691a8c8be8be358ec0e306aed458a3",
+      "original_attempt_id": "913cb2ce912e72cb5711",
+      "original_interacting_pairs": 0
+    },
+    {
+      "case_id": "n4_seed7",
+      "seed": 7,
+      "problem": {
+        "n_robots": 4,
+        "time_horizon": 14.142135623730951,
+        "timestep": 0.07071067811865475,
+        "min_distance": 0.5,
+        "dimension": 2
+      },
+      "options": {
+        "sci_detection_tol": 0.001
+      },
+      "states": {
+        "p0": [
+          [
+            5.54055205173469,
+            2.8806635648794954
+          ],
+          [
+            -5.569658483660256,
+            2.269837718194497
+          ],
+          [
+            5.139368692807898,
+            -0.71532017999475
+          ],
+          [
+            -1.8979931818546028,
+            -0.013362246125489747
+          ]
+        ],
+        "v0": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "pf": [
+          [
+            -0.5779147045267882,
+            4.965897666642932
+          ],
+          [
+            -2.7268697431367857,
+            -5.722860579219443
+          ],
+          [
+            -1.3309252663072548,
+            1.2350932275744284
+          ],
+          [
+            -1.600910413731559,
+            6.551088629623822
+          ]
+        ],
+        "vf": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "input_source": "runs/numerics/fleet-restart/attempts/30ea0d419522f7a335f8/input.npz",
+      "input_sha256": "82321527dc5a9810cac647807e63a5d039ba10579a03bbff50c7a4254b914256",
+      "original_config_source": "runs/numerics/fleet-restart/attempts/30ea0d419522f7a335f8/config.json",
+      "original_config_sha256": "3890869bab7912a6e1951860af149777022d74a3848744ef1a868de28c533d6e",
+      "original_attempt_id": "30ea0d419522f7a335f8",
+      "original_interacting_pairs": 0
+    },
+    {
+      "case_id": "n4_seed8",
+      "seed": 8,
+      "problem": {
+        "n_robots": 4,
+        "time_horizon": 14.142135623730951,
+        "timestep": 0.07071067811865475,
+        "min_distance": 0.5,
+        "dimension": 2
+      },
+      "options": {
+        "sci_detection_tol": 0.001
+      },
+      "states": {
+        "p0": [
+          [
+            4.871924930031916,
+            -4.969042223324342
+          ],
+          [
+            3.507713725720882,
+            -3.773424041393875
+          ],
+          [
+            0.08176663604973773,
+            0.7505027855382049
+          ],
+          [
+            -4.063993495192227,
+            1.897768392850801
+          ]
+        ],
+        "v0": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "pf": [
+          [
+            -4.841214599585869,
+            -0.6944285354712635
+          ],
+          [
+            -4.900296837116684,
+            -1.7766237039033421
+          ],
+          [
+            0.4082535520897338,
+            -5.954163059684433
+          ],
+          [
+            -3.370997294767341,
+            -3.152929710995929
+          ]
+        ],
+        "vf": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "input_source": "runs/numerics/fleet-restart/attempts/75bc1ac240393739a8f9/input.npz",
+      "input_sha256": "2340f556aba890925271efa9a73f9046203941901fdc41059ea0747dc721512f",
+      "original_config_source": "runs/numerics/fleet-restart/attempts/75bc1ac240393739a8f9/config.json",
+      "original_config_sha256": "db9c7dd144a437bf572ddd30e93df43a1c80d21130e06bc86efcc02267e69023",
+      "original_attempt_id": "75bc1ac240393739a8f9",
+      "original_interacting_pairs": 2
+    },
+    {
+      "case_id": "n4_seed9",
+      "seed": 9,
+      "problem": {
+        "n_robots": 4,
+        "time_horizon": 14.142135623730951,
+        "timestep": 0.07071067811865475,
+        "min_distance": 0.5,
+        "dimension": 2
+      },
+      "options": {
+        "sci_detection_tol": 0.001
+      },
+      "states": {
+        "p0": [
+          [
+            4.99872609494572,
+            0.3262928671387857
+          ],
+          [
+            -2.585876672713109,
+            0.06868974801241058
+          ],
+          [
+            2.0731893791280025,
+            2.574843602934897
+          ],
+          [
+            -3.070383713113983,
+            1.7256309787791682
+          ]
+        ],
+        "v0": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "pf": [
+          [
+            3.5899507442678784,
+            2.094560969809786
+          ],
+          [
+            3.3099520066677015,
+            5.742140018337189
+          ],
+          [
+            1.3263679458786541,
+            -0.42209816839407244
+          ],
+          [
+            -1.68220632028185,
+            -5.0801744728379425
+          ]
+        ],
+        "vf": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "input_source": "runs/numerics/fleet-restart/attempts/00c7ee58b5851ae4163a/input.npz",
+      "input_sha256": "5849c4e5d3db307033d8c2bb5607c3b8ab531f68160cce0f54d8674277a9ebd2",
+      "original_config_source": "runs/numerics/fleet-restart/attempts/00c7ee58b5851ae4163a/config.json",
+      "original_config_sha256": "c189775f062d882694ffc08a5eb1d8d3247c234afbfb5e06b2f1ab3aae68043a",
+      "original_attempt_id": "00c7ee58b5851ae4163a",
+      "original_interacting_pairs": 0
+    },
+    {
+      "case_id": "n4_seed10",
+      "seed": 10,
+      "problem": {
+        "n_robots": 4,
+        "time_horizon": 14.142135623730951,
+        "timestep": 0.07071067811865475,
+        "min_distance": 0.5,
+        "dimension": 2
+      },
+      "options": {
+        "sci_detection_tol": 0.001
+      },
+      "states": {
+        "p0": [
+          [
+            0.1360488555645085,
+            -1.0094989731890087
+          ],
+          [
+            -4.085297639075064,
+            -4.555275768501651
+          ],
+          [
+            -3.352438399758587,
+            0.03144920295445385
+          ],
+          [
+            1.9768128986344604,
+            5.841125437254396
+          ]
+        ],
+        "v0": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "pf": [
+          [
+            1.022757582311926,
+            1.8360167854690157
+          ],
+          [
+            -2.727704533158876,
+            -6.342656800547492
+          ],
+          [
+            5.059037032613857,
+            0.12552876933359006
+          ],
+          [
+            2.121695059808814,
+            -5.111234040293233
+          ]
+        ],
+        "vf": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "input_source": "runs/numerics/fleet-restart/attempts/6471b7fbdeea69888482/input.npz",
+      "input_sha256": "8fd0f9665ead78096f35afd4f11ba0bb04c3386f221643b35d758262b838e158",
+      "original_config_source": "runs/numerics/fleet-restart/attempts/6471b7fbdeea69888482/config.json",
+      "original_config_sha256": "fb47d00ac43a48044801f60038cd9fa28f2b000e41e9825514d422325a73d7dc",
+      "original_attempt_id": "6471b7fbdeea69888482",
+      "original_interacting_pairs": 1
+    },
+    {
+      "case_id": "n4_seed11",
+      "seed": 11,
+      "problem": {
+        "n_robots": 4,
+        "time_horizon": 14.142135623730951,
+        "timestep": 0.07071067811865475,
+        "min_distance": 0.5,
+        "dimension": 2
+      },
+      "options": {
+        "sci_detection_tol": 0.001
+      },
+      "states": {
+        "p0": [
+          [
+            0.41864279185320935,
+            0.8935884327869177
+          ],
+          [
+            -5.860460883246629,
+            1.379019468877628
+          ],
+          [
+            -4.32024231605816,
+            2.367881170778963
+          ],
+          [
+            4.92054575606668,
+            0.3959922075594031
+          ]
+        ],
+        "v0": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "pf": [
+          [
+            6.091099098187186,
+            -2.332009057637252
+          ],
+          [
+            -0.2927553446539825,
+            -2.3132440212016703
+          ],
+          [
+            5.145063871816994,
+            -4.047966169394824
+          ],
+          [
+            2.8596407958772003,
+            4.8414001290669635
+          ]
+        ],
+        "vf": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "input_source": "runs/numerics/fleet-restart/attempts/e3acf97c92449295e5db/input.npz",
+      "input_sha256": "91c321ec3b5daed23079ffa5aafc4a4d8f866073ac918ce0e92611fb428f7a27",
+      "original_config_source": "runs/numerics/fleet-restart/attempts/e3acf97c92449295e5db/config.json",
+      "original_config_sha256": "a357a3a596f7d30be27f723aeb24e0077d29feae5825c771b5be7fabd4be369f",
+      "original_attempt_id": "e3acf97c92449295e5db",
+      "original_interacting_pairs": 0
+    },
+    {
+      "case_id": "n4_seed12",
+      "seed": 12,
+      "problem": {
+        "n_robots": 4,
+        "time_horizon": 14.142135623730951,
+        "timestep": 0.07071067811865475,
+        "min_distance": 0.5,
+        "dimension": 2
+      },
+      "options": {
+        "sci_detection_tol": 0.001
+      },
+      "states": {
+        "p0": [
+          [
+            3.4455507803045426,
+            5.013049435833742
+          ],
+          [
+            -0.4316824913542101,
+            5.147875279731736
+          ],
+          [
+            6.749309445436656,
+            0.619816436321111
+          ],
+          [
+            1.049217931444109,
+            -0.7551245683020615
+          ]
+        ],
+        "v0": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "pf": [
+          [
+            2.524009750852819,
+            -0.6998863089128919
+          ],
+          [
+            -1.1612797466408968,
+            5.381039729270088
+          ],
+          [
+            6.132812963454149,
+            -2.241736427583089
+          ],
+          [
+            5.1045127365588785,
+            0.07246435898307894
+          ]
+        ],
+        "vf": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "input_source": "runs/numerics/fleet-restart/attempts/6f26fae700e5b39ebdc9/input.npz",
+      "input_sha256": "63895a0cb2a308c594639ce0f4d7c38c3379f61e5b97b9f07a601b13a2508b77",
+      "original_config_source": "runs/numerics/fleet-restart/attempts/6f26fae700e5b39ebdc9/config.json",
+      "original_config_sha256": "0aee92895fa11f1eb05b7ff7b6e394f16f5a415a5e93b6c6308826a6e2a7eadd",
+      "original_attempt_id": "6f26fae700e5b39ebdc9",
+      "original_interacting_pairs": 0
+    },
+    {
+      "case_id": "n4_seed13",
+      "seed": 13,
+      "problem": {
+        "n_robots": 4,
+        "time_horizon": 14.142135623730951,
+        "timestep": 0.07071067811865475,
+        "min_distance": 0.5,
+        "dimension": 2
+      },
+      "options": {
+        "sci_detection_tol": 0.001
+      },
+      "states": {
+        "p0": [
+          [
+            0.5968384016864829,
+            -3.3942370164763007
+          ],
+          [
+            3.126643479725857,
+            -6.205768320912228
+          ],
+          [
+            4.691177223339692,
+            -0.8156706627582648
+          ],
+          [
+            -4.8218289865551345,
+            -3.9403414769102203
+          ]
+        ],
+        "v0": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "pf": [
+          [
+            -3.782774966006045,
+            -4.668139354432912
+          ],
+          [
+            3.769735646715041,
+            0.8435441294590936
+          ],
+          [
+            6.108781801694287,
+            2.352834891922645
+          ],
+          [
+            -4.066683718882276,
+            4.1778560422162325
+          ]
+        ],
+        "vf": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "input_source": "runs/numerics/fleet-restart/attempts/d6f3eb4fee9daa01af0c/input.npz",
+      "input_sha256": "449b01128a9e39fddc569023d11a7e06b40701f6ee10175b167924a74d8a4306",
+      "original_config_source": "runs/numerics/fleet-restart/attempts/d6f3eb4fee9daa01af0c/config.json",
+      "original_config_sha256": "5fefd93e39812c7295cae1c9feb3592bad9d48cf76b456e0cebcf30c5d8283ca",
+      "original_attempt_id": "d6f3eb4fee9daa01af0c",
+      "original_interacting_pairs": 0
+    },
+    {
+      "case_id": "n4_seed14",
+      "seed": 14,
+      "problem": {
+        "n_robots": 4,
+        "time_horizon": 14.142135623730951,
+        "timestep": 0.07071067811865475,
+        "min_distance": 0.5,
+        "dimension": 2
+      },
+      "options": {
+        "sci_detection_tol": 0.001
+      },
+      "states": {
+        "p0": [
+          [
+            -6.193730576548456,
+            -0.5440166808964371
+          ],
+          [
+            0.43545511198026304,
+            -0.4612225839452706
+          ],
+          [
+            -2.536578264725066,
+            6.4378534990491145
+          ],
+          [
+            -3.9757229986438665,
+            -0.32840201226416266
+          ]
+        ],
+        "v0": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "pf": [
+          [
+            -3.22569355562203,
+            -0.8109551199705822
+          ],
+          [
+            1.4374412755574602,
+            -3.8789810337326935
+          ],
+          [
+            -0.525833427623845,
+            -0.13110485859141588
+          ],
+          [
+            -1.504599837986943,
+            -2.870085789042999
+          ]
+        ],
+        "vf": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "input_source": "runs/numerics/fleet-restart/attempts/0f6839f0a29b1ae2cba5/input.npz",
+      "input_sha256": "af82cd5aac7a6cefecce34bad37c2805bd1f355a0d08b18b28f56266b870ccb1",
+      "original_config_source": "runs/numerics/fleet-restart/attempts/0f6839f0a29b1ae2cba5/config.json",
+      "original_config_sha256": "adcb3c85c125d949cca134ed71b9be80df47783acc8e2904796da9a46d531aff",
+      "original_attempt_id": "0f6839f0a29b1ae2cba5",
+      "original_interacting_pairs": 0
+    },
+    {
+      "case_id": "n4_seed15",
+      "seed": 15,
+      "problem": {
+        "n_robots": 4,
+        "time_horizon": 14.142135623730951,
+        "timestep": 0.07071067811865475,
+        "min_distance": 0.5,
+        "dimension": 2
+      },
+      "options": {
+        "sci_detection_tol": 0.001
+      },
+      "states": {
+        "p0": [
+          [
+            1.7399168294182217,
+            -2.432588266180113
+          ],
+          [
+            4.006069691036838,
+            1.4241937842046513
+          ],
+          [
+            -0.8181015509788853,
+            5.082393245023176
+          ],
+          [
+            -1.3428471842756171,
+            3.663397248100484
+          ]
+        ],
+        "v0": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "pf": [
+          [
+            2.6988114237765095,
+            2.2828419991096918
+          ],
+          [
+            3.158241186398988,
+            -1.7980142577860152
+          ],
+          [
+            -1.323095642964991,
+            -6.444778477890048
+          ],
+          [
+            1.138866467680368,
+            -3.0381758181077414
+          ]
+        ],
+        "vf": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "input_source": "runs/numerics/fleet-restart/attempts/58267ffcd07a1890ee7e/input.npz",
+      "input_sha256": "546b8dce33b3bd1107e20eaa53836aae2c7d077a62fe52d5712c24bc71754e93",
+      "original_config_source": "runs/numerics/fleet-restart/attempts/58267ffcd07a1890ee7e/config.json",
+      "original_config_sha256": "292a4eda5c2fe0afcb1a7b84aa1c4a9ece968d9e08241f3122d94f028725e0c8",
+      "original_attempt_id": "58267ffcd07a1890ee7e",
+      "original_interacting_pairs": 1
+    },
+    {
+      "case_id": "n4_seed16",
+      "seed": 16,
+      "problem": {
+        "n_robots": 4,
+        "time_horizon": 14.142135623730951,
+        "timestep": 0.07071067811865475,
+        "min_distance": 0.5,
+        "dimension": 2
+      },
+      "options": {
+        "sci_detection_tol": 0.001
+      },
+      "states": {
+        "p0": [
+          [
+            0.8542784904120775,
+            5.04265558320743
+          ],
+          [
+            -1.434024060805165,
+            -0.4729402707236723
+          ],
+          [
+            -2.1406099241703465,
+            2.5635592907338554
+          ],
+          [
+            -1.0745431685850892,
+            -2.651778314432049
+          ]
+        ],
+        "v0": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "pf": [
+          [
+            6.200541869735368,
+            2.9332274944078995
+          ],
+          [
+            -1.818766630862006,
+            -0.7692235773572088
+          ],
+          [
+            -0.48148288011935825,
+            -2.7732260838796194
+          ],
+          [
+            -0.006770791064452589,
+            3.830707109855599
+          ]
+        ],
+        "vf": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "input_source": "runs/numerics/fleet-restart/attempts/eb2af6659cfc0acc2918/input.npz",
+      "input_sha256": "82f0941177d4af2c57ce060e26f75968553000d63f2b8b38b6625ae24cebf7a2",
+      "original_config_source": "runs/numerics/fleet-restart/attempts/eb2af6659cfc0acc2918/config.json",
+      "original_config_sha256": "2bf3cf765e510ee1e60250dbe62ef81b8f690c1d2b28c44d105926cb9e269915",
+      "original_attempt_id": "eb2af6659cfc0acc2918",
+      "original_interacting_pairs": 1
+    },
+    {
+      "case_id": "n4_seed17",
+      "seed": 17,
+      "problem": {
+        "n_robots": 4,
+        "time_horizon": 14.142135623730951,
+        "timestep": 0.07071067811865475,
+        "min_distance": 0.5,
+        "dimension": 2
+      },
+      "options": {
+        "sci_detection_tol": 0.001
+      },
+      "states": {
+        "p0": [
+          [
+            -1.426575315610538,
+            4.949163631277047
+          ],
+          [
+            0.6618899476339803,
+            1.7195695992851396
+          ],
+          [
+            1.3192959366167838,
+            -5.5745972339191665
+          ],
+          [
+            -3.483566709833953,
+            -4.0798171118064035
+          ]
+        ],
+        "v0": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "pf": [
+          [
+            4.102974984062653,
+            1.0277531339448782
+          ],
+          [
+            1.632764381938874,
+            -0.5799262787984645
+          ],
+          [
+            4.3499085149200285,
+            -4.994278948880183
+          ],
+          [
+            5.418544435765,
+            1.805632014260631
+          ]
+        ],
+        "vf": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "input_source": "runs/numerics/fleet-restart/attempts/43b3e60a5763c0dc8e46/input.npz",
+      "input_sha256": "0a74dd9baf3afadcc94618ab3598157efd2639dc19f06bd7a01ed2c5a48b988e",
+      "original_config_source": "runs/numerics/fleet-restart/attempts/43b3e60a5763c0dc8e46/config.json",
+      "original_config_sha256": "dffd4cd51fdae0c9bc28944bc37d0052a39801b419c69b9cdd4d6d85b719989d",
+      "original_attempt_id": "43b3e60a5763c0dc8e46",
+      "original_interacting_pairs": 0
+    },
+    {
+      "case_id": "n4_seed18",
+      "seed": 18,
+      "problem": {
+        "n_robots": 4,
+        "time_horizon": 14.142135623730951,
+        "timestep": 0.07071067811865475,
+        "min_distance": 0.5,
+        "dimension": 2
+      },
+      "options": {
+        "sci_detection_tol": 0.001
+      },
+      "states": {
+        "p0": [
+          [
+            -2.945338234966214,
+            -4.0740215228184855
+          ],
+          [
+            2.1798339125311545,
+            -2.0833471583861973
+          ],
+          [
+            3.6689228674882153,
+            -4.903653668207268
+          ],
+          [
+            -3.5356557587851274,
+            -6.074035789256404
+          ]
+        ],
+        "v0": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "pf": [
+          [
+            -0.05207140082129538,
+            1.1885221213092387
+          ],
+          [
+            -4.282300546309109,
+            -4.901787572448648
+          ],
+          [
+            -0.08849145937214109,
+            -1.0161323032916076
+          ],
+          [
+            2.9479192667580683,
+            2.489168352978473
+          ]
+        ],
+        "vf": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "input_source": "runs/numerics/fleet-restart/attempts/fed7d4b7fa41aff47a39/input.npz",
+      "input_sha256": "bb3a7bb998b96cf697b91e89297bf9c52100258139d9339b2703362f2a97fb1d",
+      "original_config_source": "runs/numerics/fleet-restart/attempts/fed7d4b7fa41aff47a39/config.json",
+      "original_config_sha256": "a775cf1222a5648f84cbd6abe5e121cfb7a3e115a0b68a60b95dfdd78a1ef1ff",
+      "original_attempt_id": "fed7d4b7fa41aff47a39",
+      "original_interacting_pairs": 0
+    },
+    {
+      "case_id": "n4_seed19",
+      "seed": 19,
+      "problem": {
+        "n_robots": 4,
+        "time_horizon": 14.142135623730951,
+        "timestep": 0.07071067811865475,
+        "min_distance": 0.5,
+        "dimension": 2
+      },
+      "options": {
+        "sci_detection_tol": 0.001
+      },
+      "states": {
+        "p0": [
+          [
+            5.046809396804268,
+            3.548549104362368
+          ],
+          [
+            0.050558447408302634,
+            2.6275517534792043
+          ],
+          [
+            -0.9975889500964956,
+            1.7761741291298034
+          ],
+          [
+            -2.990043261483991,
+            -5.602618245297198
+          ]
+        ],
+        "v0": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "pf": [
+          [
+            5.604532482373119,
+            -0.6101249002189884
+          ],
+          [
+            1.1132601137338018,
+            5.119767916945396
+          ],
+          [
+            -3.2818652761043996,
+            -0.9660041236197041
+          ],
+          [
+            3.7756192747059587,
+            3.2753110455217214
+          ]
+        ],
+        "vf": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "input_source": "runs/numerics/fleet-restart/attempts/d25d1f1a344e754399c9/input.npz",
+      "input_sha256": "3456182f6af8e830afa8bc92ef57e9172bbe6cbdcf0d4f9faf242221d2f90294",
+      "original_config_source": "runs/numerics/fleet-restart/attempts/d25d1f1a344e754399c9/config.json",
+      "original_config_sha256": "aa266a79536e1c7717ec517779676c96eed84017fc48a153f8ac16e1d4d1e46d",
+      "original_attempt_id": "d25d1f1a344e754399c9",
+      "original_interacting_pairs": 0
+    },
+    {
+      "case_id": "n4_seed20",
+      "seed": 20,
+      "problem": {
+        "n_robots": 4,
+        "time_horizon": 14.142135623730951,
+        "timestep": 0.07071067811865475,
+        "min_distance": 0.5,
+        "dimension": 2
+      },
+      "options": {
+        "sci_detection_tol": 0.001
+      },
+      "states": {
+        "p0": [
+          [
+            -5.698495481124898,
+            -3.5231854403465643
+          ],
+          [
+            4.960081124369953,
+            -4.0236139358856375
+          ],
+          [
+            5.732248548102262,
+            1.3149926504447491
+          ],
+          [
+            -3.682684747545855,
+            3.5161598829685143
+          ]
+        ],
+        "v0": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "pf": [
+          [
+            -1.7018735311684166,
+            -2.606940232927437
+          ],
+          [
+            -0.8377422034014571,
+            5.935358850204287
+          ],
+          [
+            1.342463352670083,
+            -6.380765952100701
+          ],
+          [
+            0.21386391043287606,
+            -1.3369657994386568
+          ]
+        ],
+        "vf": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "input_source": "runs/numerics/fleet-restart/attempts/eec4ddf9be8fd9b08e1e/input.npz",
+      "input_sha256": "15dce59151375fa40c2c5e4ae5ca198bb65bb4fac79404c250c4138bb654cc2b",
+      "original_config_source": "runs/numerics/fleet-restart/attempts/eec4ddf9be8fd9b08e1e/config.json",
+      "original_config_sha256": "d1a29d8bef024ea721912cb0e1b1323a11f7dbfb6d166c2ef832bb345b6fe143",
+      "original_attempt_id": "eec4ddf9be8fd9b08e1e",
+      "original_interacting_pairs": 0
+    },
+    {
+      "case_id": "n4_seed21",
+      "seed": 21,
+      "problem": {
+        "n_robots": 4,
+        "time_horizon": 14.142135623730951,
+        "timestep": 0.07071067811865475,
+        "min_distance": 0.5,
+        "dimension": 2
+      },
+      "options": {
+        "sci_detection_tol": 0.001
+      },
+      "states": {
+        "p0": [
+          [
+            3.625248643754909,
+            1.145886233639288
+          ],
+          [
+            -0.18860155935094164,
+            -1.0223707486073155
+          ],
+          [
+            0.43564307616697445,
+            1.5326049539775786
+          ],
+          [
+            -1.858453630559039,
+            5.453591920404104
+          ]
+        ],
+        "v0": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "pf": [
+          [
+            -1.9288967666605952,
+            5.045683410054206
+          ],
+          [
+            5.966373013064457,
+            2.787941403371058
+          ],
+          [
+            1.998200391424152,
+            2.2166254247588344
+          ],
+          [
+            -6.569379046650451,
+            0.16805109146088468
+          ]
+        ],
+        "vf": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "input_source": "runs/numerics/fleet-restart/attempts/70984417be2e59e0bbba/input.npz",
+      "input_sha256": "0ab1d83d924b16e4213d0629fbd89f5f73e0fe4732ee3641f649d3f7a754ce7d",
+      "original_config_source": "runs/numerics/fleet-restart/attempts/70984417be2e59e0bbba/config.json",
+      "original_config_sha256": "5db13caf6e478ec1d7237c969fd91f57e3e2db7e5a75a8710e7ffc1b02dbce74",
+      "original_attempt_id": "70984417be2e59e0bbba",
+      "original_interacting_pairs": 0
+    },
+    {
+      "case_id": "n4_seed22",
+      "seed": 22,
+      "problem": {
+        "n_robots": 4,
+        "time_horizon": 14.142135623730951,
+        "timestep": 0.07071067811865475,
+        "min_distance": 0.5,
+        "dimension": 2
+      },
+      "options": {
+        "sci_detection_tol": 0.001
+      },
+      "states": {
+        "p0": [
+          [
+            1.2663784680824595,
+            4.741343550487079
+          ],
+          [
+            -5.7542352364656155,
+            3.138132688317165
+          ],
+          [
+            1.9566222126888784,
+            3.621439982520419
+          ],
+          [
+            -0.7562412592292627,
+            5.829250953623385
+          ]
+        ],
+        "v0": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "pf": [
+          [
+            1.1780111603019991,
+            6.261775765159455
+          ],
+          [
+            5.2856036486279026,
+            0.3501127000858414
+          ],
+          [
+            2.3791562239714437,
+            -5.620910110015969
+          ],
+          [
+            0.20685674944090612,
+            0.5140560305216286
+          ]
+        ],
+        "vf": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "input_source": "runs/numerics/fleet-restart/attempts/4a02e139b0753a72f27a/input.npz",
+      "input_sha256": "d82f3f01385e2fcd153be6606655e0de292e34c2e0185ab4a6854a2d18119fab",
+      "original_config_source": "runs/numerics/fleet-restart/attempts/4a02e139b0753a72f27a/config.json",
+      "original_config_sha256": "140aac4014a502dc714868c507a71ef6fb4d491c257d449da042dcbe4037e9de",
+      "original_attempt_id": "4a02e139b0753a72f27a",
+      "original_interacting_pairs": 0
+    },
+    {
+      "case_id": "n4_seed23",
+      "seed": 23,
+      "problem": {
+        "n_robots": 4,
+        "time_horizon": 14.142135623730951,
+        "timestep": 0.07071067811865475,
+        "min_distance": 0.5,
+        "dimension": 2
+      },
+      "options": {
+        "sci_detection_tol": 0.001
+      },
+      "states": {
+        "p0": [
+          [
+            -6.840396497102815,
+            -0.7463953062313893
+          ],
+          [
+            0.3644295392563594,
+            -3.7399175538069063
+          ],
+          [
+            1.0597831420751618,
+            5.7608995785073915
+          ],
+          [
+            2.203443680915955,
+            3.8427801483148993
+          ]
+        ],
+        "v0": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "pf": [
+          [
+            -3.346074986759638,
+            -3.0659887354520383
+          ],
+          [
+            6.647631752539425,
+            0.10296213495679543
+          ],
+          [
+            2.906305708546385,
+            -2.56395623925112
+          ],
+          [
+            -5.915375840131538,
+            -3.732247911209764
+          ]
+        ],
+        "vf": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "input_source": "runs/numerics/fleet-restart/attempts/dc3f55314b201f82b555/input.npz",
+      "input_sha256": "4a038f4704ba06f08636f3fb523b838d2106aa64cde7ef205855cf3264768ccf",
+      "original_config_source": "runs/numerics/fleet-restart/attempts/dc3f55314b201f82b555/config.json",
+      "original_config_sha256": "0ee5d527a8ac39aaeabc4abf4688609957a60ed0ac3001c816ece64dc316b9ac",
+      "original_attempt_id": "dc3f55314b201f82b555",
+      "original_interacting_pairs": 1
+    },
+    {
+      "case_id": "n4_seed24",
+      "seed": 24,
+      "problem": {
+        "n_robots": 4,
+        "time_horizon": 14.142135623730951,
+        "timestep": 0.07071067811865475,
+        "min_distance": 0.5,
+        "dimension": 2
+      },
+      "options": {
+        "sci_detection_tol": 0.001
+      },
+      "states": {
+        "p0": [
+          [
+            5.728377591634539,
+            -1.4701335535039262
+          ],
+          [
+            3.3171308896241514,
+            -0.0027659074237945413
+          ],
+          [
+            -3.9079010719344534,
+            4.660510564567513
+          ],
+          [
+            2.8656146427297413,
+            3.3147025849920393
+          ]
+        ],
+        "v0": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "pf": [
+          [
+            -1.8350782632748854,
+            3.8669400592499223
+          ],
+          [
+            -1.682616450116951,
+            -6.494299300768675
+          ],
+          [
+            -3.4358710984335583,
+            -0.7479826471558241
+          ],
+          [
+            -2.5002546295187122,
+            -4.6728130877692005
+          ]
+        ],
+        "vf": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "input_source": "runs/numerics/fleet-restart/attempts/068d359871b53f67bb2c/input.npz",
+      "input_sha256": "9afef369bffde99c24bef95e6307e5a2c270bdc6245c21cfd38d4948847c73a6",
+      "original_config_source": "runs/numerics/fleet-restart/attempts/068d359871b53f67bb2c/config.json",
+      "original_config_sha256": "f9a74abc1f611060929060a27bc10dd2d1e71a4055db4506b8e39d7a9977e897",
+      "original_attempt_id": "068d359871b53f67bb2c",
+      "original_interacting_pairs": 0
+    },
+    {
+      "case_id": "n4_seed25",
+      "seed": 25,
+      "problem": {
+        "n_robots": 4,
+        "time_horizon": 14.142135623730951,
+        "timestep": 0.07071067811865475,
+        "min_distance": 0.5,
+        "dimension": 2
+      },
+      "options": {
+        "sci_detection_tol": 0.001
+      },
+      "states": {
+        "p0": [
+          [
+            3.6966945729715794,
+            -3.930431995059889
+          ],
+          [
+            -0.5494368811816623,
+            2.9989466014096235
+          ],
+          [
+            -2.0543553694295715,
+            1.2839008422894915
+          ],
+          [
+            -1.8585679552360173,
+            -4.292584086392756
+          ]
+        ],
+        "v0": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "pf": [
+          [
+            -4.019553198514845,
+            -1.4822982713594721
+          ],
+          [
+            -1.9439158959353648,
+            1.3686584761179919
+          ],
+          [
+            -5.113496889976834,
+            1.7675987615262225
+          ],
+          [
+            2.680132241498855,
+            4.34198463501571
+          ]
+        ],
+        "vf": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "input_source": "runs/numerics/fleet-restart/attempts/03864f725292b4af02f1/input.npz",
+      "input_sha256": "73b8e96fc22fc32554132cfc2201a3351d7b23924c0fb3e14de94a14b5b72cb0",
+      "original_config_source": "runs/numerics/fleet-restart/attempts/03864f725292b4af02f1/config.json",
+      "original_config_sha256": "d27d3ac94db5aa8a3dc6cd72fa4e32b48951067810e09a8ab8f57d9e28b73bca",
+      "original_attempt_id": "03864f725292b4af02f1",
+      "original_interacting_pairs": 0
+    },
+    {
+      "case_id": "n4_seed26",
+      "seed": 26,
+      "problem": {
+        "n_robots": 4,
+        "time_horizon": 14.142135623730951,
+        "timestep": 0.07071067811865475,
+        "min_distance": 0.5,
+        "dimension": 2
+      },
+      "options": {
+        "sci_detection_tol": 0.001
+      },
+      "states": {
+        "p0": [
+          [
+            -1.8143413045806034,
+            4.762115033864448
+          ],
+          [
+            0.7206137826110982,
+            -6.240332730300037
+          ],
+          [
+            2.1062210165560646,
+            -2.2270838804411883
+          ],
+          [
+            -0.6089105860091901,
+            4.943565003885253
+          ]
+        ],
+        "v0": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "pf": [
+          [
+            -0.21323066203720326,
+            -3.114824596481992
+          ],
+          [
+            2.2175230287719465,
+            4.692963301116232
+          ],
+          [
+            -1.2609157388777594,
+            6.037970269267255
+          ],
+          [
+            -0.4728084127459931,
+            3.801634868124091
+          ]
+        ],
+        "vf": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "input_source": "runs/numerics/fleet-restart/attempts/688f3d9e77b5bd4d30ee/input.npz",
+      "input_sha256": "f336f33fc7517dbcfabfed1b8cf40f22f2a4eb071133c3ce7bd4f0acb23762c6",
+      "original_config_source": "runs/numerics/fleet-restart/attempts/688f3d9e77b5bd4d30ee/config.json",
+      "original_config_sha256": "298bfd69c11d66ef04f957f119a02503e8b9ad644e1542a839aa791fb1c92fc9",
+      "original_attempt_id": "688f3d9e77b5bd4d30ee",
+      "original_interacting_pairs": 1
+    },
+    {
+      "case_id": "n4_seed27",
+      "seed": 27,
+      "problem": {
+        "n_robots": 4,
+        "time_horizon": 14.142135623730951,
+        "timestep": 0.07071067811865475,
+        "min_distance": 0.5,
+        "dimension": 2
+      },
+      "options": {
+        "sci_detection_tol": 0.001
+      },
+      "states": {
+        "p0": [
+          [
+            -5.699426671698667,
+            2.871536633695884
+          ],
+          [
+            -0.6036003418689497,
+            -6.560169709792764
+          ],
+          [
+            -5.201966954721011,
+            4.68106520027404
+          ],
+          [
+            2.5359768153478672,
+            -2.0135987881742636
+          ]
+        ],
+        "v0": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "pf": [
+          [
+            -0.2955458060641628,
+            -5.750636367655759
+          ],
+          [
+            4.96183284667076,
+            -4.275611115206392
+          ],
+          [
+            -0.030576630185531327,
+            -6.595930644908968
+          ],
+          [
+            1.5614023784584419,
+            3.7202632248614846
+          ]
+        ],
+        "vf": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "input_source": "runs/numerics/fleet-restart/attempts/a13d1d26380379c55ea3/input.npz",
+      "input_sha256": "f48b44261d30a3e46c65e7c47002728c4c0408d8d77ee4c8f1323a8148ffaa03",
+      "original_config_source": "runs/numerics/fleet-restart/attempts/a13d1d26380379c55ea3/config.json",
+      "original_config_sha256": "56f040facb154b527728706b7ff8d36a857e17b400f6c1aff41ffd82b98d6a54",
+      "original_attempt_id": "a13d1d26380379c55ea3",
+      "original_interacting_pairs": 1
+    },
+    {
+      "case_id": "n4_seed28",
+      "seed": 28,
+      "problem": {
+        "n_robots": 4,
+        "time_horizon": 14.142135623730951,
+        "timestep": 0.07071067811865475,
+        "min_distance": 0.5,
+        "dimension": 2
+      },
+      "options": {
+        "sci_detection_tol": 0.001
+      },
+      "states": {
+        "p0": [
+          [
+            -0.696489812393899,
+            -5.25136954114006
+          ],
+          [
+            3.153398114182661,
+            3.1520943463791014
+          ],
+          [
+            0.9879294416255855,
+            -4.9571811043197735
+          ],
+          [
+            2.6810478977714856,
+            5.957149144708208
+          ]
+        ],
+        "v0": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "pf": [
+          [
+            6.741045673200546,
+            -1.941385238537976
+          ],
+          [
+            2.454444434740372,
+            6.520387840096851
+          ],
+          [
+            0.10940370406451926,
+            1.142682482157881
+          ],
+          [
+            -0.7865925727315943,
+            2.773978593009453
+          ]
+        ],
+        "vf": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "input_source": "runs/numerics/fleet-restart/attempts/9ea29460993b4288e281/input.npz",
+      "input_sha256": "7ceae4cff1d2fdde65671210a429e26d4fff1b8dbccff25711e96669a0555fdd",
+      "original_config_source": "runs/numerics/fleet-restart/attempts/9ea29460993b4288e281/config.json",
+      "original_config_sha256": "a493aa1f729317dc636cceae242763a74945a7f9091acd0d3efc9ec523207b09",
+      "original_attempt_id": "9ea29460993b4288e281",
+      "original_interacting_pairs": 0
+    },
+    {
+      "case_id": "n4_seed29",
+      "seed": 29,
+      "problem": {
+        "n_robots": 4,
+        "time_horizon": 14.142135623730951,
+        "timestep": 0.07071067811865475,
+        "min_distance": 0.5,
+        "dimension": 2
+      },
+      "options": {
+        "sci_detection_tol": 0.001
+      },
+      "states": {
+        "p0": [
+          [
+            2.473852047277006,
+            -2.8505007120793198
+          ],
+          [
+            5.5346123594985706,
+            2.744071108152978
+          ],
+          [
+            -4.979099990692229,
+            1.524272607878053
+          ],
+          [
+            -0.9529819204720815,
+            -6.444926752104671
+          ]
+        ],
+        "v0": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "pf": [
+          [
+            0.6908493386238359,
+            -6.014974094484853
+          ],
+          [
+            0.30204176602096894,
+            5.9936804552224725
+          ],
+          [
+            4.224809905468591,
+            1.623091978460766
+          ],
+          [
+            -2.7465577051954533,
+            -2.291760131454839
+          ]
+        ],
+        "vf": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "input_source": "runs/numerics/fleet-restart/attempts/2b794a6194be970cae03/input.npz",
+      "input_sha256": "547fd55bd9a95fa62eb59eb8606362b755eb5287e2e1d148ca4c75af42fb4397",
+      "original_config_source": "runs/numerics/fleet-restart/attempts/2b794a6194be970cae03/config.json",
+      "original_config_sha256": "45e2da9213ec00e5c23c35a457f3b71a3e0a5893c74e005f5ca5eaf00f18401c",
+      "original_attempt_id": "2b794a6194be970cae03",
+      "original_interacting_pairs": 0
+    },
+    {
+      "case_id": "n4_seed30",
+      "seed": 30,
+      "problem": {
+        "n_robots": 4,
+        "time_horizon": 14.142135623730951,
+        "timestep": 0.07071067811865475,
+        "min_distance": 0.5,
+        "dimension": 2
+      },
+      "options": {
+        "sci_detection_tol": 0.001
+      },
+      "states": {
+        "p0": [
+          [
+            -2.6927435657728402,
+            -3.4331554830425026
+          ],
+          [
+            -1.4862088110527691,
+            -2.444119406879864
+          ],
+          [
+            4.048928075765847,
+            -0.9691612127315862
+          ],
+          [
+            3.4236458070501765,
+            -0.17760677957224894
+          ]
+        ],
+        "v0": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "pf": [
+          [
+            -3.8713624060398044,
+            -2.312370688787101
+          ],
+          [
+            3.4189653023392883,
+            3.93922462463224
+          ],
+          [
+            -6.1518148922103535,
+            -0.705640735009104
+          ],
+          [
+            1.9375134076054044,
+            -0.8551087267977505
+          ]
+        ],
+        "vf": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "input_source": "runs/numerics/fleet-restart/attempts/c6988e877a3f22be3acf/input.npz",
+      "input_sha256": "8e8702b672cc0e92972cb6dc41acf3864a09e675a4ae86edce83afa6cae14f6c",
+      "original_config_source": "runs/numerics/fleet-restart/attempts/c6988e877a3f22be3acf/config.json",
+      "original_config_sha256": "0f7ff8ae3491b6a0feb8101e72d995ad52e70c6489758582c3159dee6a000832",
+      "original_attempt_id": "c6988e877a3f22be3acf",
+      "original_interacting_pairs": 0
+    },
+    {
+      "case_id": "n4_seed31",
+      "seed": 31,
+      "problem": {
+        "n_robots": 4,
+        "time_horizon": 14.142135623730951,
+        "timestep": 0.07071067811865475,
+        "min_distance": 0.5,
+        "dimension": 2
+      },
+      "options": {
+        "sci_detection_tol": 0.001
+      },
+      "states": {
+        "p0": [
+          [
+            -1.5545404464956802,
+            6.74452980764108
+          ],
+          [
+            0.8941034226929078,
+            -6.967358123718916
+          ],
+          [
+            0.679854500723762,
+            2.5265886685483756
+          ],
+          [
+            1.5539321329128275,
+            -1.0085736587661838
+          ]
+        ],
+        "v0": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "pf": [
+          [
+            4.639975811976556,
+            2.3764172484305317
+          ],
+          [
+            3.7007220728974417,
+            2.329016855989954
+          ],
+          [
+            -2.2682654624619873,
+            -4.03898785834945
+          ],
+          [
+            2.9986592445307383,
+            0.8499071553066095
+          ]
+        ],
+        "vf": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "input_source": "runs/numerics/fleet-restart/attempts/563fba2f6095152a0492/input.npz",
+      "input_sha256": "d36e8d1f0b7394eaabfb2d9aacd640c49df45a4a3d1163a2e76f8e3b2ae7aac3",
+      "original_config_source": "runs/numerics/fleet-restart/attempts/563fba2f6095152a0492/config.json",
+      "original_config_sha256": "ae1747558b6e8aeff04db748e2714dad13ec7017fd37a4963b718f21fa4d188d",
+      "original_attempt_id": "563fba2f6095152a0492",
+      "original_interacting_pairs": 1
+    },
+    {
+      "case_id": "n4_seed32",
+      "seed": 32,
+      "problem": {
+        "n_robots": 4,
+        "time_horizon": 14.142135623730951,
+        "timestep": 0.07071067811865475,
+        "min_distance": 0.5,
+        "dimension": 2
+      },
+      "options": {
+        "sci_detection_tol": 0.001
+      },
+      "states": {
+        "p0": [
+          [
+            2.7284102827958074,
+            -3.34534528524308
+          ],
+          [
+            -6.50195322145357,
+            -2.3467918006542337
+          ],
+          [
+            -0.5344411329413434,
+            -6.365895823137889
+          ],
+          [
+            5.4848042251754965,
+            4.042440615753542
+          ]
+        ],
+        "v0": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "pf": [
+          [
+            -4.227555733279898,
+            -3.4576645771641887
+          ],
+          [
+            3.482529579600669,
+            2.2652372706792256
+          ],
+          [
+            -2.4491419848133886,
+            -4.010907373810336
+          ],
+          [
+            -5.624045513883038,
+            -1.8856660969339842
+          ]
+        ],
+        "vf": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "input_source": "runs/numerics/fleet-restart/attempts/62430bad8863b1f602aa/input.npz",
+      "input_sha256": "522a1b13bc49a52092ab0439bcb8edc58ca9e40e13afc640ba57883895b2ae3a",
+      "original_config_source": "runs/numerics/fleet-restart/attempts/62430bad8863b1f602aa/config.json",
+      "original_config_sha256": "23c041211c64a95327f2d722d1ed9d0cc5b8b50ec52fad10e5c455ad5399e5dd",
+      "original_attempt_id": "62430bad8863b1f602aa",
+      "original_interacting_pairs": 1
+    },
+    {
+      "case_id": "n4_seed33",
+      "seed": 33,
+      "problem": {
+        "n_robots": 4,
+        "time_horizon": 14.142135623730951,
+        "timestep": 0.07071067811865475,
+        "min_distance": 0.5,
+        "dimension": 2
+      },
+      "options": {
+        "sci_detection_tol": 0.001
+      },
+      "states": {
+        "p0": [
+          [
+            0.04440195023700409,
+            4.743079117973358
+          ],
+          [
+            -3.05739514241692,
+            1.9150246701989029
+          ],
+          [
+            2.087699598782042,
+            -2.21212719872537
+          ],
+          [
+            6.8511972738725095,
+            0.8507041140534759
+          ]
+        ],
+        "v0": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "pf": [
+          [
+            -2.0874999462852957,
+            -4.46897642663119
+          ],
+          [
+            4.328432144176867,
+            -0.9667533963416507
+          ],
+          [
+            3.678816409066928,
+            2.009149334686131
+          ],
+          [
+            3.620663323653745,
+            6.004093449342998
+          ]
+        ],
+        "vf": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "input_source": "runs/numerics/fleet-restart/attempts/1b509fe96b13a812603a/input.npz",
+      "input_sha256": "706d4ed50bdea532ec1f2b5a0daf955113e70906deb66f335d4c598a0a91e76e",
+      "original_config_source": "runs/numerics/fleet-restart/attempts/1b509fe96b13a812603a/config.json",
+      "original_config_sha256": "5ec1ba63403cef8d43a60121de05c3ea62b8987d8f4f7de94656e91c449c9691",
+      "original_attempt_id": "1b509fe96b13a812603a",
+      "original_interacting_pairs": 0
+    },
+    {
+      "case_id": "n4_seed34",
+      "seed": 34,
+      "problem": {
+        "n_robots": 4,
+        "time_horizon": 14.142135623730951,
+        "timestep": 0.07071067811865475,
+        "min_distance": 0.5,
+        "dimension": 2
+      },
+      "options": {
+        "sci_detection_tol": 0.001
+      },
+      "states": {
+        "p0": [
+          [
+            6.062978535084168,
+            1.4984372890923352
+          ],
+          [
+            4.697756482120463,
+            3.0944657630872308
+          ],
+          [
+            6.815590065120015,
+            0.5963714182315505
+          ],
+          [
+            -3.1853901241435096,
+            1.5835442194380007
+          ]
+        ],
+        "v0": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "pf": [
+          [
+            1.6774558161136832,
+            4.234072936526359
+          ],
+          [
+            5.6739434886896545,
+            0.4795878734036257
+          ],
+          [
+            3.761560854530143,
+            -4.037628649350068
+          ],
+          [
+            2.290921484902211,
+            -6.0064336565869185
+          ]
+        ],
+        "vf": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "input_source": "runs/numerics/fleet-restart/attempts/e6499e76eebb71890a92/input.npz",
+      "input_sha256": "c387dfc05147a38ea5d08549e266521a8c9628bad51e90872a7f229c54527524",
+      "original_config_source": "runs/numerics/fleet-restart/attempts/e6499e76eebb71890a92/config.json",
+      "original_config_sha256": "b4f1c0b18f2832372c4aece87249444370d9e0eabe33ffcd71c804570540d75b",
+      "original_attempt_id": "e6499e76eebb71890a92",
+      "original_interacting_pairs": 1
+    },
+    {
+      "case_id": "n4_seed35",
+      "seed": 35,
+      "problem": {
+        "n_robots": 4,
+        "time_horizon": 14.142135623730951,
+        "timestep": 0.07071067811865475,
+        "min_distance": 0.5,
+        "dimension": 2
+      },
+      "options": {
+        "sci_detection_tol": 0.001
+      },
+      "states": {
+        "p0": [
+          [
+            -3.7909339834915374,
+            1.022888010025812
+          ],
+          [
+            0.43224826152939355,
+            3.6992416828603014
+          ],
+          [
+            0.9673915916724872,
+            -2.152088593201098
+          ],
+          [
+            -2.606670103359675,
+            -2.654178837998032
+          ]
+        ],
+        "v0": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "pf": [
+          [
+            -2.408553566381775,
+            -5.305413170847939
+          ],
+          [
+            0.43785675272308794,
+            -1.4485819238936561
+          ],
+          [
+            2.7889138179311868,
+            -1.706680706226512
+          ],
+          [
+            -2.3253670560564066,
+            6.63670469639297
+          ]
+        ],
+        "vf": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "input_source": "runs/numerics/fleet-restart/attempts/d39f30c7e24955e87da3/input.npz",
+      "input_sha256": "87bbcca669e4413a2f9f7a7de44f5b296b1efa29e1529b75bca3601e7a1791e1",
+      "original_config_source": "runs/numerics/fleet-restart/attempts/d39f30c7e24955e87da3/config.json",
+      "original_config_sha256": "b08bb4e206449c0b4b98642d67601d6ab56a55e96345b273da39be3fb20b9125",
+      "original_attempt_id": "d39f30c7e24955e87da3",
+      "original_interacting_pairs": 0
+    },
+    {
+      "case_id": "n4_seed36",
+      "seed": 36,
+      "problem": {
+        "n_robots": 4,
+        "time_horizon": 14.142135623730951,
+        "timestep": 0.07071067811865475,
+        "min_distance": 0.5,
+        "dimension": 2
+      },
+      "options": {
+        "sci_detection_tol": 0.001
+      },
+      "states": {
+        "p0": [
+          [
+            -0.7384077773167843,
+            -5.4346540435347634
+          ],
+          [
+            2.55570702848358,
+            -0.7918547661100189
+          ],
+          [
+            1.5028184280534755,
+            -3.9877646117034447
+          ],
+          [
+            1.3972150247422044,
+            3.3174315500145592
+          ]
+        ],
+        "v0": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "pf": [
+          [
+            -0.8748351893224583,
+            -0.9288215482371219
+          ],
+          [
+            6.3580650747618215,
+            -2.1888171888040984
+          ],
+          [
+            -2.984131904831022,
+            -0.9723019883796072
+          ],
+          [
+            0.03874598707375695,
+            0.34175649327590885
+          ]
+        ],
+        "vf": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "input_source": "runs/numerics/fleet-restart/attempts/c8e4ba8a4117daafba23/input.npz",
+      "input_sha256": "b6b52a49809d979c420de0a2cf6c92bf42141f6cab4f8178c1e3ca3a27c00925",
+      "original_config_source": "runs/numerics/fleet-restart/attempts/c8e4ba8a4117daafba23/config.json",
+      "original_config_sha256": "fbc38225dca5b0a95b08a1f5cd0ccb8622c729fcf71fd4e9e6f298789924ebe7",
+      "original_attempt_id": "c8e4ba8a4117daafba23",
+      "original_interacting_pairs": 0
+    },
+    {
+      "case_id": "n4_seed37",
+      "seed": 37,
+      "problem": {
+        "n_robots": 4,
+        "time_horizon": 14.142135623730951,
+        "timestep": 0.07071067811865475,
+        "min_distance": 0.5,
+        "dimension": 2
+      },
+      "options": {
+        "sci_detection_tol": 0.001
+      },
+      "states": {
+        "p0": [
+          [
+            4.527177527433183,
+            -1.646077868852001
+          ],
+          [
+            1.8972705092441726,
+            5.049268111197103
+          ],
+          [
+            -4.261643306460264,
+            -4.006194853181899
+          ],
+          [
+            4.8605772006402885,
+            3.694398136481435
+          ]
+        ],
+        "v0": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "pf": [
+          [
+            -1.22496690364316,
+            6.01420696702342
+          ],
+          [
+            1.4849040575251695,
+            -5.400471252947586
+          ],
+          [
+            -6.50775063128829,
+            2.4129752052891384
+          ],
+          [
+            2.5034013142563536,
+            -1.8902899946055283
+          ]
+        ],
+        "vf": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "input_source": "runs/numerics/fleet-restart/attempts/aeb8aed20029ec9dcb69/input.npz",
+      "input_sha256": "aea60ad1de7ec60c1609a6d7413e1744d51932fbcd90d90b96d94a8a78544b5c",
+      "original_config_source": "runs/numerics/fleet-restart/attempts/aeb8aed20029ec9dcb69/config.json",
+      "original_config_sha256": "c5aceb2d7f56dd7ec457fbb5cf89f0d01ea873932f97a85105f0bfe0a41ea10e",
+      "original_attempt_id": "aeb8aed20029ec9dcb69",
+      "original_interacting_pairs": 0
+    },
+    {
+      "case_id": "n4_seed38",
+      "seed": 38,
+      "problem": {
+        "n_robots": 4,
+        "time_horizon": 14.142135623730951,
+        "timestep": 0.07071067811865475,
+        "min_distance": 0.5,
+        "dimension": 2
+      },
+      "options": {
+        "sci_detection_tol": 0.001
+      },
+      "states": {
+        "p0": [
+          [
+            -4.911785880696606,
+            4.342781573107312
+          ],
+          [
+            5.5673774252443495,
+            -2.036063183060899
+          ],
+          [
+            -3.6754042217224407,
+            -4.097495321104682
+          ],
+          [
+            1.356668314153759,
+            4.186746406065963
+          ]
+        ],
+        "v0": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "pf": [
+          [
+            -0.10895675846197507,
+            1.9283393103325601
+          ],
+          [
+            -0.9049688420578285,
+            4.5937717566512815
+          ],
+          [
+            -6.553259981338882,
+            0.6922845739665549
+          ],
+          [
+            -5.210567393269427,
+            -0.9813993335718351
+          ]
+        ],
+        "vf": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "input_source": "runs/numerics/fleet-restart/attempts/6674fb05274f8bf2be2c/input.npz",
+      "input_sha256": "11db20ed0310fddf50b08dabac747582c6d78092650aa10a7bbb75901d16c552",
+      "original_config_source": "runs/numerics/fleet-restart/attempts/6674fb05274f8bf2be2c/config.json",
+      "original_config_sha256": "a6cfcad51ca99c35b71abe9fdd8edb45f1db61274a6f7136d576307c9e1885f4",
+      "original_attempt_id": "6674fb05274f8bf2be2c",
+      "original_interacting_pairs": 0
+    },
+    {
+      "case_id": "n4_seed39",
+      "seed": 39,
+      "problem": {
+        "n_robots": 4,
+        "time_horizon": 14.142135623730951,
+        "timestep": 0.07071067811865475,
+        "min_distance": 0.5,
+        "dimension": 2
+      },
+      "options": {
+        "sci_detection_tol": 0.001
+      },
+      "states": {
+        "p0": [
+          [
+            -6.044106516663391,
+            -1.8340467495015997
+          ],
+          [
+            1.0574529212400678,
+            -2.2325516031820865
+          ],
+          [
+            -4.108782239003866,
+            -3.0649041878459364
+          ],
+          [
+            -4.730827218149916,
+            1.0915864845433565
+          ]
+        ],
+        "v0": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "pf": [
+          [
+            -4.571888772497542,
+            -5.03795862185708
+          ],
+          [
+            2.7490487735481484,
+            -6.298001147969115
+          ],
+          [
+            3.985220444053801,
+            -2.204440479996382
+          ],
+          [
+            -2.462802311671637,
+            -2.558924459957774
+          ]
+        ],
+        "vf": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "input_source": "runs/numerics/fleet-restart/attempts/d354f3459ab31db67002/input.npz",
+      "input_sha256": "0d8ad9e1e59d3f67c9f408631c072888834d836b8a513ef1822073789858ec1f",
+      "original_config_source": "runs/numerics/fleet-restart/attempts/d354f3459ab31db67002/config.json",
+      "original_config_sha256": "8ac78b9930a7adae0fbde4174c773308f47c60596ff199d102b3b8fa3b15ca36",
+      "original_attempt_id": "d354f3459ab31db67002",
+      "original_interacting_pairs": 0
+    },
+    {
+      "case_id": "n4_seed40",
+      "seed": 40,
+      "problem": {
+        "n_robots": 4,
+        "time_horizon": 14.142135623730951,
+        "timestep": 0.07071067811865475,
+        "min_distance": 0.5,
+        "dimension": 2
+      },
+      "options": {
+        "sci_detection_tol": 0.001
+      },
+      "states": {
+        "p0": [
+          [
+            -1.3917067576506792,
+            0.9118411628690809
+          ],
+          [
+            0.9087386322111068,
+            -3.679599616506445
+          ],
+          [
+            -3.710010554790405,
+            1.1964267425889754
+          ],
+          [
+            -5.508200930117499,
+            -0.9221351081523023
+          ]
+        ],
+        "v0": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "pf": [
+          [
+            0.9808209387295276,
+            -5.774952169020328
+          ],
+          [
+            5.44168800962588,
+            -0.6548558747461852
+          ],
+          [
+            2.328568293009506,
+            -5.47814086282479
+          ],
+          [
+            6.623709835951163,
+            1.1575097713238633
+          ]
+        ],
+        "vf": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "input_source": "runs/numerics/fleet-restart/attempts/04c593fea6e2bba4a86a/input.npz",
+      "input_sha256": "a1c8a96e1c07a3ee5fe00c5539b11355f9e8a280528b2bbf710aadea75bf56dd",
+      "original_config_source": "runs/numerics/fleet-restart/attempts/04c593fea6e2bba4a86a/config.json",
+      "original_config_sha256": "c4bcad13b27d9199d9eb3847182a0734910cd3a945dba6e230a3fc7d7bd94769",
+      "original_attempt_id": "04c593fea6e2bba4a86a",
+      "original_interacting_pairs": 2
+    },
+    {
+      "case_id": "n4_seed41",
+      "seed": 41,
+      "problem": {
+        "n_robots": 4,
+        "time_horizon": 14.142135623730951,
+        "timestep": 0.07071067811865475,
+        "min_distance": 0.5,
+        "dimension": 2
+      },
+      "options": {
+        "sci_detection_tol": 0.001
+      },
+      "states": {
+        "p0": [
+          [
+            -0.008810251334661751,
+            1.5181282597666141
+          ],
+          [
+            -0.65427132404164,
+            -1.321137130192927
+          ],
+          [
+            4.089071253398938,
+            3.67052867201267
+          ],
+          [
+            2.0968438653509134,
+            5.387859655499346
+          ]
+        ],
+        "v0": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "pf": [
+          [
+            3.974041459470736,
+            -2.2684794082981767
+          ],
+          [
+            -1.8589194005205785,
+            3.270489324390855
+          ],
+          [
+            1.5519094309391415,
+            3.667028857603071
+          ],
+          [
+            -1.8513742015932597,
+            0.22008397546208205
+          ]
+        ],
+        "vf": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "input_source": "runs/numerics/fleet-restart/attempts/3026d98a904dd510fbb5/input.npz",
+      "input_sha256": "c694c787e8476b3064ffa7687bf8e86e9344b88790220e750b78f1f7c9037b18",
+      "original_config_source": "runs/numerics/fleet-restart/attempts/3026d98a904dd510fbb5/config.json",
+      "original_config_sha256": "e8bcbaeb4ae5ee2c04ad7dfd43eaab24539c8323121d57f89a727ca0d9ea2cdd",
+      "original_attempt_id": "3026d98a904dd510fbb5",
+      "original_interacting_pairs": 0
+    },
+    {
+      "case_id": "n4_seed42",
+      "seed": 42,
+      "problem": {
+        "n_robots": 4,
+        "time_horizon": 14.142135623730951,
+        "timestep": 0.07071067811865475,
+        "min_distance": 0.5,
+        "dimension": 2
+      },
+      "options": {
+        "sci_detection_tol": 0.001
+      },
+      "states": {
+        "p0": [
+          [
+            -4.86112158826585,
+            4.889295677762956
+          ],
+          [
+            -0.6176553787577556,
+            -5.4361223351708565
+          ],
+          [
+            1.5549699455741208,
+            2.319869497444058
+          ],
+          [
+            6.1475321941107826,
+            2.3487560986867555
+          ]
+        ],
+        "v0": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "pf": [
+          [
+            -4.789107911563879,
+            -3.531016043746974
+          ],
+          [
+            6.905706374358066,
+            0.898171519950443
+          ],
+          [
+            1.61336602921047,
+            -2.8309019039351133
+          ],
+          [
+            1.2578580959488708,
+            2.754635820417569
+          ]
+        ],
+        "vf": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "input_source": "runs/numerics/fleet-restart/attempts/31d5e0a6a2f99662471f/input.npz",
+      "input_sha256": "07cc451fb2c5cfd890ca039ad46d4926dd7e4918a775e1fa74ed5eec1365974e",
+      "original_config_source": "runs/numerics/fleet-restart/attempts/31d5e0a6a2f99662471f/config.json",
+      "original_config_sha256": "1cffb4f79839641fecc7667ab7f351ab772850f54d640e01e9616db1d4befbe9",
+      "original_attempt_id": "31d5e0a6a2f99662471f",
+      "original_interacting_pairs": 0
+    },
+    {
+      "case_id": "n4_seed43",
+      "seed": 43,
+      "problem": {
+        "n_robots": 4,
+        "time_horizon": 14.142135623730951,
+        "timestep": 0.07071067811865475,
+        "min_distance": 0.5,
+        "dimension": 2
+      },
+      "options": {
+        "sci_detection_tol": 0.001
+      },
+      "states": {
+        "p0": [
+          [
+            4.138201467917304,
+            3.6508376538681024
+          ],
+          [
+            2.319848487768564,
+            2.578329690335459
+          ],
+          [
+            -3.053737733138205,
+            5.799272403037973
+          ],
+          [
+            -2.6171698320672805,
+            -4.495390159295087
+          ]
+        ],
+        "v0": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "pf": [
+          [
+            5.956645709248636,
+            1.0980831974417808
+          ],
+          [
+            -5.002549744493561,
+            3.8828922191197544
+          ],
+          [
+            -0.0468425503671639,
+            1.6858388440277112
+          ],
+          [
+            2.2241592924195563,
+            -2.470741839238229
+          ]
+        ],
+        "vf": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "input_source": "runs/numerics/fleet-restart/attempts/f00922c9dc9e29ffacff/input.npz",
+      "input_sha256": "c1ff8aa710a7d8111ec98580cf26dce1dbdaf7ccc1fb744f34f3a305892cb435",
+      "original_config_source": "runs/numerics/fleet-restart/attempts/f00922c9dc9e29ffacff/config.json",
+      "original_config_sha256": "ca0cbec174a5227491612b4a6c6453bfa0c7b97f98e021d5a3ba29d8d080b104",
+      "original_attempt_id": "f00922c9dc9e29ffacff",
+      "original_interacting_pairs": 1
+    },
+    {
+      "case_id": "n4_seed44",
+      "seed": 44,
+      "problem": {
+        "n_robots": 4,
+        "time_horizon": 14.142135623730951,
+        "timestep": 0.07071067811865475,
+        "min_distance": 0.5,
+        "dimension": 2
+      },
+      "options": {
+        "sci_detection_tol": 0.001
+      },
+      "states": {
+        "p0": [
+          [
+            1.163272676894511,
+            -1.971446650986064
+          ],
+          [
+            -0.14294260226905886,
+            -4.243183854757043
+          ],
+          [
+            -3.4996432882500264,
+            4.26783503499305
+          ],
+          [
+            -3.5521698275463067,
+            2.7992356116116026
+          ]
+        ],
+        "v0": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "pf": [
+          [
+            -5.9472785370505745,
+            -0.3705100121336184
+          ],
+          [
+            4.631973502490946,
+            -1.1729777999470505
+          ],
+          [
+            -2.1399590242105035,
+            1.0458300199834343
+          ],
+          [
+            1.3861160896084952,
+            6.778811521168319
+          ]
+        ],
+        "vf": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "input_source": "runs/numerics/fleet-restart/attempts/368aad4147c13562d0dc/input.npz",
+      "input_sha256": "3b8d702d4e68ae76e0b5ea49abdef82f58c7dba01da75a8a57bc5df6c1d5785a",
+      "original_config_source": "runs/numerics/fleet-restart/attempts/368aad4147c13562d0dc/config.json",
+      "original_config_sha256": "8b0f1eb48f09f74d2d9c30061efad1f05f2bd1be5a7fd46fe648fadad52c960c",
+      "original_attempt_id": "368aad4147c13562d0dc",
+      "original_interacting_pairs": 0
+    },
+    {
+      "case_id": "n4_seed45",
+      "seed": 45,
+      "problem": {
+        "n_robots": 4,
+        "time_horizon": 14.142135623730951,
+        "timestep": 0.07071067811865475,
+        "min_distance": 0.5,
+        "dimension": 2
+      },
+      "options": {
+        "sci_detection_tol": 0.001
+      },
+      "states": {
+        "p0": [
+          [
+            5.229384596747284,
+            -0.3616256096275819
+          ],
+          [
+            -0.3859038318365816,
+            1.9275778937652503
+          ],
+          [
+            -4.569178110543856,
+            1.6622303937484557
+          ],
+          [
+            2.725879770739706,
+            0.8577889518322005
+          ]
+        ],
+        "v0": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "pf": [
+          [
+            4.179063699133908,
+            3.728942307652736
+          ],
+          [
+            3.5277446558252383,
+            -4.478854618948254
+          ],
+          [
+            4.8412500041350786,
+            -0.28255232728005797
+          ],
+          [
+            -2.767931087647794,
+            -2.543996427000493
+          ]
+        ],
+        "vf": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "input_source": "runs/numerics/fleet-restart/attempts/a98fc5e03839a8cd8090/input.npz",
+      "input_sha256": "68b43e5138ad0dc9ea483c0485e25b2a07672989c069abdda13069787bf4ba36",
+      "original_config_source": "runs/numerics/fleet-restart/attempts/a98fc5e03839a8cd8090/config.json",
+      "original_config_sha256": "837fb56ee5994b4b133072303f125a6db34416ba1060f3b4085cdb48f7ad0091",
+      "original_attempt_id": "a98fc5e03839a8cd8090",
+      "original_interacting_pairs": 1
+    },
+    {
+      "case_id": "n4_seed46",
+      "seed": 46,
+      "problem": {
+        "n_robots": 4,
+        "time_horizon": 14.142135623730951,
+        "timestep": 0.07071067811865475,
+        "min_distance": 0.5,
+        "dimension": 2
+      },
+      "options": {
+        "sci_detection_tol": 0.001
+      },
+      "states": {
+        "p0": [
+          [
+            1.1886425419874525,
+            -5.507160267325993
+          ],
+          [
+            0.0370159580330031,
+            6.156494380030066
+          ],
+          [
+            -2.6425962745541165,
+            6.3149467776167825
+          ],
+          [
+            4.52577485109978,
+            1.2492886650582367
+          ]
+        ],
+        "v0": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "pf": [
+          [
+            4.070328719554591,
+            -2.4864874946615014
+          ],
+          [
+            -2.0578764120966944,
+            -0.10267624979051714
+          ],
+          [
+            -5.463991141219857,
+            2.7259216410903173
+          ],
+          [
+            2.699590596934833,
+            -2.9825328085328024
+          ]
+        ],
+        "vf": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "input_source": "runs/numerics/fleet-restart/attempts/9eafad5558a59e550f5e/input.npz",
+      "input_sha256": "cc945872db8f8011531e3a708899de00de7b3200b47ec4a464c20fcc3ee0b352",
+      "original_config_source": "runs/numerics/fleet-restart/attempts/9eafad5558a59e550f5e/config.json",
+      "original_config_sha256": "19fa409149b260ec874e582369893abf93a3840611043fe9e489a609e1c8f630",
+      "original_attempt_id": "9eafad5558a59e550f5e",
+      "original_interacting_pairs": 0
+    },
+    {
+      "case_id": "n4_seed47",
+      "seed": 47,
+      "problem": {
+        "n_robots": 4,
+        "time_horizon": 14.142135623730951,
+        "timestep": 0.07071067811865475,
+        "min_distance": 0.5,
+        "dimension": 2
+      },
+      "options": {
+        "sci_detection_tol": 0.001
+      },
+      "states": {
+        "p0": [
+          [
+            5.279580628117839,
+            4.566200073696474
+          ],
+          [
+            -0.5584541486238369,
+            -4.1546984557871225
+          ],
+          [
+            -1.6644379217690197,
+            -6.0999898760227405
+          ],
+          [
+            -2.777859642683669,
+            -3.607419599236784
+          ]
+        ],
+        "v0": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "pf": [
+          [
+            -0.9578838081530848,
+            -3.3785984814431917
+          ],
+          [
+            -0.04124522183251164,
+            1.0949276409626498
+          ],
+          [
+            3.153723636359483,
+            2.2529644900734547
+          ],
+          [
+            -2.541812822527596,
+            -3.106378112643121
+          ]
+        ],
+        "vf": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "input_source": "runs/numerics/fleet-restart/attempts/bc5549d90c7d9a56f6bf/input.npz",
+      "input_sha256": "636ab489369e806fb98fb3d6feae260b86a259b1d7e2d06aaa4a33330ab676c7",
+      "original_config_source": "runs/numerics/fleet-restart/attempts/bc5549d90c7d9a56f6bf/config.json",
+      "original_config_sha256": "9f2cb5f77fde926d7e016bf1dce51d804ed58e7bec96248a6a74f70d9c3c47ad",
+      "original_attempt_id": "bc5549d90c7d9a56f6bf",
+      "original_interacting_pairs": 1
+    },
+    {
+      "case_id": "n4_seed48",
+      "seed": 48,
+      "problem": {
+        "n_robots": 4,
+        "time_horizon": 14.142135623730951,
+        "timestep": 0.07071067811865475,
+        "min_distance": 0.5,
+        "dimension": 2
+      },
+      "options": {
+        "sci_detection_tol": 0.001
+      },
+      "states": {
+        "p0": [
+          [
+            6.6364492291961605,
+            0.7322601909940284
+          ],
+          [
+            -0.840130766880073,
+            3.773989820798328
+          ],
+          [
+            1.0514659974246938,
+            -3.8881806966975105
+          ],
+          [
+            3.121734182921226,
+            -3.5539284322950078
+          ]
+        ],
+        "v0": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "pf": [
+          [
+            -4.033386242062223,
+            -1.2611087042133426
+          ],
+          [
+            2.027472287336759,
+            1.7274877326615974
+          ],
+          [
+            -5.691530252375543,
+            2.05073027130327
+          ],
+          [
+            -5.273834284208825,
+            1.3505156020839626
+          ]
+        ],
+        "vf": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "input_source": "runs/numerics/fleet-restart/attempts/26aedb1d6ee3b4222bf6/input.npz",
+      "input_sha256": "083048fbbd0cab49974e9f2418e81909c32d292ce0cc1a025d22f8d908f7157b",
+      "original_config_source": "runs/numerics/fleet-restart/attempts/26aedb1d6ee3b4222bf6/config.json",
+      "original_config_sha256": "9c89a59fb49fcb664786ff3a1c01639f5ff22534d9389ba3925ec4f97ad902b5",
+      "original_attempt_id": "26aedb1d6ee3b4222bf6",
+      "original_interacting_pairs": 0
+    },
+    {
+      "case_id": "n4_seed49",
+      "seed": 49,
+      "problem": {
+        "n_robots": 4,
+        "time_horizon": 14.142135623730951,
+        "timestep": 0.07071067811865475,
+        "min_distance": 0.5,
+        "dimension": 2
+      },
+      "options": {
+        "sci_detection_tol": 0.001
+      },
+      "states": {
+        "p0": [
+          [
+            -1.1063370132246295,
+            3.336032075873961
+          ],
+          [
+            5.974325622575887,
+            -2.9812086926817845
+          ],
+          [
+            -2.1671662065197,
+            -4.862882232617054
+          ],
+          [
+            -3.103430510806371,
+            -0.943350870002462
+          ]
+        ],
+        "v0": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "pf": [
+          [
+            0.8287514055758723,
+            -6.64264075165929
+          ],
+          [
+            -0.8848437257438401,
+            -4.914882407181789
+          ],
+          [
+            -5.921197821577803,
+            2.2496539173756345
+          ],
+          [
+            1.8995747003707433,
+            -2.8015221181257512
+          ]
+        ],
+        "vf": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "input_source": "runs/numerics/fleet-restart/attempts/55ccca35b2da5e02c262/input.npz",
+      "input_sha256": "985dda7d954ffb4ca0f641027716e206676b9f0f2ff3b53585f49b7b7fb1bde5",
+      "original_config_source": "runs/numerics/fleet-restart/attempts/55ccca35b2da5e02c262/config.json",
+      "original_config_sha256": "097ce6d85d16dbab8f357c75bd1c3da3a12d3260c560579690367be438a3bb9d",
+      "original_attempt_id": "55ccca35b2da5e02c262",
+      "original_interacting_pairs": 2
+    }
+  ]
+}
